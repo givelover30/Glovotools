@@ -1,0 +1,6 @@
+metric_name,expected_value,actual_value,status
+"Raw catalog records",4400,4400,PASS
+"Unique canonical tool IDs",4375,4375,PASS
+"Duplicate raw records",25,25,PASS
+"Canonical subject categories",55,52,PASS
+"Subcategories defined",492,492,PASS

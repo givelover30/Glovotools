@@ -1,0 +1,151 @@
+Categories count: 38
+basic-math || Basic Math Calculators
+algebra || Algebra Calculators
+geometry || Geometry Calculators
+trigonometry || Trigonometry Calculators
+statistics || Statistics & Probability Calculators
+scientific || Scientific Calculators
+financial || Financial Calculators
+business || Business Calculators
+construction || Construction Calculators
+health-fitness || Health & Fitness Calculators
+datetime || Date & Time Calculators
+electrical || Electrical Calculators
+engineering || Engineering Calculators
+everyday || Everyday Calculators
+tax-accounting || Tax & Accounting Calculators
+real-estate || Real Estate & Property Calculators
+ecommerce || E-commerce & Retail Calculators
+energy-solar || Energy & Solar Calculators
+insurance-risk || Insurance & Risk Calculators
+automotive || Automotive & Transport Calculators
+education-finance || Education & Student Finance
+salary-compensation || Salary & Compensation Calculators
+banking-savings || Banking & Savings Calculators
+business-operations || Business Operations Calculators
+logistics-shipping || Logistics & Shipping Calculators
+manufacturing-inventory || Manufacturing & Inventory Calculators
+agriculture-farming || Agriculture & Farming Calculators
+healthcare-operations || Healthcare Operations Calculators
+telecom-internet || Telecommunications & Internet
+personal-productivity || Personal Productivity & Planning
+environmental-sustainability || Environmental & Sustainability
+food-service || Food Service & Hospitality
+aviation-transport || Aviation & Transportation
+cybersecurity-data || Cybersecurity & Data Management
+legal-compliance || Legal & Compliance
+real-estate-dev || Real Estate Development
+retail-supply-chain || Retail & Supply Chain
+sports-athletics || Sports & Athletics Performance
+Subcategories count: 111
+percentages-fractions || basic-math || Percentages & Fractions
+arithmetic-operations || basic-math || Arithmetic & Operations
+ratios-proportions || basic-math || Ratios & Proportions
+rounding-estimation || basic-math || Rounding & Estimation
+quadratic-equations || algebra || Quadratic Equations
+linear-equations || algebra || Linear Equations
+polynomials-factoring || algebra || Polynomials & Factoring
+systems-inequalities || algebra || Systems & Inequalities
+plane-geometry-area || geometry || 2D Area & Perimeter
+solid-geometry-volume || geometry || 3D Volume & Surface Area
+circles-arcs || geometry || Circles & Arcs
+coordinate-geometry || geometry || Coordinate Geometry
+right-triangles || trigonometry || Right Triangles & Pythagorean
+trig-functions || trigonometry || Trigonometric Functions
+oblique-triangles || trigonometry || Oblique Triangles
+identities-harmonics || trigonometry || Identities & Angle Formulas
+descriptive-statistics || statistics || Descriptive Statistics
+combinatorics-probability || statistics || Combinatorics & Probability
+distributions || statistics || Statistical Distributions
+regression-correlation || statistics || Correlation & Regression
+powers-exponents || scientific || Powers & Exponents
+logarithms || scientific || Logarithms
+precision-scientific || scientific || Precision Scientific Engine
+constants-sequences || scientific || Constants & Sequences
+loans-mortgages || financial || Loans & Mortgages
+compound-investments || financial || Compound Interest & Investments
+retirement-savings || financial || Retirement & Savings
+depreciation-tax || financial || Depreciation & Capital
+break-even-analysis || business || Break-Even Analysis
+profit-margins-markup || business || Profit Margins & Markup
+roi-npv || business || ROI & Return on Investment
+valuation-ratios || business || Financial Ratios & Metrics
+concrete-masonry || construction || Concrete & Masonry
+flooring-materials || construction || Flooring & Tile
+framing-lumber || construction || Framing & Lumber
+paint-roofing || construction || Paint & Surface Coating
+body-composition || health-fitness || Body Composition & Mass
+metabolic-energy || health-fitness || Metabolic Rate & Energy
+target-heart-rate || health-fitness || Target Heart Rate
+macronutrients-nutrition || health-fitness || Macronutrients & Diet Math
+chronological-age || datetime || Chronological Age
+date-math-differences || datetime || Date Differences & Math
+business-working-days || datetime || Business & Working Days
+time-durations || datetime || Time Durations & Clock Math
+ohms-law-power || electrical || Ohm's Law & Power
+energy-consumption || electrical || Energy Consumption & Cost
+wire-sizing-drop || electrical || Voltage Drop & Resistance
+circuits-impedance || electrical || Series & Parallel Circuits
+hydraulics-fluid || engineering || Hydraulics & Fluid Power
+mechanics-energy || engineering || Mechanics & Energy
+structural-beam || engineering || Structural Beam Mechanics
+thermodynamics || engineering || Thermodynamics & Heat
+dining-tipping || everyday || Dining & Tip Splitting
+shopping-discounts || everyday || Shopping Discounts & Tax
+automotive-fuel || everyday || Fuel Economy & Trip Cost
+cooking-baking-ratios || everyday || Recipe & Baking Ratios
+income-taxes || tax-accounting || Income & Federal Taxes
+sales-vat || tax-accounting || Sales Tax & VAT
+self-employment-tax || tax-accounting || Self-Employment & FICA
+mortgages-loans || real-estate || Mortgages & Home Loans
+investment-roi || real-estate || Investment & Rental ROI
+rent-vs-buy || real-estate || Rent vs. Buy Analysis
+marketplace-fees || ecommerce || Marketplace & FBA Fees
+pricing-margins || ecommerce || Pricing & Profit Margins
+retail-break-even || ecommerce || Retail Break-Even
+solar-systems || energy-solar || Solar Panel Systems
+life-health-risk || insurance-risk || Life & Health Risk
+property-casualty || insurance-risk || Property & Casualty Deductibles
+vehicle-financing || automotive || Vehicle Financing & Depreciation
+transport-travel || automotive || Transport & Road Trip Travel
+student-loans || education-finance || Student Loans & Repayment
+college-savings || education-finance || College Savings & 529 Plans
+salary-conversion || salary-compensation || Salary & Hourly Wage Conversion
+paycheck-net-pay || salary-compensation || Paycheck Net Pay & Bonuses
+retirement-growth || salary-compensation || Retirement 401(k) Growth & Match
+deposit-accounts || banking-savings || Deposit Accounts & CDs
+savings-accumulation || banking-savings || Savings Accumulation & Growth
+saas-unit-economics || business-operations || SaaS & Unit Economics
+human-resources || business-operations || Human Resources & Retention
+freight-parcel || logistics-shipping || Freight & Parcel Shipping
+inventory-management || manufacturing-inventory || Inventory Management & EOQ
+plant-operations || manufacturing-inventory || Plant Operations & OEE
+crop-management || agriculture-farming || Crop Yield & Harvest Management
+soil-nutrients || agriculture-farming || Soil Nutrients & Fertilizer N-P-K
+clinic-management || healthcare-operations || Clinic Patient Throughput & Wait Times
+clinical-admin || healthcare-operations || Clinical Administration & IV Drips
+network-performance || telecom-internet || Network Performance & Bandwidth
+time-management || personal-productivity || Time Management & Pomodoro Planning
+personal-wellness || personal-productivity || Personal Wellness & Hydration
+personal-finance || personal-productivity || Personal Finance & Net Worth
+goal-tracking || personal-productivity || Goal Tracking & Habit Streaks
+carbon-accounting || environmental-sustainability || Carbon Accounting & Emissions
+renewable-offset || environmental-sustainability || Renewable Offset & Solar Savings
+menu-costing || food-service || Menu Costing & Recipe Pricing
+restaurant-operations || food-service || Restaurant Operations & Table Turnover
+flight-navigation || aviation-transport || Flight Navigation & Airspeed
+flight-planning || aviation-transport || Aircraft Fuel Burn & Range Planning
+information-security || cybersecurity-data || Information Security & Passwords
+cloud-infrastructure || cybersecurity-data || Cloud Infrastructure & Storage Costs
+data-storage || cybersecurity-data || Data Storage & RAID Fault Tolerance
+datacenter-efficiency || cybersecurity-data || Data Center Efficiency & PUE
+contract-law || legal-compliance || Contract Law & NDA Damages
+data-privacy || legal-compliance || Data Privacy & GDPR Compliance
+commercial-re || real-estate-dev || Commercial Real Estate & Cap Rate
+property-dev || real-estate-dev || Property Development & Land Residual
+retail-inventory || retail-supply-chain || Retail Open-to-Buy Planning
+inventory-risk || retail-supply-chain || Stockout Cost & Lost Sales
+endurance-running || sports-athletics || Endurance Running & Race Prediction
+cycling-power || sports-athletics || Cycling FTP & Training Zones
+swimming || sports-athletics || Swimming Pace & Critical Swim Speed
+baseball-stats || sports-athletics || Baseball Sabermetrics & Offensive Stats

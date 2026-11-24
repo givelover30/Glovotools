@@ -1,0 +1,76 @@
+summary_section,metric_or_dimension,distinct_identifier_count,unique_tool_count,share_of_unregistered_tools,notes
+Baseline,Raw catalog records,,4400,100.00%,Unchanged live catalog count
+Baseline,Unique canonical tool IDs,,4375,100.00%,Primary first-occurrence deduplicated catalog
+Baseline,Preserved duplicate records,,25,0.57%,All 25 duplicate IDs (50 raw occurrences) preserved
+Baseline,Valid registered & parent-matched tools,,1560,35.66%,Require zero remediation
+Baseline,Registered but parent-mismatched tools,,45,1.03%,Audited separately in CALCTOOLS_PHASE_D31_PARENT_MISMATCH_AUDIT.csv
+Baseline,Unregistered primary tools & distinct IDs,1039,2770,63.31%,"Full D3.1 audit scope (note: 1 additional raw-only ID ""metadata"" appears on duplicate #2 of pdf-metadata-editor)"
+Disposition,MAP_TO_EXISTING,79,141,5.09%,Maps directly to existing canonical subcategory in same parent category
+Disposition,ALIAS_TO_EXISTING,36,107,3.86%,Legitimate slug or legacy synonym aliasing an existing canonical subcategory in same parent category
+Disposition,NEW_SUBCATEGORY_CANDIDATE,652,1207,43.57%,Consolidated into 76 proposed canonical subcategories (zero collisions with existing 492)
+Disposition,MANUAL_REVIEW,263,1306,47.15%,164 cross-category split IDs + boundary/topic-mismatched single-category IDs
+Disposition,LEGACY_OR_INVALID,9,9,0.32%,"Leading-whitespace malformed ID ("" culinary-conversions"") and 8 internal QA/certification/test stubs"
+Coverage,Resolved without manual split (MAP + ALIAS + NEW),767,1455,52.53%,Actionable parent-safe canonical destinations proposed
+Coverage,Consolidated New Subcategory Proposals,76,1207,43.57%,652 distinct unregistered IDs consolidated into 76 new proposals
+Coverage,Manual Review Required (Unregistered + Parent Mismatch),263,1338,,263 unregistered IDs + 32 parent-mismatch tools
+Duplicates,Duplicate IDs where primary is valid & secondary is unregistered,,14,,"Includes pdf-metadata-editor whose secondary occurrence introduces raw-only unregistered ID ""metadata"" (1,040th raw ID)"
+Duplicates,Duplicate IDs where both occurrences have different unregistered IDs,,4,,"rolling-element-bearing-l10h-fatigue-life, adv-quantum-shor-factoring-qubit-requirement, adv-quantum-optical-bell-state-generator-efficiency, adv-quantum-error-mitigation-zero-noise-extrapolation"
+Duplicates,Duplicate IDs where both occurrences share same unregistered ID,,7,,6 identical duplicates + freelance-client-project-organizer (diverges in category business vs planners & hub Organizers vs Planners)
+Semantic Group,Engineering & Mechanical Systems,209,642,23.18%,"Mechanical, structural, CFD, chemical process, robotics, petroleum, marine, and aerospace engineering systems"
+Semantic Group,Computer Science & Cybersecurity,171,469,16.93%,"Cybersecurity, cryptography, quantum computing, software architecture, databases, DevOps, and developer infrastructure"
+Semantic Group,Business & Management,104,278,10.04%,"Operations, supply chain, logistics, HR, SaaS, retail, e-commerce, pricing, and organizational management"
+Semantic Group,Finance & Accounting,75,262,9.46%,"Personal/corporate finance, investing, fixed income, derivatives, taxation, real estate valuation, and macroeconomics"
+Semantic Group,Physics & Scientific Research,95,209,7.55%,"Classical/quantum mechanics, nuclear and plasma physics, photonics, optics, Earth sciences, meteorology, and astronomy"
+Semantic Group,Everyday Utilities,61,169,6.10%,"Household tasks, personal productivity, cooking, travel, lifestyle planning, pet care, and general utilities"
+Semantic Group,Energy & Sustainability,74,157,5.67%,"Solar PV, wind, geothermal, batteries, smart grids, LCA, carbon accounting, and environmental engineering"
+Semantic Group,Health & Fitness,55,143,5.16%,"Body composition, nutrition, cardio/strength training, clinical diagnostics, medical specialties, and healthcare operations"
+Semantic Group,Construction & Building,44,141,5.09%,"Structural building materials, concrete, masonry, roofing, framing, HVAC, plumbing, and civil site works"
+Semantic Group,Biology & Chemistry,52,126,4.55%,"General/analytical/physical chemistry, biochemistry, genetics, biotechnology, ecology, agriculture, and neuroscience"
+Semantic Group,Mathematics & Statistics,21,45,1.62%,"Pure and applied mathematics, linear algebra, calculus, numerical methods, probability, and inferential statistics"
+Semantic Group,Writing & Document Tools,24,42,1.52%,"Markdown editing, PDF processing, text analysis, readability, linguistics, and document transformations"
+Semantic Group,Design & Media,16,37,1.34%,"Color palettes, CSS styling, SVG graphics, image dimensions, audio/video formatting, and UX/UI utilities"
+Semantic Group,Networking & Telecommunications,20,27,0.97%,"Optical fiber, RF wireless, cellular propagation, satellite links, Ethernet, and network performance protocols"
+Semantic Group,Education & Academic,9,14,0.51%,"Academic grading, standardized tests, study planning, citations, and educational publishing tools"
+Semantic Group,Platform & Legacy Diagnostics,9,9,0.32%,"Malformed identifiers, internal platform audit/certification stubs, and non-taxonomy test utilities"
+Subject Category,engineering,148,415,14.98%,Engineering Calculators — primary unregistered tool count
+Subject Category,education-science,180,381,13.75%,Science & Education Calculators — primary unregistered tool count
+Subject Category,developer-it,73,227,8.19%,Developer & IT Infrastructure Utilities — primary unregistered tool count
+Subject Category,financial,65,226,8.16%,Financial Calculators — primary unregistered tool count
+Subject Category,business,82,215,7.76%,Business Calculators — primary unregistered tool count
+Subject Category,construction,66,211,7.62%,Construction Calculators — primary unregistered tool count
+Subject Category,health-fitness,41,112,4.04%,Health & Fitness Calculators — primary unregistered tool count
+Subject Category,cybersecurity-data,65,104,3.75%,Cybersecurity & Data Management — primary unregistered tool count
+Subject Category,electrical,55,102,3.68%,Electrical Calculators — primary unregistered tool count
+Subject Category,everyday,32,91,3.29%,Everyday Calculators — primary unregistered tool count
+Subject Category,energy-solar,45,81,2.92%,Energy & Solar Calculators — primary unregistered tool count
+Subject Category,checkers,25,71,2.56%,Checkers & Validators — primary unregistered tool count
+Subject Category,aviation-transport,43,70,2.53%,Aviation & Transportation — primary unregistered tool count
+Subject Category,text-writing,28,56,2.02%,Text & Writing Analysis Tools — primary unregistered tool count
+Subject Category,planners,36,55,1.99%,Planners & Organizers — primary unregistered tool count
+Subject Category,environmental-sustainability,34,42,1.52%,Environmental & Sustainability — primary unregistered tool count
+Subject Category,trackers,29,41,1.48%,Trackers & Metrics — primary unregistered tool count
+Subject Category,logistics-shipping,33,39,1.41%,Logistics & Shipping Calculators — primary unregistered tool count
+Subject Category,automotive,27,38,1.37%,Automotive & Transport Calculators — primary unregistered tool count
+Subject Category,tools,24,25,0.90%,Developer & Everyday Digital Tools — primary unregistered tool count
+Subject Category,healthcare-operations,15,25,0.90%,Healthcare Operations Calculators — primary unregistered tool count
+Subject Category,telecom-internet,20,25,0.90%,Telecommunications & Internet — primary unregistered tool count
+Subject Category,agriculture-farming,10,15,0.54%,Agriculture & Farming Calculators — primary unregistered tool count
+Subject Category,basic-math,11,13,0.47%,Basic Math Calculators — primary unregistered tool count
+Subject Category,additional-tools,8,9,0.32%,Additional Tools & Utilities — primary unregistered tool count
+Subject Category,food-service,7,8,0.29%,Food Service & Hospitality — primary unregistered tool count
+Subject Category,pdf-tools,6,8,0.29%,PDF Document Suite — primary unregistered tool count
+Subject Category,statistics,5,7,0.25%,Statistics & Probability Calculators — primary unregistered tool count
+Subject Category,ecommerce,5,7,0.25%,E-commerce & Retail Calculators — primary unregistered tool count
+Subject Category,animal-world,5,7,0.25%,Animal World Calculators — primary unregistered tool count
+Subject Category,datetime,3,7,0.25%,Date & Time Calculators — primary unregistered tool count
+Subject Category,sports-athletics,6,6,0.22%,Sports & Athletics Performance — primary unregistered tool count
+Subject Category,personal-productivity,6,6,0.22%,Personal Productivity & Planning — primary unregistered tool count
+Subject Category,education-finance,4,5,0.18%,Education & Student Finance — primary unregistered tool count
+Subject Category,real-estate,4,4,0.14%,Real Estate & Property Calculators — primary unregistered tool count
+Subject Category,algebra,3,3,0.11%,Algebra Calculators — primary unregistered tool count
+Subject Category,geometry,2,3,0.11%,Geometry Calculators — primary unregistered tool count
+Subject Category,tax-accounting,2,3,0.11%,Tax & Accounting Calculators — primary unregistered tool count
+Subject Category,retail-supply-chain,2,2,0.07%,Retail & Supply Chain — primary unregistered tool count
+Subject Category,insurance-risk,2,2,0.07%,Insurance & Risk Calculators — primary unregistered tool count
+Subject Category,salary-compensation,2,2,0.07%,Salary & Compensation Calculators — primary unregistered tool count
+Subject Category,trigonometry,1,1,0.04%,Trigonometry Calculators — primary unregistered tool count

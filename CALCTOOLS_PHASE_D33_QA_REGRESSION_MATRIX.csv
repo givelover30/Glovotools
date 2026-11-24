@@ -1,0 +1,11 @@
+test_category,test_identifier,verification_scope,expected_result,mandatory_passing_criteria
+Catalog Integrity,TC-CAT-01,"4,400 raw records",Exact raw count preserved,100% raw preservation
+Catalog Integrity,TC-CAT-02,"4,375 unique tool IDs",Deduplicated unique count preserved,100% unique preservation
+Catalog Integrity,TC-CAT-03,25 duplicate IDs / 50 raw occurrences,Both occurrences indexed without mutation,Zero duplicate loss
+Taxonomy Integrity,TC-TAX-01,Subcategory parent linkage,Every subcategory maps to exactly 1 valid subject category,Zero orphan or multi-parent subcategories
+Taxonomy Integrity,TC-TAX-02,Zero-subcategory categories,"education-science, developer-it, text-writing populated via approved proposals",100% subcategory coverage
+Resolver Integrity,TC-RES-01,DIRECT_CANONICAL state,Valid canonical subcategories resolve directly,100% success rate
+Resolver Integrity,TC-RES-02,ALIAS_RESOLVED state,Legacy aliases resolve to correct canonical target,100% alias map resolution
+Resolver Integrity,TC-RES-03,CATEGORY_FALLBACK & UNRESOLVED states,Unresolved items fall back gracefully without counting as canonical success,Zero false-positive classification
+Functional Integrity,TC-FUN-01,Calculation contracts & formulas,"Calculation inputs, outputs, and formulas remain 100% identical",Zero formula drift
+Functional Integrity,TC-FUN-02,URL routes & SEO metadata,Calculator and category routes function without redirection loops,100% route health

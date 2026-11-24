@@ -1,0 +1,346 @@
+import { CalculatorMeta, SubcategoryMeta } from '../../types.ts';
+
+export const PHASE25_SUBCATEGORIES: Omit<SubcategoryMeta, 'count'>[] = [
+  { id: 'p25-sub-org', categoryId: 'pdf-tools', name: 'PDF Organization & Page Management', slug: 'pdf-organization-management', description: 'Merge, split, extract, delete, rotate, reorder, and count pages in PDF documents', sortOrder: 250 },
+  { id: 'p25-sub-edit', categoryId: 'pdf-tools', name: 'PDF Document Editing & Layout', slug: 'pdf-document-editing', description: 'Add watermarks, page numbers, text annotations, metadata, resize, and crop PDF pages', sortOrder: 251 },
+  { id: 'p25-sub-conv', categoryId: 'pdf-tools', name: 'PDF Conversion & Optimization', slug: 'pdf-conversion-optimization', description: 'Compress file size, convert images to PDF, render PDF to images, extract images, and convert PDF to text', sortOrder: 252 },
+  { id: 'p25-sub-sec', categoryId: 'pdf-tools', name: 'PDF Security & Analysis', slug: 'pdf-security-analysis', description: 'Password encryption, password removal, metadata inspection, and PDF document comparison', sortOrder: 253 },
+  { id: 'p25-sub-adv', categoryId: 'pdf-tools', name: 'Advanced PDF Processing', slug: 'pdf-advanced-processing', description: 'Browser-local OCR text recognition and damaged PDF file structure repair', sortOrder: 254 }
+];
+
+export const PHASE25_METADATA: CalculatorMeta[] = [
+  // --- GROUP 1: PDF ORGANIZATION (8 tools including upgraded extractor-merger) ---
+  {
+    id: 'pdf-merge',
+    name: 'Merge PDF Files',
+    shortDesc: 'Combine multiple PDF documents into a single unified PDF file entirely client-side in your browser',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'merge', 'combine', 'documents', 'organization'],
+    formula: 'PDF stream concatenation via pdf-lib',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-split',
+    name: 'Split PDF Document',
+    shortDesc: 'Split a large PDF into individual page files or extract custom page ranges into separate documents',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'split', 'extract', 'pages', 'organization'],
+    formula: 'Page range extraction and multi-document generation',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-extract-pages',
+    name: 'Extract PDF Pages',
+    shortDesc: 'Extract specific pages or page ranges from a PDF document into a new downloadable PDF file',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'extract', 'pages', 'organization'],
+    formula: 'Target page index copying to new PDF document',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-delete-pages',
+    name: 'Delete PDF Pages',
+    shortDesc: 'Remove unwanted pages from a PDF document and export the cleaned resulting file',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'delete', 'pages', 'remove', 'organization'],
+    formula: 'Exclusion index filtering and document reconstruction',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-rotate-pages',
+    name: 'Rotate PDF Pages',
+    shortDesc: 'Rotate PDF pages by 90, 180, or 270 degrees clockwise or counter-clockwise',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'rotate', 'orientation', 'pages', 'organization'],
+    formula: 'Page rotation matrix transformation (0, 90, 180, 270 deg)',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-reorder-pages',
+    name: 'Reorder PDF Pages',
+    shortDesc: 'Rearrange page sequences in a PDF document by dragging or specifying custom sort order',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'reorder', 'sort', 'pages', 'organization'],
+    formula: 'Custom index array remapping and document generation',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-page-counter',
+    name: 'PDF Page Counter & Info Inspector',
+    shortDesc: 'Instantly inspect total page count, file size, dimensions, and structural properties of PDF files',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['pdf', 'counter', 'pages', 'info', 'inspector'],
+    formula: 'PDF dictionary page count and metadata parsing',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-extractor-merger',
+    name: 'PDF Page Extractor & Merger Utility',
+    shortDesc: 'Select, extract specific page ranges, and merge multiple PDF documents entirely client-side in the browser',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-org',
+    tags: ['tools', 'pdf', 'extractor', 'merger', 'document', 'client-side'],
+    formula: 'PDF stream concatenation and page index extraction',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+
+  // --- GROUP 2: PDF EDITING (6 tools) ---
+  {
+    id: 'pdf-add-watermark',
+    name: 'Add Watermark to PDF',
+    shortDesc: 'Stamp custom text or image watermarks across all pages of a PDF document with adjustable opacity',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'watermark', 'stamp', 'security', 'editing'],
+    formula: 'Text/Image overlay rendering on PDF page canvas',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-add-page-numbers',
+    name: 'Add Page Numbers to PDF',
+    shortDesc: 'Insert professional page numbers (e.g. Page X of Y) into headers or footers of PDF documents',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'page-numbers', 'header', 'footer', 'editing'],
+    formula: 'Dynamic page numbering insertion across document pages',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-add-text',
+    name: 'Add Text Annotations to PDF',
+    shortDesc: 'Insert custom text notes, labels, or annotations onto specific pages and coordinates of a PDF',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'add-text', 'annotation', 'editing'],
+    formula: 'Coordinate-based text drawing operations on PDF canvas',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-metadata-editor',
+    name: 'PDF Metadata Editor',
+    shortDesc: 'Edit PDF document title, author, subject, keywords, and creator metadata properties',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'metadata', 'author', 'title', 'editing'],
+    formula: 'PDF Document Information Dictionary (InfoDict) updates',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-page-resizer',
+    name: 'PDF Page Resizer',
+    shortDesc: 'Resize PDF pages between standard formats (A4, Letter, A3, Legal) or custom dimensions',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'resizer', 'dimensions', 'format', 'editing'],
+    formula: 'Page media box scaling and transformation',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-crop-pages',
+    name: 'PDF Crop Pages',
+    shortDesc: 'Crop margins and adjust visible bounding boxes of PDF pages',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-edit',
+    tags: ['pdf', 'crop', 'margins', 'bounding-box', 'editing'],
+    formula: 'CropBox and MediaBox boundary adjustments',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+
+  // --- GROUP 3: CONVERSION & OPTIMIZATION (5 tools) ---
+  {
+    id: 'pdf-compress',
+    name: 'Compress PDF File Size',
+    shortDesc: 'Optimize and compress PDF document size by removing redundant streams and compressing image assets',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-conv',
+    tags: ['pdf', 'compress', 'optimize', 'file-size', 'conversion'],
+    formula: 'Stream optimization and asset compression',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-images-to-pdf',
+    name: 'Images to PDF Converter',
+    shortDesc: 'Convert multiple JPG, PNG, or WebP images into a single professional PDF document',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-conv',
+    tags: ['pdf', 'images-to-pdf', 'jpg', 'png', 'conversion'],
+    formula: 'Image embedding into new PDF pages',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-to-images',
+    name: 'PDF to Images Converter',
+    shortDesc: 'Render PDF pages into high-resolution PNG or JPEG image files',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-conv',
+    tags: ['pdf', 'pdf-to-images', 'png', 'jpeg', 'conversion'],
+    formula: 'Canvas rendering of PDF pages to image blobs',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-extract-images',
+    name: 'Extract Images from PDF',
+    shortDesc: 'Extract all embedded photographs and graphic image assets from a PDF document',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-conv',
+    tags: ['pdf', 'extract-images', 'assets', 'conversion'],
+    formula: 'Embedded XObject image stream extraction',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-to-text',
+    name: 'PDF to Text Extractor',
+    shortDesc: 'Extract all textual content and plain text layers from a PDF document for copying or export',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-conv',
+    tags: ['pdf', 'pdf-to-text', 'text-extraction', 'conversion'],
+    formula: 'Text content stream parsing and string extraction',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+
+  // --- GROUP 4: SECURITY & ANALYSIS (4 tools) ---
+  {
+    id: 'pdf-protect-password',
+    name: 'Protect PDF with Password',
+    shortDesc: 'Encrypt and secure PDF documents with user and owner passwords (AES/RC4 encryption)',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-sec',
+    tags: ['pdf', 'protect', 'password', 'encrypt', 'security'],
+    formula: 'PDF Standard Security Handler & Encryption',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-remove-password',
+    name: 'Remove PDF Password Security',
+    shortDesc: 'Decrypt and remove password protection from authorized PDF documents when password is known',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-sec',
+    tags: ['pdf', 'remove-password', 'decrypt', 'security'],
+    formula: 'Password authentication and unencrypted re-saving',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-metadata-viewer',
+    name: 'PDF Metadata & Properties Viewer',
+    shortDesc: 'Inspect comprehensive internal PDF properties, author, creation date, modification date, and encryption status',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-sec',
+    tags: ['pdf', 'metadata', 'viewer', 'properties', 'analysis'],
+    formula: 'Document Info dictionary and trailer catalog inspection',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-comparison',
+    name: 'PDF Document Comparison',
+    shortDesc: 'Compare page counts, file sizes, metadata, and structural properties between two PDF documents',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-sec',
+    tags: ['pdf', 'comparison', 'diff', 'analysis'],
+    formula: 'Differential property analysis between two PDF files',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+
+  // --- GROUP 5: ADVANCED PROCESSING (2 tools) ---
+  {
+    id: 'pdf-ocr',
+    name: 'PDF OCR Text Recognition',
+    shortDesc: 'Perform browser-local Optical Character Recognition (OCR) on scanned PDF pages to extract searchable text',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-adv',
+    tags: ['pdf', 'ocr', 'text-recognition', 'scanned', 'advanced'],
+    formula: 'Canvas rendering and OCR text pattern recognition',
+    isPopular: true,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  },
+  {
+    id: 'pdf-repair',
+    name: 'PDF Structure Repair Utility',
+    shortDesc: 'Attempt structural recovery and repair of corrupted or damaged PDF documents',
+    category: 'pdf-tools',
+    subcategoryId: 'p25-sub-adv',
+    tags: ['pdf', 'repair', 'recovery', 'corrupted', 'advanced'],
+    formula: 'Trailer reconstruction and object stream recovery parsing',
+    isPopular: false,
+    iconName: 'FileText',
+    iconColor: '#DC2626',
+    iconBg: '#FEF2F2'
+  }
+];

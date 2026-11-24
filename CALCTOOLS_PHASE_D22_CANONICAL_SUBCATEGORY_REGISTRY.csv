@@ -1,0 +1,493 @@
+subcategory_id,subcategory_name,parent_category_id,parent_category_title,assigned_unique_tools_by_subcategory_id,assigned_unique_tools_same_parent_category,registry_reported_count,is_active,has_valid_routes,route_path,usage_status,naming_or_duplication_notes
+percentages-fractions,Percentages & Fractions,basic-math,Basic Math Calculators,8,8,8,TRUE,TRUE,/categories/basic-math/percentages-fractions,Active / Populated,Clean
+arithmetic-operations,Arithmetic & Operations,basic-math,Basic Math Calculators,8,8,8,TRUE,TRUE,/categories/basic-math/arithmetic,Active / Populated,Clean
+ratios-proportions,Ratios & Proportions,basic-math,Basic Math Calculators,5,5,5,TRUE,TRUE,/categories/basic-math/ratios-proportions,Active / Populated,Clean
+rounding-estimation,Rounding & Estimation,basic-math,Basic Math Calculators,4,4,4,TRUE,TRUE,/categories/basic-math/rounding-estimation,Active / Populated,Clean
+quadratic-equations,Quadratic Equations,algebra,Algebra Calculators,4,4,4,TRUE,TRUE,/categories/algebra/quadratic,Active / Populated,Clean
+linear-equations,Linear Equations,algebra,Algebra Calculators,5,5,5,TRUE,TRUE,/categories/algebra/linear,Active / Populated,Clean
+polynomials-factoring,Polynomials & Factoring,algebra,Algebra Calculators,6,6,6,TRUE,TRUE,/categories/algebra/polynomials,Active / Populated,Clean
+systems-inequalities,Systems & Inequalities,algebra,Algebra Calculators,5,5,5,TRUE,TRUE,/categories/algebra/systems,Active / Populated,Clean
+plane-geometry-area,2D Area & Perimeter,geometry,Geometry Calculators,7,7,7,TRUE,TRUE,/categories/geometry/area-perimeter,Active / Populated,Clean
+solid-geometry-volume,3D Volume & Surface Area,geometry,Geometry Calculators,9,9,9,TRUE,TRUE,/categories/geometry/volume-surface,Active / Populated,Clean
+circles-arcs,Circles & Arcs,geometry,Geometry Calculators,4,4,4,TRUE,TRUE,/categories/geometry/circles-arcs,Active / Populated,Clean
+coordinate-geometry,Coordinate Geometry,geometry,Geometry Calculators,2,2,2,TRUE,TRUE,/categories/geometry/coordinate,Active / Populated,Clean
+right-triangles,Right Triangles & Pythagorean,trigonometry,Trigonometry Calculators,3,3,3,TRUE,TRUE,/categories/trigonometry/right-triangles,Active / Populated,Clean
+trig-functions,Trigonometric Functions,trigonometry,Trigonometry Calculators,5,5,5,TRUE,TRUE,/categories/trigonometry/functions,Active / Populated,Clean
+oblique-triangles,Oblique Triangles,trigonometry,Trigonometry Calculators,2,2,2,TRUE,TRUE,/categories/trigonometry/oblique-triangles,Active / Populated,Clean
+identities-harmonics,Identities & Angle Formulas,trigonometry,Trigonometry Calculators,2,2,2,TRUE,TRUE,/categories/trigonometry/identities,Active / Populated,Clean
+descriptive-statistics,Descriptive Statistics,statistics,Statistics & Probability Calculators,8,8,8,TRUE,TRUE,/categories/statistics/descriptive,Active / Populated,Clean
+combinatorics-probability,Combinatorics & Probability,statistics,Statistics & Probability Calculators,6,6,6,TRUE,TRUE,/categories/statistics/combinatorics,Active / Populated,Clean
+distributions,Statistical Distributions,statistics,Statistics & Probability Calculators,8,8,8,TRUE,TRUE,/categories/statistics/distributions,Active / Populated,Clean
+regression-correlation,Correlation & Regression,statistics,Statistics & Probability Calculators,3,3,3,TRUE,TRUE,/categories/statistics/regression,Active / Populated,Clean
+powers-exponents,Powers & Exponents,scientific,Scientific Calculators,4,4,4,TRUE,TRUE,/categories/scientific/powers-exponents,Active / Populated,Clean
+logarithms,Logarithms,scientific,Scientific Calculators,2,2,2,TRUE,TRUE,/categories/scientific/logarithms,Active / Populated,Clean
+precision-scientific,Precision Scientific Engine,scientific,Scientific Calculators,3,3,3,TRUE,TRUE,/categories/scientific/precision,Active / Populated,Clean
+constants-sequences,Constants & Sequences,scientific,Scientific Calculators,3,3,3,TRUE,TRUE,/categories/scientific/constants,Active / Populated,Clean
+loans-mortgages,Loans & Mortgages,financial,Financial Calculators,11,11,11,TRUE,TRUE,/categories/financial/mortgage,Active / Populated,Clean
+compound-investments,Compound Interest & Investments,financial,Financial Calculators,11,11,11,TRUE,TRUE,/categories/financial/investing,Active / Populated,Clean
+retirement-savings,Retirement & Savings,financial,Financial Calculators,10,10,10,TRUE,TRUE,/categories/financial/retirement,Active / Populated,Clean
+depreciation-tax,Depreciation & Capital,financial,Financial Calculators,10,10,10,TRUE,TRUE,/categories/financial/depreciation,Active / Populated,Clean
+break-even-analysis,Break-Even Analysis,business,Business Calculators,5,5,5,TRUE,TRUE,/categories/business/break-even,Active / Populated,Clean
+profit-margins-markup,Profit Margins & Markup,business,Business Calculators,5,5,5,TRUE,TRUE,/categories/business/margins,Active / Populated,Clean
+roi-npv,ROI & Return on Investment,business,Business Calculators,5,5,5,TRUE,TRUE,/categories/business/roi,Active / Populated,Clean
+valuation-ratios,Financial Ratios & Metrics,business,Business Calculators,4,4,4,TRUE,TRUE,/categories/business/valuation,Active / Populated,Clean
+concrete-masonry,Concrete & Masonry,construction,Construction Calculators,8,8,8,TRUE,TRUE,/categories/construction/concrete,Active / Populated,Clean
+flooring-materials,Flooring & Tile,construction,Construction Calculators,7,7,7,TRUE,TRUE,/categories/construction/flooring,Active / Populated,Clean
+framing-lumber,Framing & Lumber,construction,Construction Calculators,7,7,7,TRUE,TRUE,/categories/construction/framing,Active / Populated,Clean
+paint-roofing,Paint & Surface Coating,construction,Construction Calculators,8,8,8,TRUE,TRUE,/categories/construction/roofing,Active / Populated,Clean
+body-composition,Body Composition & Mass,health-fitness,Health & Fitness Calculators,11,11,11,TRUE,TRUE,/categories/health-fitness/body-mass,Active / Populated,Clean
+metabolic-energy,Metabolic Rate & Energy,health-fitness,Health & Fitness Calculators,6,6,6,TRUE,TRUE,/categories/health-fitness/calories,Active / Populated,Clean
+target-heart-rate,Target Heart Rate,health-fitness,Health & Fitness Calculators,6,6,6,TRUE,TRUE,/categories/health-fitness/heart-rate,Active / Populated,Clean
+macronutrients-nutrition,Macronutrients & Diet Math,health-fitness,Health & Fitness Calculators,6,6,6,TRUE,TRUE,/categories/health-fitness/macronutrients,Active / Populated,Clean
+chronological-age,Chronological Age,datetime,Date & Time Calculators,4,4,4,TRUE,TRUE,/categories/datetime/age,Active / Populated,Clean
+date-math-differences,Date Differences & Math,datetime,Date & Time Calculators,4,4,4,TRUE,TRUE,/categories/datetime/date-difference,Active / Populated,Clean
+business-working-days,Business & Working Days,datetime,Date & Time Calculators,4,4,4,TRUE,TRUE,/categories/datetime/business-days,Active / Populated,Clean
+time-durations,Time Durations & Clock Math,datetime,Date & Time Calculators,4,4,4,TRUE,TRUE,/categories/datetime/time-duration,Active / Populated,Clean
+ohms-law-power,Ohm's Law & Power,electrical,Electrical Calculators,5,5,5,TRUE,TRUE,/categories/electrical/ohms-law,Active / Populated,Clean
+energy-consumption,Energy Consumption & Cost,electrical,Electrical Calculators,5,5,5,TRUE,TRUE,/categories/electrical/energy-cost,Active / Populated,Clean
+wire-sizing-drop,Voltage Drop & Resistance,electrical,Electrical Calculators,4,4,4,TRUE,TRUE,/categories/electrical/voltage-drop,Active / Populated,Clean
+circuits-impedance,Series & Parallel Circuits,electrical,Electrical Calculators,4,4,4,TRUE,TRUE,/categories/electrical/circuits,Active / Populated,Clean
+hydraulics-fluid,Hydraulics & Fluid Power,engineering,Engineering Calculators,6,6,6,TRUE,TRUE,/categories/engineering/hydraulics,Active / Populated,Clean
+mechanics-energy,Mechanics & Energy,engineering,Engineering Calculators,6,6,6,TRUE,TRUE,/categories/engineering/mechanics,Active / Populated,Clean
+structural-beam,Structural Beam Mechanics,engineering,Engineering Calculators,4,4,4,TRUE,TRUE,/categories/engineering/structural,Active / Populated,Clean
+thermodynamics,Thermodynamics & Heat,engineering,Engineering Calculators,33,7,33,TRUE,TRUE,/categories/engineering/thermodynamics,Active / Populated,26 tool(s) reference this subcategoryId under a different parent category
+dining-tipping,Dining & Tip Splitting,everyday,Everyday Calculators,4,4,4,TRUE,TRUE,/categories/everyday/tipping,Active / Populated,Clean
+shopping-discounts,Shopping Discounts & Tax,everyday,Everyday Calculators,4,4,4,TRUE,TRUE,/categories/everyday/discounts,Active / Populated,Clean
+automotive-fuel,Fuel Economy & Trip Cost,everyday,Everyday Calculators,3,3,3,TRUE,TRUE,/categories/everyday/fuel-economy,Active / Populated,Shared slug across parent categories (scoped cleanly by parent category route)
+cooking-baking-ratios,Recipe & Baking Ratios,everyday,Everyday Calculators,3,3,3,TRUE,TRUE,/categories/everyday/recipe-scaling,Active / Populated,Clean
+income-taxes,Income & Federal Taxes,tax-accounting,Tax & Accounting Calculators,1,1,1,TRUE,TRUE,/categories/tax-accounting/income-taxes,Active / Populated,Clean
+sales-vat,Sales Tax & VAT,tax-accounting,Tax & Accounting Calculators,1,1,1,TRUE,TRUE,/categories/tax-accounting/sales-vat,Active / Populated,Clean
+self-employment-tax,Self-Employment & FICA,tax-accounting,Tax & Accounting Calculators,1,1,1,TRUE,TRUE,/categories/tax-accounting/self-employment-tax,Active / Populated,Clean
+mortgages-loans,Mortgages & Home Loans,real-estate,Real Estate & Property Calculators,1,1,1,TRUE,TRUE,/categories/real-estate/mortgages-loans,Active / Populated,Clean
+investment-roi,Investment & Rental ROI,real-estate,Real Estate & Property Calculators,1,1,1,TRUE,TRUE,/categories/real-estate/investment-roi,Active / Populated,Clean
+rent-vs-buy,Rent vs. Buy Analysis,real-estate,Real Estate & Property Calculators,1,1,1,TRUE,TRUE,/categories/real-estate/rent-vs-buy,Active / Populated,Clean
+marketplace-fees,Marketplace & FBA Fees,ecommerce,E-commerce & Retail Calculators,1,1,1,TRUE,TRUE,/categories/ecommerce/marketplace-fees,Active / Populated,Clean
+pricing-margins,Pricing & Profit Margins,ecommerce,E-commerce & Retail Calculators,1,1,1,TRUE,TRUE,/categories/ecommerce/pricing-margins,Active / Populated,Clean
+retail-break-even,Retail Break-Even,ecommerce,E-commerce & Retail Calculators,1,1,1,TRUE,TRUE,/categories/ecommerce/retail-break-even,Active / Populated,Clean
+solar-systems,Solar Panel Systems,energy-solar,Energy & Solar Calculators,1,1,1,TRUE,TRUE,/categories/energy-solar/solar-systems,Active / Populated,Clean
+life-health-risk,Life & Health Risk,insurance-risk,Insurance & Risk Calculators,1,1,1,TRUE,TRUE,/categories/insurance-risk/life-health-risk,Active / Populated,Clean
+property-casualty,Property & Casualty Deductibles,insurance-risk,Insurance & Risk Calculators,1,1,1,TRUE,TRUE,/categories/insurance-risk/property-casualty,Active / Populated,Clean
+vehicle-financing,Vehicle Financing & Depreciation,automotive,Automotive & Transport Calculators,1,1,1,TRUE,TRUE,/categories/automotive/vehicle-financing,Active / Populated,Clean
+transport-travel,Transport & Road Trip Travel,automotive,Automotive & Transport Calculators,1,1,1,TRUE,TRUE,/categories/automotive/transport-travel,Active / Populated,Clean
+student-loans,Student Loans & Repayment,education-finance,Education & Student Finance,2,2,2,TRUE,TRUE,/categories/education-finance/student-loans,Active / Populated,Clean
+college-savings,College Savings & 529 Plans,education-finance,Education & Student Finance,1,1,1,TRUE,TRUE,/categories/education-finance/college-savings,Active / Populated,Clean
+salary-conversion,Salary & Hourly Wage Conversion,salary-compensation,Salary & Compensation Calculators,1,1,1,TRUE,TRUE,/categories/salary-compensation/salary-conversion,Active / Populated,Clean
+paycheck-net-pay,Paycheck Net Pay & Bonuses,salary-compensation,Salary & Compensation Calculators,2,2,2,TRUE,TRUE,/categories/salary-compensation/paycheck-net-pay,Active / Populated,Clean
+retirement-growth,Retirement 401(k) Growth & Match,salary-compensation,Salary & Compensation Calculators,1,1,1,TRUE,TRUE,/categories/salary-compensation/retirement-growth,Active / Populated,Clean
+deposit-accounts,Deposit Accounts & CDs,banking-savings,Banking & Savings Calculators,1,1,1,TRUE,TRUE,/categories/banking-savings/deposit-accounts,Active / Populated,Clean
+savings-accumulation,Savings Accumulation & Growth,banking-savings,Banking & Savings Calculators,1,1,1,TRUE,TRUE,/categories/banking-savings/savings-accumulation,Active / Populated,Clean
+saas-unit-economics,SaaS & Unit Economics,business-operations,Business Operations Calculators,1,1,1,TRUE,TRUE,/categories/business-operations/saas-unit-economics,Active / Populated,Clean
+human-resources,Human Resources & Retention,business-operations,Business Operations Calculators,3,1,3,TRUE,TRUE,/categories/business-operations/human-resources,Active / Populated,2 tool(s) reference this subcategoryId under a different parent category
+freight-parcel,Freight & Parcel Shipping,logistics-shipping,Logistics & Shipping Calculators,2,2,2,TRUE,TRUE,/categories/logistics-shipping/freight-parcel,Active / Populated,Clean
+inventory-management,Inventory Management & EOQ,manufacturing-inventory,Manufacturing & Inventory Calculators,3,3,3,TRUE,TRUE,/categories/manufacturing-inventory/inventory-management,Active / Populated,Clean
+plant-operations,Plant Operations & OEE,manufacturing-inventory,Manufacturing & Inventory Calculators,1,1,1,TRUE,TRUE,/categories/manufacturing-inventory/plant-operations,Active / Populated,Clean
+crop-management,Crop Yield & Harvest Management,agriculture-farming,Agriculture & Farming Calculators,1,1,1,TRUE,TRUE,/categories/agriculture-farming/crop-management,Active / Populated,Clean
+soil-nutrients,Soil Nutrients & Fertilizer N-P-K,agriculture-farming,Agriculture & Farming Calculators,1,1,1,TRUE,TRUE,/categories/agriculture-farming/soil-nutrients,Active / Populated,Clean
+clinic-management,Clinic Patient Throughput & Wait Times,healthcare-operations,Healthcare Operations Calculators,1,1,1,TRUE,TRUE,/categories/healthcare-operations/clinic-management,Active / Populated,Clean
+clinical-admin,Clinical Administration & IV Drips,healthcare-operations,Healthcare Operations Calculators,1,1,1,TRUE,TRUE,/categories/healthcare-operations/clinical-admin,Active / Populated,Clean
+network-performance,Network Performance & Bandwidth,telecom-internet,Telecommunications & Internet,2,2,2,TRUE,TRUE,/categories/telecom-internet/network-performance,Active / Populated,Clean
+time-management,Time Management & Pomodoro Planning,personal-productivity,Personal Productivity & Planning,4,2,4,TRUE,TRUE,/categories/personal-productivity/time-management,Active / Populated,2 tool(s) reference this subcategoryId under a different parent category
+personal-wellness,Personal Wellness & Hydration,personal-productivity,Personal Productivity & Planning,1,1,1,TRUE,TRUE,/categories/personal-productivity/personal-wellness,Active / Populated,Clean
+personal-finance,Personal Finance & Net Worth,personal-productivity,Personal Productivity & Planning,2,1,2,TRUE,TRUE,/categories/personal-productivity/personal-finance,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+goal-tracking,Goal Tracking & Habit Streaks,personal-productivity,Personal Productivity & Planning,1,1,1,TRUE,TRUE,/categories/personal-productivity/goal-tracking,Active / Populated,Clean
+carbon-accounting,Carbon Accounting & Emissions,environmental-sustainability,Environmental & Sustainability,3,3,3,TRUE,TRUE,/categories/environmental-sustainability/carbon-accounting,Active / Populated,Clean
+renewable-offset,Renewable Offset & Solar Savings,environmental-sustainability,Environmental & Sustainability,1,1,1,TRUE,TRUE,/categories/environmental-sustainability/renewable-offset,Active / Populated,Clean
+menu-costing,Menu Costing & Recipe Pricing,food-service,Food Service & Hospitality,1,1,1,TRUE,TRUE,/categories/food-service/menu-costing,Active / Populated,Clean
+restaurant-operations,Restaurant Operations & Table Turnover,food-service,Food Service & Hospitality,1,1,1,TRUE,TRUE,/categories/food-service/restaurant-operations,Active / Populated,Clean
+flight-navigation,Flight Navigation & Airspeed,aviation-transport,Aviation & Transportation,1,1,1,TRUE,TRUE,/categories/aviation-transport/flight-navigation,Active / Populated,Clean
+flight-planning,Aircraft Fuel Burn & Range Planning,aviation-transport,Aviation & Transportation,4,4,4,TRUE,TRUE,/categories/aviation-transport/flight-planning,Active / Populated,Clean
+information-security,Information Security & Passwords,cybersecurity-data,Cybersecurity & Data Management,1,1,1,TRUE,TRUE,/categories/cybersecurity-data/information-security,Active / Populated,Clean
+cloud-infrastructure,Cloud Infrastructure & Storage Costs,cybersecurity-data,Cybersecurity & Data Management,1,1,1,TRUE,TRUE,/categories/cybersecurity-data/cloud-infrastructure,Active / Populated,Clean
+data-storage,Data Storage & RAID Fault Tolerance,cybersecurity-data,Cybersecurity & Data Management,1,1,1,TRUE,TRUE,/categories/cybersecurity-data/data-storage,Active / Populated,Clean
+datacenter-efficiency,Data Center Efficiency & PUE,cybersecurity-data,Cybersecurity & Data Management,1,1,1,TRUE,TRUE,/categories/cybersecurity-data/datacenter-efficiency,Active / Populated,Clean
+contract-law,Contract Law & NDA Damages,legal-compliance,Legal & Compliance,1,1,1,TRUE,TRUE,/categories/legal-compliance/contract-law,Active / Populated,Clean
+data-privacy,Data Privacy & GDPR Compliance,legal-compliance,Legal & Compliance,1,1,1,TRUE,TRUE,/categories/legal-compliance/data-privacy,Active / Populated,Clean
+commercial-re,Commercial Real Estate & Cap Rate,real-estate-dev,Real Estate Development,1,1,1,TRUE,TRUE,/categories/real-estate-dev/commercial-re,Active / Populated,Clean
+property-dev,Property Development & Land Residual,real-estate-dev,Real Estate Development,1,1,1,TRUE,TRUE,/categories/real-estate-dev/property-dev,Active / Populated,Clean
+retail-inventory,Retail Open-to-Buy Planning,retail-supply-chain,Retail & Supply Chain,1,1,1,TRUE,TRUE,/categories/retail-supply-chain/retail-inventory,Active / Populated,Clean
+inventory-risk,Stockout Cost & Lost Sales,retail-supply-chain,Retail & Supply Chain,1,1,1,TRUE,TRUE,/categories/retail-supply-chain/inventory-risk,Active / Populated,Clean
+endurance-running,Endurance Running & Race Prediction,sports-athletics,Sports & Athletics Performance,1,1,1,TRUE,TRUE,/categories/sports-athletics/endurance-running,Active / Populated,Clean
+cycling-power,Cycling FTP & Training Zones,sports-athletics,Sports & Athletics Performance,1,1,1,TRUE,TRUE,/categories/sports-athletics/cycling-power,Active / Populated,Clean
+swimming,Swimming Pace & Critical Swim Speed,sports-athletics,Sports & Athletics Performance,2,2,2,TRUE,TRUE,/categories/sports-athletics/swimming,Active / Populated,Clean
+baseball-stats,Baseball Sabermetrics & Offensive Stats,sports-athletics,Sports & Athletics Performance,1,1,1,TRUE,TRUE,/categories/sports-athletics/baseball-stats,Active / Populated,Clean
+universal-conversions,Universal & Multi-Unit,converter,Unit Converter & Measurement Tools,2,2,2,TRUE,TRUE,/categories/converter/universal-conversions,Active / Populated,Clean
+length-distance,Length & Distance,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/length-distance,Active / Populated,Clean
+mass-weight,Weight & Mass,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/weight-mass,Active / Populated,Clean
+temperature-units,Temperature,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/temperature,Active / Populated,Clean
+volume-capacity,Volume & Capacity,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/volume-capacity,Active / Populated,Clean
+area-surface,Area & Land Surface,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/area-surface,Active / Populated,Clean
+digital-storage,Digital Data & Storage,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/digital-storage,Active / Populated,Clean
+speed-velocity,Speed & Velocity,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/speed-velocity,Active / Populated,Clean
+pressure-stress,Pressure & Stress,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/pressure-stress,Active / Populated,Clean
+energy-power,Energy & Power,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/energy-power,Active / Populated,Clean
+angle-conversion,Angle,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/angle,Active / Populated,Clean
+fuel-economy,Fuel Economy,converter,Unit Converter & Measurement Tools,3,1,3,TRUE,TRUE,/categories/converter/fuel-economy,Active / Populated,2 tool(s) reference this subcategoryId under a different parent category; Shared slug across parent categories (scoped cleanly by parent category route)
+torque-units,Torque,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/torque,Active / Populated,Clean
+force-units,Force,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/force,Active / Populated,Clean
+cooking-measurements,Cooking Measurement,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/cooking,Active / Populated,Clean
+typography-units,Typography,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/typography,Active / Populated,Clean
+data-transfer,Data Transfer Rate,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/data-transfer-rate,Active / Populated,Clean
+sound-level,Sound Level,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/sound-level,Active / Populated,Clean
+shoe-sizes,Shoe Size,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/shoe-size,Active / Populated,Clean
+clothing-sizes,Clothing Size,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/clothing-size,Active / Populated,Clean
+tools-text,Text Tools,tools,Developer & Everyday Digital Tools,2,2,2,TRUE,TRUE,/categories/tools/text-tools,Active / Populated,Clean
+tools-developer,Developer Tools,tools,Developer & Everyday Digital Tools,4,4,4,TRUE,TRUE,/categories/tools/developer-tools,Active / Populated,Clean
+tools-datetime,Date & Time Tools,tools,Developer & Everyday Digital Tools,1,1,1,TRUE,TRUE,/categories/tools/datetime-tools,Active / Populated,Clean
+tools-image,Image Tools,tools,Developer & Everyday Digital Tools,1,1,1,TRUE,TRUE,/categories/tools/image-tools,Active / Populated,Clean
+tools-file,File Tools,tools,Developer & Everyday Digital Tools,1,1,1,TRUE,TRUE,/categories/tools/file-tools,Active / Populated,Clean
+tools-color,Color Tools,tools,Developer & Everyday Digital Tools,1,1,1,TRUE,TRUE,/categories/tools/color-tools,Active / Populated,Clean
+tools-web,Web Tools,tools,Developer & Everyday Digital Tools,2,2,2,TRUE,TRUE,/categories/tools/web-tools,Active / Populated,Clean
+tools-productivity,Productivity Tools,tools,Developer & Everyday Digital Tools,1,1,1,TRUE,TRUE,/categories/tools/productivity-tools,Active / Populated,Clean
+generators-security,Security & Auth Generators,generators,Generators & Utilities,3,3,3,TRUE,TRUE,/categories/generators/security-generators,Active / Populated,Clean
+generators-data,Data & Text Generators,generators,Generators & Utilities,4,4,4,TRUE,TRUE,/categories/generators/data-generators,Active / Populated,Clean
+generators-web,Web & Design Generators,generators,Generators & Utilities,3,3,3,TRUE,TRUE,/categories/generators/web-generators,Active / Populated,Clean
+generators-code,Code & SEO Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/code-seo-generators,Active / Populated,Clean
+planners-financial,Financial & Shopping Planners,planners,Planners & Organizers,2,2,2,TRUE,TRUE,/categories/planners/financial-planners,Active / Populated,Clean
+planners-lifestyle,Lifestyle & Routine Planners,planners,Planners & Organizers,4,4,4,TRUE,TRUE,/categories/planners/lifestyle-planners,Active / Populated,Clean
+planners-projects,"Projects, Travel & Events Planners",planners,Planners & Organizers,4,4,4,TRUE,TRUE,/categories/planners/project-planners,Active / Populated,Clean
+checkers-data,Data & Code Validators,checkers,Checkers & Validators,7,7,7,TRUE,TRUE,/categories/checkers/data-validators,Active / Populated,Clean
+checkers-net,Network & Web Checkers,checkers,Checkers & Validators,5,5,5,TRUE,TRUE,/categories/checkers/network-checkers,Active / Populated,Clean
+checkers-security,Security & Financial Validators,checkers,Checkers & Validators,8,8,8,TRUE,TRUE,/categories/checkers/security-validators,Active / Populated,Clean
+trackers-health,Health & Wellness Trackers,trackers,Trackers & Metrics,4,4,4,TRUE,TRUE,/categories/trackers/health-trackers,Active / Populated,Clean
+trackers-fitness,Fitness & Nutrition Trackers,trackers,Trackers & Metrics,3,3,3,TRUE,TRUE,/categories/trackers/fitness-trackers,Active / Populated,Clean
+trackers-productivity,Productivity & Finance Trackers,trackers,Trackers & Metrics,3,3,3,TRUE,TRUE,/categories/trackers/productivity-trackers,Active / Populated,Clean
+guides-science,Science & Mathematics References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/science-math-guides,Active / Populated,Clean
+guides-dev,Developer & Web References,guides,Guides & References,4,4,4,TRUE,TRUE,/categories/guides/dev-guides,Active / Populated,Clean
+guides-general,General & Engineering References,guides,Guides & References,4,4,4,TRUE,TRUE,/categories/guides/general-guides,Active / Populated,Clean
+additional-dev,Developer & Data Formatting Tools,additional-tools,Additional Tools & Utilities,4,4,4,TRUE,TRUE,/categories/additional-tools/dev-formatting,Active / Populated,Clean
+additional-web,Web Encoding & Security Utilities,additional-tools,Additional Tools & Utilities,2,2,2,TRUE,TRUE,/categories/additional-tools/web-encoding,Active / Populated,Clean
+additional-media,Visual & Measurement Utilities,additional-tools,Additional Tools & Utilities,3,3,3,TRUE,TRUE,/categories/additional-tools/visual-utils,Active / Populated,Clean
+planners-expansion-projects,Advanced Project & Event Planners,planners,Planners & Organizers,4,4,4,TRUE,TRUE,/categories/planners/advanced-project-planners,Active / Populated,Clean
+planners-expansion-finance,Advanced Financial & Wealth Planners,planners,Planners & Organizers,3,3,3,TRUE,TRUE,/categories/planners/advanced-financial-planners,Active / Populated,Clean
+planners-expansion-lifestyle,Advanced Lifestyle & Goal Organizers,planners,Planners & Organizers,3,3,3,TRUE,TRUE,/categories/planners/advanced-lifestyle-planners,Active / Populated,Clean
+trackers-expansion-finance,Financial & Bill Trackers,trackers,Trackers & Metrics,2,2,2,TRUE,TRUE,/categories/trackers/financial-bill-trackers,Active / Populated,Clean
+trackers-expansion-assets,"Asset, Vehicle & Inventory Trackers",trackers,Trackers & Metrics,4,4,4,TRUE,TRUE,/categories/trackers/asset-vehicle-trackers,Active / Populated,Clean
+trackers-expansion-lifestyle,"Lifestyle, Pet & Time Trackers",trackers,Trackers & Metrics,4,4,4,TRUE,TRUE,/categories/trackers/lifestyle-pet-time-trackers,Active / Populated,Clean
+p12-calc-fin,Advanced Financial & Investment Calculators,financial,Financial Calculators,4,4,4,TRUE,TRUE,/categories/financial/advanced-financial,Active / Populated,Clean
+p12-calc-sci,Advanced Mathematical & Thermal Calculators,scientific,Scientific Calculators,5,4,5,TRUE,TRUE,/categories/scientific/advanced-math-thermal,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p12-calc-con,Structural & Footing Calculators,construction,Construction Calculators,1,1,1,TRUE,TRUE,/categories/construction/structural-footing,Active / Populated,Clean
+p12-conv,Specialized Engineering & Physical Converters,converter,Unit Converter & Measurement Tools,6,6,6,TRUE,TRUE,/categories/converter/specialized-converters,Active / Populated,Clean
+p12-check,Developer & Protocol Security Checkers,checkers,Checkers & Validators,6,6,6,TRUE,TRUE,/categories/checkers/dev-protocol-checkers,Active / Populated,Clean
+p12-gen,Advanced Code & Data Generators,generators,Generators & Utilities,6,6,6,TRUE,TRUE,/categories/generators/advanced-generators,Active / Populated,Clean
+p12-plan,Specialized Lifestyle & Business Planners,planners,Planners & Organizers,5,5,5,TRUE,TRUE,/categories/planners/specialized-planners,Active / Populated,Clean
+p12-tools,Advanced Developer Utilities & Formatters,tools,Developer & Everyday Digital Tools,6,6,6,TRUE,TRUE,/categories/tools/advanced-dev-tools,Active / Populated,Clean
+p12-track,"Health, Focus & Milestone Trackers",trackers,Trackers & Metrics,5,5,5,TRUE,TRUE,/categories/trackers/health-focus-trackers,Active / Populated,Clean
+p12-guides,Engineering & DevOps Reference Guides,guides,Guides & References,6,6,6,TRUE,TRUE,/categories/guides/devops-engineering-guides,Active / Populated,Clean
+p13-sub-const,Advanced Construction & Structural Calculators,construction,Construction Calculators,4,4,4,TRUE,TRUE,/categories/construction/advanced-construction,Active / Populated,Clean
+p13-sub-elec,Electrical Power & Renewable Engineering Calculators,scientific,Scientific Calculators,4,4,4,TRUE,TRUE,/categories/scientific/electrical-power-engineering,Active / Populated,Clean
+p13-sub-mech,Mechanical & Fluid Flow Engineering Calculators,converter,Unit Converter & Measurement Tools,3,3,3,TRUE,TRUE,/categories/converter/mechanical-fluid-flow,Active / Populated,Clean
+p13-sub-fin,Advanced Business Profit & Margin Calculators,financial,Financial Calculators,1,1,1,TRUE,TRUE,/categories/financial/advanced-business-profit,Active / Populated,Clean
+p13b-sub-conv,Advanced Engineering & Physical Unit Converters,converter,Unit Converter & Measurement Tools,7,7,7,TRUE,TRUE,/categories/converter/advanced-engineering-converters,Active / Populated,Clean
+p13b-sub-check,"Web, Security & Data Quality Checkers",checkers,Checkers & Validators,7,7,7,TRUE,TRUE,/categories/checkers/web-security-data-checkers,Active / Populated,Clean
+p13c-sub-gen,"Advanced Infrastructure, Code & Documentation Generators",generators,Generators & Utilities,7,7,7,TRUE,TRUE,/categories/generators/advanced-infra-code-generators,Active / Populated,Clean
+p13d-sub-plan,"Advanced Engineering, Production & Business Planners",planners,Planners & Organizers,6,6,6,TRUE,TRUE,/categories/planners/advanced-engineering-business-planners,Active / Populated,Clean
+p13e-sub-tools,"Advanced File, Media & Data Utilities",additional-tools,Additional Tools & Utilities,6,6,6,TRUE,TRUE,/categories/additional-tools/advanced-file-media-data-utilities,Active / Populated,Clean
+p13f-sub-track,"Advanced Engineering, Business & Operational Trackers",trackers,Trackers & Metrics,6,6,6,TRUE,TRUE,/categories/trackers/advanced-operational-trackers,Active / Populated,Clean
+p13f-sub-guides,Advanced Engineering Formula & Standards References,guides,Guides & References,7,7,7,TRUE,TRUE,/categories/guides/advanced-engineering-references,Active / Populated,Clean
+p15a-sub-calc,Phase 15A Business & Date Calculators,financial,Financial Calculators,2,1,2,TRUE,TRUE,/categories/financial/phase15a-business-date,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p15a-sub-conv,Phase 15A Radix & Number Base Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15a-radix-converter,Active / Populated,Clean
+p15a-sub-check,Phase 15A Email DNS Authentication Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15a-email-auth-checker,Active / Populated,Clean
+p15a-sub-gen,Phase 15A CSS Typography & Code Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15a-css-ts-generators,Active / Populated,Clean
+p15a-sub-plan,Phase 15A Inventory Stock Planning Tool,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15a-inventory-stock-planner,Active / Populated,Clean
+p15a-sub-tools,Phase 15A TypeScript Interface Generator,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15a-ts-generator,Active / Populated,Clean
+p15a-sub-track,Phase 15A Inventory Stock Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15a-inventory-stock-tracker,Active / Populated,Clean
+p15a-sub-guides,Phase 15A Accounting & Networking References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15a-accounting-networking-refs,Active / Populated,Clean
+p15b-sub-calc,Phase 15B Grade & Sales Tax Calculators,basic-math,Basic Math Calculators,2,1,2,TRUE,TRUE,/categories/basic-math/phase15b-grade-tax-calculators,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p15b-sub-conv,Phase 15B Time Zone UTC Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15b-timezone-converter,Active / Populated,Clean
+p15b-sub-check,Phase 15B HTML Accessibility Structure Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15b-accessibility-checker,Active / Populated,Clean
+p15b-sub-gen,Phase 15B Business Proposal Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15b-proposal-generator,Active / Populated,Clean
+p15b-sub-plan,Phase 15B Debt Snowball & Avalanche Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15b-debt-planner,Active / Populated,Clean
+p15b-sub-tools,Phase 15B Markdown Converter & Text Processor,additional-tools,Additional Tools & Utilities,2,2,2,TRUE,TRUE,/categories/additional-tools/phase15b-markdown-text-tools,Active / Populated,Clean
+p15b-sub-track,Phase 15B Subscription Renewal Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15b-subscription-tracker,Active / Populated,Clean
+p15b-sub-guides,Phase 15B Business Document & Invoice Terms Reference,guides,Guides & References,1,1,1,TRUE,TRUE,/categories/guides/phase15b-invoice-terms-ref,Active / Populated,Clean
+p15c-sub-calc,Phase 15C Unit Economics & Rental Calculators,financial,Financial Calculators,2,2,2,TRUE,TRUE,/categories/financial/phase15c-unit-economics-rental,Active / Populated,Clean
+p15c-sub-conv,Phase 15C Geographic Coordinate Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15c-geo-coordinate-converter,Active / Populated,Clean
+p15c-sub-check,Phase 15C robots.txt Directive Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15c-robots-txt-checker,Active / Populated,Clean
+p15c-sub-gen,Phase 15C SVG Icon Sprite Sheet Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15c-svg-sprite-generator,Active / Populated,Clean
+p15c-sub-plan,Phase 15C Freelance Project Pricing Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15c-freelance-pricing-planner,Active / Populated,Clean
+p15c-sub-tools,Phase 15C URL Query Builder & Parser,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15c-url-query-builder,Active / Populated,Clean
+p15c-sub-track,Phase 15C Content Publishing & Editorial Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15c-editorial-tracker,Active / Populated,Clean
+p15c-sub-guides,Phase 15C Cloud Architecture & Algorithm References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15c-cloud-algorithm-references,Active / Populated,Clean
+p15d-sub-calc,Phase 15D Overtime & Dimensional Weight Calculators,financial,Financial Calculators,2,2,2,TRUE,TRUE,/categories/financial/phase15d-overtime-dim-weight,Active / Populated,Clean
+p15d-sub-conv,Phase 15D Roman Numeral Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15d-roman-numeral-converter,Active / Populated,Clean
+p15d-sub-check,Phase 15D Canonical & Hreflang SEO Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15d-canonical-hreflang-checker,Active / Populated,Clean
+p15d-sub-gen,Phase 15D CSS Container Query Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15d-container-query-generator,Active / Populated,Clean
+p15d-sub-plan,Phase 15D Business Cash Flow Forecast Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15d-cashflow-forecast-planner,Active / Populated,Clean
+p15d-sub-tools,Phase 15D NDJSON Validator & Formatter,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15d-ndjson-validator,Active / Populated,Clean
+p15d-sub-track,Phase 15D Invoice Receivables Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15d-invoice-receivables-tracker,Active / Populated,Clean
+p15d-sub-guides,Phase 15D Incoterms & Core Web Vitals References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15d-incoterms-vitals-references,Active / Populated,Clean
+p15e-sub-calc,Phase 15E Inventory Turnover & LTV Calculators,financial,Financial Calculators,2,2,2,TRUE,TRUE,/categories/financial/phase15e-inventory-ltv-calc,Active / Populated,Clean
+p15e-sub-conv,Phase 15E Color Format Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15e-color-format-converter,Active / Populated,Clean
+p15e-sub-check,Phase 15E Meta Tags & Social Preview Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15e-meta-tags-checker,Active / Populated,Clean
+p15e-sub-gen,Phase 15E Professional Meeting Minutes Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15e-meeting-minutes-generator,Active / Populated,Clean
+p15e-sub-plan,Phase 15E Workforce & Shift Scheduling Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15e-workforce-shift-planner,Active / Populated,Clean
+p15e-sub-tools,Phase 15E SQL Query Parameterizer & Formatter,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15e-sql-parameterizer,Active / Populated,Clean
+p15e-sub-track,Phase 15E Website Uptime & Incident Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15e-uptime-incident-tracker,Active / Populated,Clean
+p15e-sub-guides,Phase 15E Database Normalization & PM References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15e-db-normalization-pm-refs,Active / Populated,Clean
+p15f-sub-calc,"Phase 15F NPV, IRR & Depreciation Calculators",financial,Financial Calculators,2,2,2,TRUE,TRUE,/categories/financial/phase15f-npv-irr-depreciation,Active / Populated,Clean
+p15f-sub-conv,Phase 15F Unicode Text Encoding Inspector,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15f-unicode-inspector,Active / Populated,Clean
+p15f-sub-check,Phase 15F XML Sitemap Structure Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15f-xml-sitemap-checker,Active / Populated,Clean
+p15f-sub-gen,Phase 15F Kubernetes YAML Manifest Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15f-k8s-manifest-generator,Active / Populated,Clean
+p15f-sub-plan,Phase 15F Procurement & Purchase Order Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15f-procurement-po-planner,Active / Populated,Clean
+p15f-sub-tools,Phase 15F Cron Expression Validator,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15f-cron-expression-validator,Active / Populated,Clean
+p15f-sub-track,Phase 15F Vendor Performance Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15f-vendor-performance-tracker,Active / Populated,Clean
+p15f-sub-guides,Phase 15F API Auth & Statistical Distributions Reference,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15f-api-auth-stats-reference,Active / Populated,Clean
+p15g-sub-calc,Phase 15G CAGR & Electricity Cost Calculators,financial,Financial Calculators,2,1,2,TRUE,TRUE,/categories/financial/phase15g-cagr-electricity-calc,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p15g-sub-conv,Phase 15G Unix Timestamp DateTime Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15g-unix-timestamp-converter,Active / Populated,Clean
+p15g-sub-check,Phase 15G CSV Data Quality & Schema Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15g-csv-data-quality-checker,Active / Populated,Clean
+p15g-sub-gen,Phase 15G OpenAPI Specification Scaffold Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15g-openapi-scaffold-generator,Active / Populated,Clean
+p15g-sub-plan,Phase 15G Preventive Maintenance Schedule Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15g-preventive-maintenance-planner,Active / Populated,Clean
+p15g-sub-tools,Phase 15G Regular Expression Tester & Explainer,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15g-regex-tester-explainer,Active / Populated,Clean
+p15g-sub-track,Phase 15G Warranty & Asset Lifecycle Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15g-warranty-asset-tracker,Active / Populated,Clean
+p15g-sub-guides,Phase 15G Software Testing & Cloud Storage References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15g-testing-cloud-storage-refs,Active / Populated,Clean
+p15h-sub-calc,Phase 15H Fuel Economy & Commission Calculators,financial,Financial Calculators,2,2,2,TRUE,TRUE,/categories/financial/phase15h-fuel-commission-calc,Active / Populated,Clean
+p15h-sub-conv,Phase 15H Number-to-Words Text Converter,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15h-number-to-words-converter,Active / Populated,Clean
+p15h-sub-check,Phase 15H JSON Schema Validation Checker,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15h-json-schema-checker,Active / Populated,Clean
+p15h-sub-gen,Phase 15H Docker Compose Config Generator,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15h-docker-compose-generator,Active / Populated,Clean
+p15h-sub-plan,Phase 15H Personal Study Schedule Planner,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15h-study-schedule-planner,Active / Populated,Clean
+p15h-sub-tools,Phase 15H HTTP Request Builder & cURL Generator,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15h-http-request-curl-generator,Active / Populated,Clean
+p15h-sub-track,Phase 15H Employee Training & Certification Tracker,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15h-training-certification-tracker,Active / Populated,Clean
+p15h-sub-guides,Phase 15H HTTP Status Codes & Backup Recovery References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15h-http-status-backup-references,Active / Populated,Clean
+p15i-sub-calc,Phase 15I Price Elasticity & Demand Economics,financial,Financial Calculators,1,1,1,TRUE,TRUE,/categories/financial/phase15i-price-elasticity-economics,Active / Populated,Clean
+p15i-sub-calc2,Phase 15I Water Consumption & Utility Tariffs,basic-math,Basic Math Calculators,1,1,1,TRUE,TRUE,/categories/basic-math/phase15i-water-consumption-utilities,Active / Populated,Clean
+p15i-sub-conv,Phase 15I JSON & XML Data Structure Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15i-json-xml-converters,Active / Populated,Clean
+p15i-sub-check,Phase 15I SSL/TLS Certificate Metadata Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15i-ssl-tls-metadata-checkers,Active / Populated,Clean
+p15i-sub-gen,Phase 15I Gitignore & Development File Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15i-gitignore-file-generators,Active / Populated,Clean
+p15i-sub-plan,Phase 15I Event Budget & Expense Planners,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15i-event-budget-expense-planners,Active / Populated,Clean
+p15i-sub-tools,Phase 15I JWT Decoders & Token Inspectors,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15i-jwt-decoders-inspectors,Active / Populated,Clean
+p15i-sub-track,Phase 15I Vehicle Mileage & Maintenance Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15i-vehicle-mileage-maintenance-trackers,Active / Populated,Clean
+p15i-sub-guides,Phase 15I DNS Resolution & Database Indexing References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15i-dns-database-references,Active / Populated,Clean
+p15j-sub-calc,Phase 15J Gross Margin & Leave Balance Calculators,business,Business Calculators,2,2,2,TRUE,TRUE,/categories/business/phase15j-margin-leave-calculators,Active / Populated,Clean
+p15j-sub-conv,Phase 15J Frequency & Wavelength Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase15j-frequency-wavelength-converters,Active / Populated,Clean
+p15j-sub-check,Phase 15J Accessibility Color Contrast Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase15j-accessibility-contrast-checkers,Active / Populated,Clean
+p15j-sub-gen,Phase 15J Professional Email Signature Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase15j-email-signature-generators,Active / Populated,Clean
+p15j-sub-plan,Phase 15J Business Continuity & Recovery Planners,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase15j-continuity-recovery-planners,Active / Populated,Clean
+p15j-sub-tools,Phase 15J Text Diff & Version Comparison Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase15j-text-diff-comparison-utilities,Active / Populated,Clean
+p15j-sub-track,Phase 15J Personal Subscription & Membership Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase15j-subscription-membership-trackers,Active / Populated,Clean
+p15j-sub-guides,Phase 15J Software Licensing & Risk Management References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase15j-licensing-risk-management-references,Active / Populated,Clean
+p16a-sub-calc,Phase 16A Three-Phase Power & Fluid Flow Calculators,electrical,Electrical Calculators,2,1,2,TRUE,TRUE,/categories/electrical/phase16a-electrical-fluid-calculators,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p16a-sub-conv,Phase 16A Engineering Notation & SI Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16a-engineering-notation-converters,Active / Populated,Clean
+p16a-sub-check,Phase 16A G-Code Syntax & Structure Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16a-gcode-syntax-checkers,Active / Populated,Clean
+p16a-sub-gen,Phase 16A Technical SVG Diagram Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16a-technical-svg-generators,Active / Populated,Clean
+p16a-sub-plan,Phase 16A Laboratory Experiment & Test Planners,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16a-lab-experiment-planners,Active / Populated,Clean
+p16a-sub-tools,Phase 16A Significant Figures & Precision Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16a-significant-figures-utilities,Active / Populated,Clean
+p16a-sub-track,Phase 16A Equipment Calibration & Inspection Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16a-equipment-calibration-trackers,Active / Populated,Clean
+p16a-sub-guides,Phase 16A Materials Science & GD&T References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16a-materials-gdt-references,Active / Populated,Clean
+p16b-sub-calc,Phase 16B Beam Deflection & Thermal Expansion Calculators,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16b-beam-thermal-calculators,Active / Populated,Clean
+p16b-sub-conv,Phase 16B Torque & Rotational Speed Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16b-torque-speed-converters,Active / Populated,Clean
+p16b-sub-check,Phase 16B Resistor Color Code & Tolerance Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16b-resistor-code-checkers,Active / Populated,Clean
+p16b-sub-gen,Phase 16B Parametric Mechanical Part Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16b-parametric-part-generators,Active / Populated,Clean
+p16b-sub-plan,Phase 16B Engineering Design Review Planners,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16b-design-review-planners,Active / Populated,Clean
+p16b-sub-tools,Phase 16B Engineering Dimensional Analysis Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16b-dimensional-analysis-utilities,Active / Populated,Clean
+p16b-sub-track,Phase 16B Laboratory Sample & Specimen Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16b-sample-specimen-trackers,Active / Populated,Clean
+p16b-sub-guides,Phase 16B Electrical Circuits & Fluid Mechanics References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16b-circuits-fluid-references,Active / Populated,Clean
+p16c-sub-calc,Phase 16C Pipe Flow & Heat Exchanger Calculators,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16c-pipe-heat-calculators,Active / Populated,Clean
+p16c-sub-conv,Phase 16C Viscosity Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16c-viscosity-converters,Active / Populated,Clean
+p16c-sub-check,Phase 16C PCB BOM & Component Reference Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16c-pcb-bom-checkers,Active / Populated,Clean
+p16c-sub-gen,Phase 16C P&ID SVG Diagram Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16c-pid-svg-generators,Active / Populated,Clean
+p16c-sub-plan,Phase 16C Machine Shop Production Schedulers,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16c-machine-shop-schedulers,Active / Populated,Clean
+p16c-sub-tools,Phase 16C Engineering Formula Rearrangement Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16c-formula-rearrangement-utilities,Active / Populated,Clean
+p16c-sub-track,Phase 16C Laboratory Chemical Inventory Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16c-chemical-inventory-trackers,Active / Populated,Clean
+p16c-sub-guides,Phase 16C Welding & Control Systems References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16c-welding-control-references,Active / Populated,Clean
+p16d-sub-calc,Phase 16D Pressure Vessel & Pump Power Calculators,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16d-vessel-pump-calculators,Active / Populated,Clean
+p16d-sub-conv,Phase 16D Thermal Conductivity Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16d-thermal-conductivity-converters,Active / Populated,Clean
+p16d-sub-check,Phase 16D CAD Drawing Scale Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16d-cad-scale-checkers,Active / Populated,Clean
+p16d-sub-gen,Phase 16D Engineering Test Report Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16d-test-report-generators,Active / Populated,Clean
+p16d-sub-plan,Phase 16D Preventive Maintenance Schedulers,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16d-maintenance-schedulers,Active / Populated,Clean
+p16d-sub-tools,Phase 16D Engineering Data Interpolation Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16d-interpolation-utilities,Active / Populated,Clean
+p16d-sub-track,Phase 16D Engineering Change Order Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16d-eco-trackers,Active / Populated,Clean
+p16d-sub-guides,Phase 16D NDT Methods & Metrology References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16d-ndt-metrology-references,Active / Populated,Clean
+p16e-sub-calc,Phase 16E Gear Train & DC Cable Loss Calculators,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16e-gear-dc-calculators,Active / Populated,Clean
+p16e-sub-conv,Phase 16E Specific Heat Capacity Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16e-specific-heat-converters,Active / Populated,Clean
+p16e-sub-check,Phase 16E Mechanical Fastener Consistency Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16e-fastener-consistency-checkers,Active / Populated,Clean
+p16e-sub-gen,Phase 16E Mechanical Fastener Sheet Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16e-fastener-sheet-generators,Active / Populated,Clean
+p16e-sub-plan,Phase 16E Engineering Prototype Build Planners,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16e-prototype-build-planners,Active / Populated,Clean
+p16e-sub-tools,Phase 16E Engineering Curve Fit & Regression Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16e-curve-fit-regression-utilities,Active / Populated,Clean
+p16e-sub-track,Phase 16E Tooling & Fixture Usage Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16e-tooling-fixture-trackers,Active / Populated,Clean
+p16e-sub-guides,Phase 16E Fasteners & Industrial Sensors References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16e-fasteners-sensors-references,Active / Populated,Clean
+p16f-sub-calc,Phase 16F Spring Rate & Pneumatic Cylinder Calculators,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16f-spring-pneumatic-calculators,Active / Populated,Clean
+p16f-sub-conv,Phase 16F Thermal Diffusivity Converters,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16f-thermal-diffusivity-converters,Active / Populated,Clean
+p16f-sub-check,Phase 16F Drawing Revision Consistency Checkers,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16f-drawing-revision-checkers,Active / Populated,Clean
+p16f-sub-gen,Phase 16F Tolerance Stack-Up Worksheet Generators,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16f-tolerance-stackup-generators,Active / Populated,Clean
+p16f-sub-plan,Phase 16F CNC Machining Setup Schedulers,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16f-cnc-machining-schedulers,Active / Populated,Clean
+p16f-sub-tools,Phase 16F Engineering Matrix Operations Utilities,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16f-matrix-operations-utilities,Active / Populated,Clean
+p16f-sub-track,Phase 16F Industrial Lubrication & Oil Trackers,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16f-lubrication-oil-trackers,Active / Populated,Clean
+p16f-sub-guides,"Phase 16F Pneumatics, Hydraulics & Fits References",guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16f-pneumatics-fits-references,Active / Populated,Clean
+p16g-sub-calc,Phase 16G Column Buckling & Transformer,engineering,Engineering Calculators,2,1,2,TRUE,TRUE,/categories/engineering/phase16g-col-trans,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p16g-sub-conv,Phase 16G Thermal Resistance,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16g-therm-res,Active / Populated,Clean
+p16g-sub-check,Phase 16G FMEA Risk,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16g-fmea,Active / Populated,Clean
+p16g-sub-gen,Phase 16G Pneumatic Diagrams,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16g-pneum-diag,Active / Populated,Clean
+p16g-sub-plan,Phase 16G Failure Investigation,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16g-fail-inv,Active / Populated,Clean
+p16g-sub-tools,Phase 16G Fourier Signal,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16g-fourier,Active / Populated,Clean
+p16g-sub-track,Phase 16G Machine Condition,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16g-mach-cond,Active / Populated,Clean
+p16g-sub-guides,Phase 16G Heat Treatment & Surface,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16g-heat-surf,Active / Populated,Clean
+p16h-sub-calc,Phase 16H Shaft Torsion & Battery Bank,engineering,Engineering Calculators,2,1,2,TRUE,TRUE,/categories/engineering/phase16h-torsion-battery,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p16h-sub-conv,Phase 16H Magnetic Flux Density,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16h-magnetic,Active / Populated,Clean
+p16h-sub-check,Phase 16H Electrical Cable Consistency,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16h-cable-check,Active / Populated,Clean
+p16h-sub-gen,Phase 16H Electrical Panel Schedule,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16h-panel-sched,Active / Populated,Clean
+p16h-sub-plan,Phase 16H Industrial Energy Audit,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16h-energy-audit,Active / Populated,Clean
+p16h-sub-tools,Phase 16H Boolean Logic & Truth Table,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16h-boolean-logic,Active / Populated,Clean
+p16h-sub-track,Phase 16H Industrial Spare Parts,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16h-spare-parts,Active / Populated,Clean
+p16h-sub-guides,Phase 16H Corrosion Protection & Bearings,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16h-corrosion-bearings,Active / Populated,Clean
+p16i-sub-calc,Phase 16I Belt Drive & RC/RL Circuit,engineering,Engineering Calculators,2,2,2,TRUE,TRUE,/categories/engineering/phase16i-belt-rcrl,Active / Populated,Clean
+p16i-sub-conv,Phase 16I Electric Charge,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16i-charge-conv,Active / Populated,Clean
+p16i-sub-check,Phase 16I Data Acquisition Configuration,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16i-daq-check,Active / Populated,Clean
+p16i-sub-gen,Phase 16I Laboratory Test Procedure,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16i-test-proc-gen,Active / Populated,Clean
+p16i-sub-plan,Phase 16I Production Line Balancing,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16i-line-balance,Active / Populated,Clean
+p16i-sub-tools,Phase 16I Numerical Differentiation & Integration,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16i-num-calc,Active / Populated,Clean
+p16i-sub-track,Phase 16I Industrial Energy Consumption,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16i-energy-track,Active / Populated,Clean
+p16i-sub-guides,Phase 16I Grounding & Thermal Insulation,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16i-ground-insul,Active / Populated,Clean
+p16j-sub-calc,Phase 16J Welding Heat Input & Motor Starting,engineering,Engineering Calculators,2,1,2,TRUE,TRUE,/categories/engineering/phase16j-welding-motor,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p16j-sub-conv,Phase 16J Illuminance & Luminance,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase16j-lighting-conv,Active / Populated,Clean
+p16j-sub-check,Phase 16J PLC I/O Address Mapping,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase16j-plc-check,Active / Populated,Clean
+p16j-sub-gen,Phase 16J Electrical Wiring Diagrams,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase16j-wiring-gen,Active / Populated,Clean
+p16j-sub-plan,Phase 16J Calibration Workload,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase16j-calib-plan,Active / Populated,Clean
+p16j-sub-tools,Phase 16J Complex Number & Phasor,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase16j-phasor-calc,Active / Populated,Clean
+p16j-sub-track,Phase 16J Weld Inspection & Defect Log,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase16j-weld-track,Active / Populated,Clean
+p16j-sub-guides,Phase 16J Electric Motors & PLC Architecture,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase16j-motor-plc-guides,Active / Populated,Clean
+p17a-sub-calc,Phase 17A CLV & Inventory Holding,business-operations,Business Operations Calculators,2,1,2,TRUE,TRUE,/categories/business-operations/phase17a-clv-inventory,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p17a-sub-conv,Phase 17A Profit Margin & Markup,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17a-margin-markup-conv,Active / Populated,Clean
+p17a-sub-check,Phase 17A Business Invoice Validation,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17a-invoice-check,Active / Populated,Clean
+p17a-sub-gen,Phase 17A Professional Business Proposal,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17a-proposal-gen,Active / Populated,Clean
+p17a-sub-plan,Phase 17A Small Business Startup Launch,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17a-startup-plan,Active / Populated,Clean
+p17a-sub-tools,Phase 17A Financial Ratio Analysis,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17a-financial-ratio-tool,Active / Populated,Clean
+p17a-sub-track,Phase 17A Business Expense & Spending,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17a-expense-track,Active / Populated,Clean
+p17a-sub-guides,Phase 17A Legal Structures & E-commerce Models,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17a-legal-ecommerce-guides,Active / Populated,Clean
+p17b-sub-calc,Phase 17B Valuation & ROAS,business-operations,Business Operations Calculators,2,1,2,TRUE,TRUE,/categories/business-operations/phase17b-valuation-roas,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p17b-sub-conv,Phase 17B Interest Rates,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17b-interest-conv,Active / Populated,Clean
+p17b-sub-check,Phase 17B PO & Invoice Matching,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17b-po-invoice-check,Active / Populated,Clean
+p17b-sub-gen,Phase 17B Cash Flow Statement,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17b-cashflow-gen,Active / Populated,Clean
+p17b-sub-plan,Phase 17B Pricing Strategy,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17b-pricing-plan,Active / Populated,Clean
+p17b-sub-tools,Phase 17B Payment Processing Fees,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17b-processing-fee-tool,Active / Populated,Clean
+p17b-sub-track,Phase 17B Accounts Receivable,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17b-ar-track,Active / Populated,Clean
+p17b-sub-guides,Phase 17B Tax Deductions & Payment Terms,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17b-tax-payment-guides,Active / Populated,Clean
+p17c-sub-calc,Phase 17C Cash Cycle & Compensation,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17c-cycle-comp,Active / Populated,Clean
+p17c-sub-conv,Phase 17C Currency Cross-Rate,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17c-cross-rate-conv,Active / Populated,Clean
+p17c-sub-check,Phase 17C Contract Clause Completeness,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17c-contract-check,Active / Populated,Clean
+p17c-sub-gen,Phase 17C Purchase Order,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17c-po-gen,Active / Populated,Clean
+p17c-sub-plan,Phase 17C Quarterly Business Review,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17c-qbr-plan,Active / Populated,Clean
+p17c-sub-tools,Phase 17C Financial Sensitivity Analysis,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17c-sensitivity-tool,Active / Populated,Clean
+p17c-sub-track,Phase 17C Accounts Payable,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17c-ap-track,Active / Populated,Clean
+p17c-sub-guides,Phase 17C Insurance & Working Capital,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17c-insurance-capital-guides,Active / Populated,Clean
+p17d-sub-calc,Phase 17D Loan Amortization & CAC Payback,financial,Financial Calculators,2,1,2,TRUE,TRUE,/categories/financial/phase17d-loan-cac,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p17d-sub-conv,Phase 17D Annualized Return,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17d-return-conv,Active / Populated,Clean
+p17d-sub-check,Phase 17D Financial Document Consistency,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17d-financial-consistency-check,Active / Populated,Clean
+p17d-sub-gen,Phase 17D Business Credit Policy,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17d-credit-policy-gen,Active / Populated,Clean
+p17d-sub-plan,Phase 17D Business Continuity,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17d-continuity-plan,Active / Populated,Clean
+p17d-sub-tools,Phase 17D Revenue Forecast Scenario,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17d-revenue-forecast-tool,Active / Populated,Clean
+p17d-sub-track,Phase 17D Contract Renewal,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17d-contract-renewal-track,Active / Populated,Clean
+p17d-sub-guides,Phase 17D Financing Options & Governance,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17d-financing-governance-guides,Active / Populated,Clean
+p17e-sub-calc,Phase 17E Profitability & Turnover,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17e-profit-turnover,Active / Populated,Clean
+p17e-sub-conv,Phase 17E Loan APR & Borrowing Cost,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17e-apr-conv,Active / Populated,Clean
+p17e-sub-check,Phase 17E Budget Variance,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17e-budget-check,Active / Populated,Clean
+p17e-sub-gen,Phase 17E Customer Credit Application,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17e-credit-app-gen,Active / Populated,Clean
+p17e-sub-plan,Phase 17E Expansion Readiness,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17e-expansion-plan,Active / Populated,Clean
+p17e-sub-tools,Phase 17E Sales Performance Benchmark,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17e-sales-benchmark-tool,Active / Populated,Clean
+p17e-sub-track,Phase 17E License & Permit Renewal,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17e-license-track,Active / Populated,Clean
+p17e-sub-guides,Phase 17E Recordkeeping & Risk Assessment,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17e-record-risk-guides,Active / Populated,Clean
+p17f-sub-calc,Phase 17F Customer Concentration & Absenteeism,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17f-concentration-absenteeism,Active / Populated,Clean
+p17f-sub-conv,Phase 17F Invoice Factoring,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17f-factoring-conv,Active / Populated,Clean
+p17f-sub-check,Phase 17F Bank Reconciliation,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17f-bank-recon-check,Active / Populated,Clean
+p17f-sub-gen,Phase 17F Vendor Onboarding,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17f-vendor-onboarding-gen,Active / Populated,Clean
+p17f-sub-plan,Phase 17F Franchise Evaluation,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17f-franchise-plan,Active / Populated,Clean
+p17f-sub-tools,Phase 17F Subscription Cohort Analysis,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17f-cohort-tool,Active / Populated,Clean
+p17f-sub-track,Phase 17F Asset Warranty & Maintenance,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17f-asset-warranty-track,Active / Populated,Clean
+p17f-sub-guides,Phase 17F Trade Finance & Internal Controls,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17f-trade-finance-controls-guides,Active / Populated,Clean
+p17g-sub-calc,Phase 17G Retention & Debt Service,business-operations,Business Operations Calculators,2,1,2,TRUE,TRUE,/categories/business-operations/phase17g-retention-dscr,Active / Populated,1 tool(s) reference this subcategoryId under a different parent category
+p17g-sub-conv,Phase 17G Gross-to-Net Revenue,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17g-gross-net-conv,Active / Populated,Clean
+p17g-sub-check,Phase 17G Payroll Register Validation,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17g-payroll-check,Active / Populated,Clean
+p17g-sub-gen,Phase 17G Meeting Minutes,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17g-meeting-minutes-gen,Active / Populated,Clean
+p17g-sub-plan,Phase 17G Business Succession,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17g-succession-plan,Active / Populated,Clean
+p17g-sub-tools,Phase 17G Multi-Channel Sales Attribution,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17g-attribution-tool,Active / Populated,Clean
+p17g-sub-track,Phase 17G Equipment Depreciation,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17g-depreciation-track,Active / Populated,Clean
+p17g-sub-guides,Phase 17G Data Privacy & Financial Reporting,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17g-privacy-reporting-guides,Active / Populated,Clean
+p17h-sub-calc,Phase 17H Revenue per Employee & Churn Impact,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17h-revenue-churn-calc,Active / Populated,Clean
+p17h-sub-conv,Phase 17H Inventory Cost Flow Method,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17h-inventory-cost-flow-conv,Active / Populated,Clean
+p17h-sub-check,Phase 17H Vendor Invoice Duplicate Detection,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17h-invoice-duplicate-check,Active / Populated,Clean
+p17h-sub-gen,Phase 17H Partnership Agreement Outline,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17h-partnership-agreement-gen,Active / Populated,Clean
+p17h-sub-plan,Phase 17H New Market Entry Strategy,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17h-market-entry-plan,Active / Populated,Clean
+p17h-sub-tools,Phase 17H KPI Dashboard Data,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17h-kpi-dashboard-tool,Active / Populated,Clean
+p17h-sub-track,Phase 17H Subscription Renewal,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17h-subscription-track,Active / Populated,Clean
+p17h-sub-guides,Phase 17H Financial Controls & Trade Payment,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17h-controls-trade-payment-guides,Active / Populated,Clean
+p17i-sub-calc,Phase 17I Break-Even Sales & Healthcare Benefit,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17i-breakeven-healthcare-calc,Active / Populated,Clean
+p17i-sub-conv,Phase 17I Currency Denomination,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17i-denomination-conv,Active / Populated,Clean
+p17i-sub-check,Phase 17I General Ledger Account Balance,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17i-ledger-balance-check,Active / Populated,Clean
+p17i-sub-gen,Phase 17I Non-Disclosure Agreement,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17i-nda-gen,Active / Populated,Clean
+p17i-sub-plan,Phase 17I Product Launch Marketing,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17i-product-launch-plan,Active / Populated,Clean
+p17i-sub-tools,Phase 17I E-commerce Funnel Conversion,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17i-funnel-conversion-tool,Active / Populated,Clean
+p17i-sub-track,Phase 17I Vehicle Fleet Maintenance,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17i-fleet-maintenance-track,Active / Populated,Clean
+p17i-sub-guides,Phase 17I Cybersecurity & CSR References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17i-cybersecurity-csr-guides,Active / Populated,Clean
+p17j-sub-calc,Phase 17J Operating Margin & CLV,business-operations,Business Operations Calculators,2,2,2,TRUE,TRUE,/categories/business-operations/phase17j-operating-margin-clv-calc,Active / Populated,Clean
+p17j-sub-conv,Phase 17J Forex Spread Markup,converter,Unit Converter & Measurement Tools,1,1,1,TRUE,TRUE,/categories/converter/phase17j-forex-markup-conv,Active / Populated,Clean
+p17j-sub-check,Phase 17J Financial Statement Cross-Check,checkers,Checkers & Validators,1,1,1,TRUE,TRUE,/categories/checkers/phase17j-financial-statement-check,Active / Populated,Clean
+p17j-sub-gen,Phase 17J Business Policy Document,generators,Generators & Utilities,1,1,1,TRUE,TRUE,/categories/generators/phase17j-business-policy-gen,Active / Populated,Clean
+p17j-sub-plan,Phase 17J Acquisition Due Diligence,planners,Planners & Organizers,1,1,1,TRUE,TRUE,/categories/planners/phase17j-acquisition-diligence-plan,Active / Populated,Clean
+p17j-sub-tools,Phase 17J Sales Pipeline Analytics,additional-tools,Additional Tools & Utilities,1,1,1,TRUE,TRUE,/categories/additional-tools/phase17j-sales-pipeline-tool,Active / Populated,Clean
+p17j-sub-track,Phase 17J Tax Filing Deadline,trackers,Trackers & Metrics,1,1,1,TRUE,TRUE,/categories/trackers/phase17j-tax-filing-track,Active / Populated,Clean
+p17j-sub-guides,Phase 17J Audit & Global Expansion References,guides,Guides & References,2,2,2,TRUE,TRUE,/categories/guides/phase17j-audit-expansion-guides,Active / Populated,Clean
+p18-sub-calc,Phase 18 Technology Calculators,additional-tools,Additional Tools & Utilities,20,20,20,TRUE,TRUE,/categories/additional-tools/phase18-technology-calculators,Active / Populated,Clean
+p18-sub-conv,Phase 18 Technology Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase18-technology-converters,Active / Populated,Clean
+p18-sub-check,Phase 18 Technology Checkers,checkers,Checkers & Validators,10,10,10,TRUE,TRUE,/categories/checkers/phase18-technology-checkers,Active / Populated,Clean
+p18-sub-gen,Phase 18 Technology Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase18-technology-generators,Active / Populated,Clean
+p18-sub-plan,Phase 18 Technology Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase18-technology-planners,Active / Populated,Clean
+p18-sub-tools,Phase 18 Technology Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase18-technology-utilities,Active / Populated,Clean
+p18-sub-track,Phase 18 Technology Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase18-technology-trackers,Active / Populated,Clean
+p18-sub-guides,Phase 18 Technology References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase18-technology-references,Active / Populated,Clean
+p19-sub-calc,Phase 19 Construction Calculators,construction,Construction Calculators,20,20,20,TRUE,TRUE,/categories/construction/phase19-construction-calculators,Active / Populated,Clean
+p19-sub-conv,Phase 19 Construction Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase19-construction-converters,Active / Populated,Clean
+p19-sub-check,Phase 19 Building Code Checkers,construction,Construction Calculators,10,10,10,TRUE,TRUE,/categories/construction/phase19-building-code-checkers,Active / Populated,Clean
+p19-sub-gen,Phase 19 Construction Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase19-construction-generators,Active / Populated,Clean
+p19-sub-plan,Phase 19 Construction Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase19-construction-planners,Active / Populated,Clean
+p19-sub-tools,Phase 19 Construction Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase19-construction-utilities,Active / Populated,Clean
+p19-sub-track,Phase 19 Construction Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase19-construction-trackers,Active / Populated,Clean
+p19-sub-guides,Phase 19 Construction References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase19-construction-references,Active / Populated,Clean
+p20-sub-calc,Phase 20 Manufacturing Calculators,business-operations,Business Operations Calculators,20,20,20,TRUE,TRUE,/categories/business-operations/phase20-manufacturing-calculators,Active / Populated,Clean
+p20-sub-conv,Phase 20 Industrial Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase20-industrial-converters,Active / Populated,Clean
+p20-sub-check,Phase 20 Industrial Quality Checkers,checkers,Checkers & Validators,10,10,10,TRUE,TRUE,/categories/checkers/phase20-industrial-quality-checkers,Active / Populated,Clean
+p20-sub-gen,Phase 20 Production Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase20-production-generators,Active / Populated,Clean
+p20-sub-plan,Phase 20 Supply Chain Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase20-supply-chain-planners,Active / Populated,Clean
+p20-sub-tools,Phase 20 Factory Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase20-factory-utilities,Active / Populated,Clean
+p20-sub-track,Phase 20 Production Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase20-production-trackers,Active / Populated,Clean
+p20-sub-guides,Phase 20 Industrial References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase20-industrial-references,Active / Populated,Clean
+p21-sub-calc,Phase 21 Scientific Calculators,scientific,Scientific Calculators,20,20,20,TRUE,TRUE,/categories/scientific/phase21-scientific-calculators,Active / Populated,Clean
+p21-sub-conv,Phase 21 Science Unit Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase21-science-unit-converters,Active / Populated,Clean
+p21-sub-check,Phase 21 Research Validation Checkers,checkers,Checkers & Validators,10,10,10,TRUE,TRUE,/categories/checkers/phase21-research-validation-checkers,Active / Populated,Clean
+p21-sub-gen,Phase 21 Academic Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase21-academic-generators,Active / Populated,Clean
+p21-sub-plan,Phase 21 Research Grant Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase21-research-grant-planners,Active / Populated,Clean
+p21-sub-tools,Phase 21 Laboratory Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase21-laboratory-utilities,Active / Populated,Clean
+p21-sub-track,Phase 21 Research Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase21-research-trackers,Active / Populated,Clean
+p21-sub-guides,Phase 21 Scientific References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase21-scientific-references,Active / Populated,Clean
+p22-sub-calc,Phase 22 Lifestyle Calculators,everyday,Everyday Calculators,20,20,20,TRUE,TRUE,/categories/everyday/phase22-lifestyle-calculators,Active / Populated,Clean
+p22-sub-conv,Phase 22 Everyday Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase22-everyday-converters,Active / Populated,Clean
+p22-sub-check,Phase 22 Home Safety Checkers,checkers,Checkers & Validators,10,10,10,TRUE,TRUE,/categories/checkers/phase22-home-safety-checkers,Active / Populated,Clean
+p22-sub-gen,Phase 22 Household Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase22-household-generators,Active / Populated,Clean
+p22-sub-plan,Phase 22 Home & Family Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase22-home-family-planners,Active / Populated,Clean
+p22-sub-tools,Phase 22 Lifestyle Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase22-lifestyle-utilities,Active / Populated,Clean
+p22-sub-track,Phase 22 Household Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase22-household-trackers,Active / Populated,Clean
+p22-sub-guides,Phase 22 Everyday References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase22-everyday-references,Active / Populated,Clean
+p23-sub-calc,Phase 23 Business & Financial Calculators,business,Business Calculators,20,20,20,TRUE,TRUE,/categories/business/phase23-business-calculators,Active / Populated,Clean
+p23-sub-conv,Phase 23 Professional Converters,converter,Unit Converter & Measurement Tools,10,10,10,TRUE,TRUE,/categories/converter/phase23-professional-converters,Active / Populated,Clean
+p23-sub-check,Phase 23 Professional Checkers,checkers,Checkers & Validators,10,10,10,TRUE,TRUE,/categories/checkers/phase23-professional-checkers,Active / Populated,Clean
+p23-sub-gen,Phase 23 Document Generators,generators,Generators & Utilities,10,10,10,TRUE,TRUE,/categories/generators/phase23-document-generators,Active / Populated,Clean
+p23-sub-plan,Phase 23 Business & Product Planners,planners,Planners & Organizers,10,10,10,TRUE,TRUE,/categories/planners/phase23-business-planners,Active / Populated,Clean
+p23-sub-tools,Phase 23 Productivity Utilities,additional-tools,Additional Tools & Utilities,10,10,10,TRUE,TRUE,/categories/additional-tools/phase23-productivity-utilities,Active / Populated,Clean
+p23-sub-track,Phase 23 Project & Business Trackers,trackers,Trackers & Metrics,10,10,10,TRUE,TRUE,/categories/trackers/phase23-project-trackers,Active / Populated,Clean
+p23-sub-guides,Phase 23 Professional References,guides,Guides & References,20,20,20,TRUE,TRUE,/categories/guides/phase23-professional-references,Active / Populated,Clean
+p25-sub-org,PDF Organization & Page Management,pdf-tools,PDF Document Suite,8,8,8,TRUE,TRUE,/categories/pdf-tools/pdf-organization-management,Active / Populated,Clean
+p25-sub-edit,PDF Document Editing & Layout,pdf-tools,PDF Document Suite,6,6,6,TRUE,TRUE,/categories/pdf-tools/pdf-document-editing,Active / Populated,Clean
+p25-sub-conv,PDF Conversion & Optimization,pdf-tools,PDF Document Suite,5,5,5,TRUE,TRUE,/categories/pdf-tools/pdf-conversion-optimization,Active / Populated,Clean
+p25-sub-sec,PDF Security & Analysis,pdf-tools,PDF Document Suite,4,4,4,TRUE,TRUE,/categories/pdf-tools/pdf-security-analysis,Active / Populated,Clean
+p25-sub-adv,Advanced PDF Processing,pdf-tools,PDF Document Suite,2,2,2,TRUE,TRUE,/categories/pdf-tools/pdf-advanced-processing,Active / Populated,Clean
+p27-sub-pdf-to-office,PDF to Office Converters,document-converters,Document Converters,4,4,4,TRUE,TRUE,/categories/document-converters/pdf-to-office,Active / Populated,Clean
+p27-sub-office-to-pdf,Office & Text to PDF Converters,document-converters,Document Converters,4,4,4,TRUE,TRUE,/categories/document-converters/office-to-pdf,Active / Populated,Clean
+p27-sub-web-text-to-pdf,"Web, Data & Rich Text to PDF",document-converters,Document Converters,4,4,4,TRUE,TRUE,/categories/document-converters/web-text-to-pdf,Active / Populated,Clean
+p27-sub-office-formats,OpenDocument & Office Format Converters,document-converters,Document Converters,4,4,4,TRUE,TRUE,/categories/document-converters/office-format-converters,Active / Populated,Clean
+p27-sub-advanced-conv,Advanced Document & Markup Converters,document-converters,Document Converters,4,4,4,TRUE,TRUE,/categories/document-converters/advanced-document-converters,Active / Populated,Clean
+mammals,Mammals,animal-world,Animal World Calculators,8,8,8,TRUE,TRUE,/categories/animal-world/mammals,Active / Populated,Clean
+birds,Birds,animal-world,Animal World Calculators,1,1,1,TRUE,TRUE,/categories/animal-world/birds,Active / Populated,Clean
+reptiles,Reptiles,animal-world,Animal World Calculators,0,0,0,TRUE,TRUE,/categories/animal-world/reptiles,Unused (0 tools),Unused (0 assigned unique tools)
+amphibians,Amphibians,animal-world,Animal World Calculators,0,0,0,TRUE,TRUE,/categories/animal-world/amphibians,Unused (0 tools),Unused (0 assigned unique tools)
+fish,Fish,animal-world,Animal World Calculators,2,2,2,TRUE,TRUE,/categories/animal-world/fish,Active / Populated,Clean
+insects,Insects,animal-world,Animal World Calculators,0,0,0,TRUE,TRUE,/categories/animal-world/insects,Unused (0 tools),Unused (0 assigned unique tools)
+arachnids,Arachnids,animal-world,Animal World Calculators,0,0,0,TRUE,TRUE,/categories/animal-world/arachnids,Unused (0 tools),Unused (0 assigned unique tools)
+other-invertebrates,Other Invertebrates,animal-world,Animal World Calculators,0,0,0,TRUE,TRUE,/categories/animal-world/other-invertebrates,Unused (0 tools),Unused (0 assigned unique tools)

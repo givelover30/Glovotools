@@ -1,0 +1,6 @@
+{
+  "name": "CalcTools — Free Online Calculators",
+  "description": "A collection of easy, fast and accurate calculators for everyday use.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

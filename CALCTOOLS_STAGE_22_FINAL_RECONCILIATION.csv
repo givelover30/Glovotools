@@ -1,0 +1,5 @@
+investigation_id,topic,reported_metric_a,reported_metric_b,variance_explanation,resolution_status,action_required
+INV-01,Fallback Count Reconciliation,3,753 (Lean Audit),3,752 (Stage 2.2 Audit),cloud-storage-cost-optimizer extracted into explicit contract tier in Stage 2.2; methodology otherwise identical,RESOLVED_AND_EXPLAINED,None
+INV-02,The 202 Reference Guides,202 total guides in catalog,10 static-guide / 192 generic-fallback,10 guides have custom React reference components; 192 fall through to generic fallback smartFields preview,EXPLAINED_RECOMMENDATION,Schedule future product phase for dedicated reference markdown viewers
+INV-03,Contract Count Reconciliation,404 unique registered contracts,396 tool records flagged has_explicit_contract=true in CSV,Workspace hubs and static guides rely on specialized workspaces/fallback generators rather than individual explicit contracts,RESOLVED_AND_EXPLAINED,None
+INV-04,Change Register Integrity,20 modified source files,20 backup files in backups/stage_22_impl_01/,All 20 modified files verified against CHECKSUMS.sha256; Stage 2.1 backups untouched,VERIFIED_COMPLIANT,None

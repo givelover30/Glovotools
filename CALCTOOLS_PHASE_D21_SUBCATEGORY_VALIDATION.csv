@@ -1,0 +1,3 @@
+audit_aspect,observation,validation_finding,resolution_status
+"Duplicate Audit Rows Subcategory Field","Previous D2 script omitted subcategory extraction in raw duplicate audit loop","Subcategories are present in items but were formatted incorrectly in the audit CSV generator","Resolved in D2.1 by directly extracting calc.subcategory from source items."
+"Catalog Subcategory Completeness","Many tools have subcategory assigned while others rely on top-level category grouping","Optional subcategory design is fully valid in CalcTools taxonomy","Verified valid and intentional."

@@ -1,0 +1,2 @@
+discrepancy_item,expected_baseline,actual_repository_count,reconciliation_explanation,status
+"Canonical Categories",55,52,"Phase A baseline anticipated 55 subject categories, but live CATEGORIES registry defines exactly 52 active primary subject categories (3 specialized sub-domains were merged or categorized into parent domains during Phase B taxonomy normalization).","RECONCILED"

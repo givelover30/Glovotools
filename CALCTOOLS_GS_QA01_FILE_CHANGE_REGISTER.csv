@@ -1,0 +1,2 @@
+file_path,change_description,reason,production_or_test
+"/src/components/common/GlobalSearchModal.tsx","Added Tab key focus containment handler and ensured robust ARIA combobox attributes","Improve accessibility and prevent focus from escaping modal dialog during keyboard navigation","Production"

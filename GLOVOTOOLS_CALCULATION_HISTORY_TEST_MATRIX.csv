@@ -1,0 +1,12 @@
+test_id,investigation_area,test_case_description,expected_behavior,actual_behavior,severity,status
+TC-HIST-01,Privacy,Sensitive parameter storage in localStorage,Parameters stored locally in plain text in browser localStorage,Stored locally; no transmission to server,LOW,PASS
+TC-HIST-02,Privacy,Privacy policy key disclosure,Privacy page lists glovotools_calculation_history key,Key omitted in current PrivacyPage draft text,MEDIUM,FINDING_DOCUMENTED
+TC-HIST-03,Privacy,History clear action,Clearing history removes glovotools_calculation_history key,Successfully removes storage key and resets memory store,LOW,PASS
+TC-HIST-04,Functionality,Maximum 5 records limit,History never exceeds 5 items,Enforced via .slice(0, 5) in service,LOW,PASS
+TC-HIST-05,Functionality,Newest-first display order,Most recent calculation appears at the top,Enforced via prepending [newItem, ...current],LOW,PASS
+TC-HIST-06,Functionality,Successful calculation guard,Only successful computations with primary result are recorded,Guarded by success && formatted?.primary check,LOW,PASS
+TC-HIST-07,Functionality,Debounce and duplicate prevention,Rapid input changes do not spam history records,Protected via 1-second debounce timeout,LOW,PASS
+TC-HIST-08,Functionality,Malformed localStorage recovery,Corrupted JSON in localStorage does not crash app,Caught via try/catch returning empty array fallback,LOW,PASS
+TC-HIST-09,Functionality,SSR and in-memory fallback,Node/SSR environment without window does not throw,Handled via memoryStore array fallback,LOW,PASS
+TC-HIST-10,Browser Safety,LocalStorage quota/sandbox failure,Storage exceptions do not throw unhandled runtime errors,Wrapped in try/catch blocks,LOW,PASS
+TC-HIST-11,Performance,Render and storage overhead,Minimal memory footprint and no calculation blocking,1-second debounce and 5-item cap keep overhead negligible,LOW,PASS

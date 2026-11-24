@@ -1,0 +1,2 @@
+defect_id,severity,description,root_cause,fix_applied,regression_test
+"DEF-01","Low","Tab key could potentially allow focus to escape modal dialog if user tabbed rapidly","Lack of Tab key event interception in handleKeyDown","Added Tab key event interception in handleKeyDown to keep focus contained on input","TM-18, TM-19 passed successfully"

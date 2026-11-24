@@ -1,0 +1,333 @@
+import { CalculatorMeta } from '../../types.ts';
+
+/**
+ * CALCTOOLS 2.0 — Phase 4 Universal Tool Page Variants
+ *
+ * Ensures each tool class renders with an appropriate workspace structure
+ * while sharing one consistent Utily-inspired visual language:
+ * - 'calculator': Numerical, financial, construction, engineering, health, date/time, scientific
+ * - 'converter': Unit, currency, and measurement converters
+ * - 'document-utility': File-processing PDF and document converters/utilities
+ * - 'workspace': Generators, checkers/validators, planners, trackers, references, developer utilities
+ */
+export type ToolPageVariant =
+  | 'calculator'
+  | 'converter'
+  | 'document-utility'
+  | 'workspace';
+
+const DOCUMENT_CATEGORIES = new Set<string>(['pdf-tools', 'document-converters']);
+
+const CONVERTER_CATEGORIES = new Set<string>(['converter']);
+
+const WORKSPACE_CATEGORIES = new Set<string>([
+  'generators',
+  'checkers',
+  'planners',
+  'trackers',
+  'references',
+  'tools',
+  'developer-it',
+  'text-writing',
+  'image-design'
+]);
+
+/**
+ * Representative tools already upgraded to native Phase 4 bare-canvas layouts
+ * (no extra outer wrapper card so we maintain single-elevation depth).
+ */
+export const PHASE4_NATIVE_WORKSPACE_IDS = new Set<string>([
+  'bmi',
+  'loan-mortgage',
+  'construction-calc',
+  'exact-age',
+  'universal-unit-converter',
+  'length-converter',
+  'weight-mass-converter',
+  'temperature-converter',
+  'volume-converter',
+  'area-converter',
+  'digital-storage-converter',
+  'speed-converter',
+  'pressure-converter',
+  'energy-power-converter',
+  'time-frequency-converter',
+  'angle-converter',
+  'fuel-economy-converter',
+  'torque-converter',
+  'force-converter',
+  'cooking-measurement-converter',
+  'typography-converter',
+  'data-transfer-rate-converter',
+  'sound-level-converter',
+  'shoe-size-converter',
+  'clothing-size-converter',
+  // Phase 5 — Batch 1 (15 components / 21 IDs)
+  'percentage',
+  'quadratic',
+  'slope-intercept',
+  'area-shapes',
+  'volume-surface',
+  'pythagorean',
+  'trig-solver',
+  'stats-summary',
+  'compound-interest',
+  'break-even',
+  'profit-margin',
+  'bmr-tdee',
+  'date-difference',
+  'ohms-law',
+  'electricity-cost',
+  'hydraulic-force',
+  'kinetic-energy',
+  'tip-split',
+  'discount-tax',
+  'macro-protein-calc',
+  'global-vat-sales-tax-calc',
+  // Phase 5 — Batch 2 (17 components / 17 IDs)
+  'advanced-mortgage-refinance-calc',
+  'compound-interest-monthly-simulator',
+  'retirement-shortfall-gap-calc',
+  'cash-flow-burn-rate-calc',
+  'capital-gains-tax-estimator',
+  'dividend-reinvestment-drip-calc',
+  'hsa-growth-tax-savings-calc',
+  'college-savings-529-calc',
+  'emergency-fund-expense-calc',
+  'emergency-runway-calc',
+  'reverse-mortgage-calc',
+  'heloc-calc',
+  'crypto-tax-calc',
+  'w4-withholding-calc',
+  'rental-cashflow-calc',
+  'cre-irr-calc',
+  'student-loan-payoff-calc',
+  // Phase 5 — Batch 3 (20 components / 20 IDs)
+  'asphalt-paving-calc',
+  'concrete-curb-calc',
+  'contractor-profit-calc',
+  'drywall-estimator-calc',
+  'fence-material-calc',
+  'hvac-btu-calc',
+  'labor-burden-calc',
+  'retaining-wall-calc',
+  'roof-pitch-calc',
+  'roof-shingle-calc',
+  'tile-flooring-calc',
+  'solar-battery-calc',
+  'ev-charging-calc',
+  'lease-vs-buy-calc',
+  'overtime-pay-calc',
+  'freelance-rate-calc',
+  'multi-breakeven-calc',
+  'dim-weight-calc',
+  'pregnancy-due-date-calc',
+  'ovulation-tracker-calc',
+  // Phase 5 — Batch 4 (10 components / 10 IDs — Animal, Livestock & Aquatic)
+  'animal-age-calc',
+  'animal-breeding-interval-calc',
+  'animal-gestation-calc',
+  'aquarium-volume-calc',
+  'egg-incubation-calc',
+  'livestock-feed-calc',
+  'livestock-weight-calc',
+  'milk-production-calc',
+  'pet-energy-food-calc',
+  'pond-volume-calc',
+  // Phase 5 — Batch 5 (8 components / 27 IDs — Standalone Converters + Document Converters Hub)
+  'timezone-offset-converter',
+  'json-csv-converter',
+  'xml-to-json',
+  'base64-codec-generator',
+  'url-encoder-decoder',
+  'html-entity-encoder',
+  'epoch-timestamp',
+  'pdf-to-word-docx',
+  'pdf-to-excel-xlsx',
+  'pdf-to-powerpoint-pptx',
+  'pdf-to-csv-converter',
+  'word-to-pdf-converter',
+  'excel-to-pdf-converter',
+  'powerpoint-to-pdf-converter',
+  'txt-to-pdf-converter',
+  'html-to-pdf-converter',
+  'csv-to-pdf-converter',
+  'rtf-to-pdf-converter',
+  'odt-to-pdf-converter',
+  'ods-to-pdf-converter',
+  'odp-to-pdf-converter',
+  'docx-to-html-converter',
+  'xlsx-to-csv-converter',
+  'xlsx-to-json-converter',
+  'pptx-to-images-converter',
+  'pdf-to-html-converter',
+  'pdf-to-markdown-converter',
+  // Phase 5 — Batch 6 (22 components / 22 IDs — Validators, Checkers & Code Debuggers)
+  'json-validator',
+  'yaml-validator',
+  'toml-validator',
+  'csv-validator',
+  'html-tag-validator',
+  'markdown-syntax-checker',
+  'email-validator',
+  'url-validator',
+  'iban-validator',
+  'credit-card-validator',
+  'ip-subnet-validator',
+  'isbn-validator',
+  'phone-number-checker',
+  'datetime-format-validator',
+  'password-strength-checker',
+  'color-contrast-checker',
+  'mime-signature-checker',
+  'duplicate-file-checker',
+  'seo-checklist-checker',
+  'regex-tester',
+  'jwt-decoder',
+  'text-diff-checker',
+  // Phase 5 — Batch 7 (22 components / 22 IDs — Code, Web, Security & Utility Generators)
+  'secure-password-generator',
+  'uuid-v4-generator',
+  'random-number-generator',
+  'crypto-hash-generator',
+  'qr-code-generator',
+  'color-palette-generator',
+  'css-box-shadow-generator',
+  'css-gradient-generator',
+  'css-reset-generator',
+  'favicon-generator',
+  'html-boilerplate-generator',
+  'meta-tags-generator',
+  'open-graph-generator',
+  'robots-generator',
+  'sitemap-generator',
+  'json-mock-generator',
+  'sql-data-generator',
+  'invoice-number-generator',
+  'lorem-ipsum-generator',
+  'text-slug-case-generator',
+  'cron-expression-calculator',
+  'image-dimension-calculator',
+  // Phase 5 — Batch 8 (1 component / 43 IDs — ToolsWorkspace Monolith Hub)
+  'word-character-counter',
+  'case-converter-tool',
+  'json-formatter-validator',
+  'base64-encoder-decoder',
+  'hash-generator-tool',
+  'regex-tester-tool',
+  'unix-timestamp-converter',
+  'aspect-ratio-calculator',
+  'file-size-bandwidth-tool',
+  'color-converter-picker',
+  'html-entity-converter',
+  'qr-code-payload-generator',
+  'sql-formatter',
+  'markdown-preview-tool',
+  'color-shade-tint-tool',
+  'svg-path-inspector',
+  'text-statistics-analyzer',
+  'ascii-banner-generator',
+  'adv-web-core-web-vitals-inp-budget',
+  'adv-web-seo-organic-ranking-cannibalization-model',
+  'adv-web-cdn-edge-cache-hit-ratio-bandwidth-savings',
+  'adv-web-image-compression-webp-avif-savings',
+  'adv-web-javascript-bundle-treeshaking-gzipped-size',
+  'adv-web-structured-data-json-ld-rich-snippet-ctr',
+  'adv-web-critical-css-inline-render-blocking-elimination',
+  'adv-web-dns-prefetch-preconnect-tcp-handshake-latency',
+  'adv-web-font-display-swap-cls-layout-shift',
+  'adv-web-crawl-budget-log-file-analyzer-indexation',
+  'adv-web-international-hreflang-tag-validation-coverage',
+  'adv-web-server-side-rendering-ssr-vs-csr-ttfb',
+  'adv-web-service-worker-pwa-offline-cache-hit-rate',
+  'adv-web-amp-accelerated-mobile-pages-conversion-uplift',
+  'adv-web-backlink-domain-authority-link-equity-flow',
+  'adv-web-http2-http3-multiplexing-head-of-line-blocking',
+  'adv-web-paginated-content-seo-rel-next-prev-architecture',
+  'adv-web-local-seo-gmb-proximity-radius-rank-tracker',
+  'adv-web-redirect-chain-latency-loss-link-equity',
+  'adv-web-content-readability-flesch-kincaid-seo-score',
+  'adv-web-domain-migration-traffic-drop-recovery-forecaster',
+  'adv-web-meta-title-description-pixel-width-truncation',
+  'adv-web-ecommerce-faceted-navigation-crawl-budget-trap',
+  'adv-web-web-vital-lcp-element-discovery-resource-timing',
+  'adv-web-comprehensive-technical-seo-audit-score',
+  // Phase 5 — Batch 9 (20 components / 20 IDs — Planners, Organizers & Content Calendars)
+  'monthly-budget-planner',
+  'meal-planner',
+  'grocery-shopping-planner',
+  'travel-itinerary-planner',
+  'moving-planner',
+  'daily-schedule-planner',
+  'weekly-task-planner',
+  'event-party-planner',
+  'home-maintenance-planner',
+  'study-schedule-planner',
+  'project-timeline-planner',
+  'wedding-planning-organizer',
+  'home-renovation-planner',
+  'debt-repayment-planner',
+  'emergency-fund-planner',
+  'retirement-planning-calculator',
+  'social-media-content-calendar',
+  'business-launch-planner',
+  'garden-planting-planner',
+  'personal-goal-organizer',
+  // Phase 5 — Batch 10 (33 components / 33 IDs — Trackers, References & Scientific Calculator)
+  'water-intake-tracker',
+  'water-intake-calc',
+  'habit-streak-tracker',
+  'expense-savings-tracker',
+  'workout-fitness-tracker',
+  'sleep-duration-tracker',
+  'calorie-macro-tracker',
+  'weight-body-metrics-tracker',
+  'task-milestone-tracker',
+  'mood-wellness-tracker',
+  'reading-book-tracker',
+  'pet-growth-tracker-calc',
+  'subscription-tracker',
+  'bill-due-date-tracker',
+  'vehicle-maintenance-tracker',
+  'fuel-mileage-tracker',
+  'home-inventory-tracker',
+  'warranty-expiration-tracker',
+  'pet-care-tracker',
+  'plant-growth-tracker',
+  'screen-time-tracker',
+  'personal-time-tracker',
+  'periodic-table-reference',
+  'math-formulas-reference',
+  'http-status-reference',
+  'markdown-syntax-reference',
+  'ascii-unicode-reference',
+  'css-flex-grid-reference',
+  'unit-conversion-factors-reference',
+  'programming-syntax-reference',
+  'sql-commands-reference',
+  'paper-resolution-reference',
+  'scientific-calc'
+]);
+
+export function resolveToolPageVariant(calculator: CalculatorMeta): ToolPageVariant {
+  if (DOCUMENT_CATEGORIES.has(calculator.category) || calculator.id.startsWith('pdf-')) {
+    return 'document-utility';
+  }
+  if (
+    CONVERTER_CATEGORIES.has(calculator.category) ||
+    calculator.id.endsWith('-converter')
+  ) {
+    return 'converter';
+  }
+  if (WORKSPACE_CATEGORIES.has(calculator.category)) {
+    return 'workspace';
+  }
+  return 'calculator';
+}
+
+export function isNativePhase4Workspace(calculator: CalculatorMeta): boolean {
+  if (PHASE4_NATIVE_WORKSPACE_IDS.has(calculator.id)) return true;
+  if (calculator.category === 'pdf-tools') return true;
+  if (calculator.category === 'tools') return true;
+  return false;
+}

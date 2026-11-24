@@ -1,0 +1,7 @@
+source_file_path,component_type,estimated_affected_tools,nature_of_impact,risk_level,mitigation_strategy
+src/data/calculators.ts,Canonical Registry,568 subcategories,Addition of 72 approved new subcategories to SUBCATEGORIES registry,Medium,Zero collision validation against existing 492 IDs
+src/types.ts,Type Definitions,Global,Optional addition of resolver classification state union types,Low,Backward-compatible optional type extensions
+src/utils/taxonomyResolver.ts (Proposed),Resolver Utility,"1,039 unregistered IDs",New passive resolver module for alias lookup and fallback handling,Low,Shadow mode deployment with comprehensive telemetry
+src/data/catalog/*.ts,Tool Catalog Modules,"1,455 tools",Updating subcategoryId and category fields for approved migrations,Medium,Batch-by-batch execution with automated unit tests
+src/components/GlobalSearchModal.tsx,Search UI,All tools,Indexing canonical subcategories and aliases in global search index,Low,Read-only indexing validation
+src/components/CategoryDirectory.tsx,Navigation UI,All categories,Rendering expanded subcategory lists and breadcrumbs,Low,Visual UI smoke tests

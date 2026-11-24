@@ -1,0 +1,203 @@
+tool_id,tool_name,existing_category,existing_hub,is_reference_guide,proposed_hub
+periodic-table-reference,Periodic Table of Chemical Elements Reference,guides,Calculators,YES,Guides & References
+math-formulas-reference,Mathematical Formulas & Constants Cheat Sheet,guides,Calculators,YES,Guides & References
+http-status-reference,HTTP Status Codes & API Response Reference,guides,Calculators,YES,Guides & References
+markdown-syntax-reference,Markdown Syntax & Formatting Cheat Sheet,guides,Formatters,YES,Guides & References
+ascii-unicode-reference,ASCII & Unicode Character Map Reference,guides,Calculators,YES,Guides & References
+css-flex-grid-reference,CSS Flexbox & CSS Grid Cheat Sheet,guides,Calculators,YES,Guides & References
+unit-conversion-factors-reference,Standard Unit Conversion Factors Reference,guides,Calculators,YES,Guides & References
+programming-syntax-reference,Programming Language Syntax Cheat Sheet,guides,Calculators,YES,Guides & References
+sql-commands-reference,Common SQL Commands & Queries Reference,guides,Calculators,YES,Guides & References
+paper-resolution-reference,Paper Sizes & Screen Resolution Reference,guides,Calculators,YES,Guides & References
+git-commands-reference,Essential Git Version Control Commands Cheat Sheet,guides,Calculators,YES,Guides & References
+docker-commands-reference,Docker Container & CLI Reference Guide,guides,Calculators,YES,Guides & References
+linux-cli-reference,Common Linux Terminal & File Permissions Reference,guides,Calculators,YES,Guides & References
+keyboard-shortcuts-reference,Pro IDE Keyboard Shortcuts Cheat Sheet,guides,Calculators,YES,Guides & References
+http-methods-reference,RESTful HTTP Methods & Status Codes Guide,guides,Calculators,YES,Guides & References
+regex-cheatsheet-reference,Regular Expressions Pattern Syntax Cheat Sheet,guides,Calculators,YES,Guides & References
+electrical-formula-reference,Electrical Engineering Formula & Constants Reference,guides,Calculators,YES,Guides & References
+civil-formula-reference,Civil Engineering Mechanics & Geotech Formula Reference,guides,Calculators,YES,Guides & References
+construction-material-properties-reference,Construction Material Properties & Densities Reference,guides,Calculators,YES,Guides & References
+welding-symbols-reference,"Welding Symbols, Joint Types & Standards Reference",guides,Calculators,YES,Guides & References
+mechanical-design-reference,Mechanical Engineering Design & Machine Elements Reference,guides,Calculators,YES,Guides & References
+solar-components-reference,Solar PV Components & System Architecture Reference,guides,Calculators,YES,Guides & References
+machining-parameters-reference,Manufacturing Machining Parameters & Tooling Reference,guides,Calculators,YES,Guides & References
+financial-ratios-reference,Financial Ratios & Accounting Formulas Reference,guides,Counters,YES,Guides & References
+networking-ports-reference,"Networking Ports, Protocols & Services Reference",guides,Calculators,YES,Guides & References
+business-invoice-terms-reference,Commercial Document & Invoice Terms Reference,guides,Document & PDF,YES,Guides & References
+cloud-architecture-reference,Cloud Computing Models & Architecture Reference,guides,Calculators,YES,Guides & References
+algorithm-complexity-reference,Data Structures & Algorithm Complexity Reference,guides,Calculators,YES,Guides & References
+incoterms-shipping-reference,E-commerce Shipping Methods & Incoterms Reference,guides,Calculators,YES,Guides & References
+core-web-vitals-reference,Web Performance & Core Web Vitals Reference Guide,guides,Calculators,YES,Guides & References
+database-normalization-reference,Database Normalization & SQL Design Reference,guides,Calculators,YES,Guides & References
+project-management-methodologies-reference,Project Management Methodologies & Frameworks Reference,guides,Trackers,YES,Guides & References
+api-authentication-oauth-reference,API Authentication Methods & OAuth Reference,guides,Calculators,YES,Guides & References
+statistical-distributions-probability-reference,Statistical Distributions & Probability Reference,guides,Calculators,YES,Guides & References
+software-testing-qa-reference,Software Testing Methods & QA Techniques Reference,guides,Testers,YES,Guides & References
+cloud-storage-architecture-reference,Cloud Storage Concepts & Architecture Reference,guides,Calculators,YES,Guides & References
+http-status-codes-reference,HTTP Status Codes & Response Semantics Reference,guides,Calculators,YES,Guides & References
+data-backup-recovery-reference,Data Backup Strategies & Recovery Reference,guides,Calculators,YES,Guides & References
+dns-records-domain-reference,DNS Records & Domain Resolution Reference,guides,Calculators,YES,Guides & References
+database-indexing-query-optimization-reference,Database Indexing & Query Optimization Reference,guides,Calculators,YES,Guides & References
+software-licensing-compliance-reference,Software Licensing Models & Compliance Reference,guides,Calculators,YES,Guides & References
+project-risk-management-mitigation-reference,Project Risk Management & Mitigation Reference,guides,Business & Management,YES,Guides & References
+engineering-materials-properties-reference,Engineering Materials Properties Reference,guides,Calculators,YES,Guides & References
+geometric-dimensioning-tolerancing-reference,Geometric Dimensioning & Tolerancing (GD&T) Reference,guides,Calculators,YES,Guides & References
+electrical-circuit-components-symbols-reference,Electrical Circuit Components & Symbols Reference,guides,Calculators,YES,Guides & References
+fluid-mechanics-equations-applications-reference,Fluid Mechanics Equations & Applications Reference,guides,Calculators,YES,Guides & References
+welding-processes-joint-design-reference,Welding Processes & Joint Design Reference,guides,Calculators,YES,Guides & References
+control-systems-pid-reference,Control Systems & PID Fundamentals Reference,guides,Calculators,YES,Guides & References
+non-destructive-testing-methods-reference,Non-Destructive Testing (NDT) Methods Reference,guides,Testers,YES,Guides & References
+metrology-instruments-measurement-uncertainty-reference,Metrology Instruments & Measurement Uncertainty Reference,guides,Trackers,YES,Guides & References
+industrial-fasteners-grades-standards-reference,"Industrial Fasteners, Grades & Standards Reference",guides,Calculators,YES,Guides & References
+industrial-sensors-instrumentation-reference,Industrial Sensors & Instrumentation Reference,guides,Calculators,YES,Guides & References
+industrial-pneumatics-hydraulics-components-reference,Industrial Pneumatics & Hydraulics Components Reference,guides,Calculators,YES,Guides & References
+engineering-fits-tolerances-reference,Engineering Fits & Tolerances Reference,guides,Calculators,YES,Guides & References
+industrial-heat-treatment-processes-reference,Industrial Heat Treatment Processes Reference,guides,Calculators,YES,Guides & References
+engineering-surface-finish-roughness-reference,Engineering Surface Finish & Roughness Reference,guides,Calculators,YES,Guides & References
+industrial-corrosion-protection-methods-reference,Industrial Corrosion Protection Methods Reference,guides,Calculators,YES,Guides & References
+industrial-bearings-types-selection-reference,Industrial Bearings Types & Selection Reference,guides,Calculators,YES,Guides & References
+industrial-electrical-grounding-bonding-reference,Industrial Electrical Grounding & Bonding Reference,guides,Calculators,YES,Guides & References
+industrial-thermal-insulation-materials-reference,Industrial Thermal Insulation Materials Reference,guides,Calculators,YES,Guides & References
+industrial-electric-motor-selection-reference,Industrial Electric Motor Types & Selection Reference,guides,Calculators,YES,Guides & References
+plc-architecture-industrial-io-reference,PLC Architecture & Industrial I/O Reference,guides,Calculators,YES,Guides & References
+business-legal-structure-reference,Business Legal Structure Reference,guides,Business & Management,YES,Guides & References
+ecommerce-business-models-reference,E-commerce Business Models Reference,guides,Business & Management,YES,Guides & References
+small-business-tax-deductions-reference,Small Business Tax Deductions Reference,guides,Business & Management,YES,Guides & References
+business-payment-terms-collections-reference,Business Payment Terms & Collections Reference,guides,Business & Management,YES,Guides & References
+business-insurance-coverage-reference,Business Insurance Coverage Reference,guides,Business & Management,YES,Guides & References
+working-capital-management-reference,Working Capital Management Reference,guides,Business & Management,YES,Guides & References
+small-business-financing-options-reference,Small Business Financing Options Reference,guides,Business & Management,YES,Guides & References
+corporate-governance-compliance-reference,Corporate Governance & Compliance Reference,guides,Calculators,YES,Guides & References
+small-business-recordkeeping-reference,Small Business Recordkeeping Reference,guides,Business & Management,YES,Guides & References
+business-risk-assessment-framework,Business Risk Assessment Framework,guides,Business & Management,YES,Guides & References
+import-export-finance-terms-reference,Import & Export Finance Terms Reference,guides,Calculators,YES,Guides & References
+small-business-internal-controls-reference,Small Business Internal Controls Reference,guides,Business & Management,YES,Guides & References
+small-business-data-privacy-reference,Small Business Data Privacy Reference,guides,Business & Management,YES,Guides & References
+corporate-financial-reporting-reference,Corporate Financial Reporting Reference,guides,Calculators,YES,Guides & References
+small-business-financial-controls-reference,Small Business Financial Controls Reference,guides,Business & Management,YES,Guides & References
+international-trade-payment-methods-reference,International Trade Payment Methods Reference,guides,Calculators,YES,Guides & References
+small-business-cybersecurity-best-practices-reference,Small Business Cybersecurity Best Practices Reference,guides,Business & Management,YES,Guides & References
+corporate-social-responsibility-reference,Corporate Social Responsibility (CSR) Reference,guides,Calculators,YES,Guides & References
+small-business-audit-preparation-reference,Small Business Audit Preparation Reference,guides,Business & Management,YES,Guides & References
+international-business-expansion-reference,International Business Expansion Reference,guides,Business & Management,YES,Guides & References
+phase18-http-status-codes-reference,HTTP Status Codes Reference,guides,Calculators,YES,Guides & References
+semantic-versioning-release-management-reference,Semantic Versioning & Release Management Reference,guides,Business & Management,YES,Guides & References
+git-branching-strategy-reference,Git Branching Strategies & Gitflow Reference,guides,Calculators,YES,Guides & References
+owasp-top-ten-security-reference,OWASP Top 10 Web Application Security Reference,guides,Calculators,YES,Guides & References
+rest-api-design-best-practices-reference,RESTful API Design Best Practices Reference,guides,Calculators,YES,Guides & References
+microservices-patterns-reference,Microservices Architecture Patterns Reference,guides,Calculators,YES,Guides & References
+database-indexing-strategies-reference,Database Indexing Strategies & B-Tree Reference,guides,Calculators,YES,Guides & References
+docker-containerization-best-practices-reference,Docker Containerization Best Practices Reference,guides,Calculators,YES,Guides & References
+kubernetes-pod-lifecycle-reference,Kubernetes Pod Lifecycle & Probes Reference,guides,Calculators,YES,Guides & References
+ci-cd-pipeline-stages-reference,CI/CD Pipeline Stages & Automation Reference,guides,Calculators,YES,Guides & References
+cors-security-headers-reference,CORS & HTTP Security Headers Reference,guides,Calculators,YES,Guides & References
+oauth2-openid-connect-reference,OAuth 2.0 & OpenID Connect (OIDC) Reference,guides,Calculators,YES,Guides & References
+jwt-structure-security-reference,JSON Web Token (JWT) Structure & Security Reference,guides,Calculators,YES,Guides & References
+linux-file-permissions-chmod-reference,Linux File Permissions & Chmod Octal Reference,guides,Calculators,YES,Guides & References
+regex-syntax-cheatsheet-reference,Regular Expression (Regex) Syntax Cheatsheet Reference,guides,Calculators,YES,Guides & References
+json-schema-validation-reference,JSON Schema Validation Specification Reference,guides,Calculators,YES,Guides & References
+graphql-vs-rest-architecture-reference,GraphQL vs REST Architecture Comparison Reference,guides,Calculators,YES,Guides & References
+websockets-vs-sse-reference,WebSockets vs Server-Sent Events (SSE) Reference,guides,Calculators,YES,Guides & References
+clean-code-solid-principles-reference,Clean Code & SOLID Design Principles Reference,guides,Calculators,YES,Guides & References
+software-design-patterns-reference,Software Design Patterns (GoF) Reference,guides,Calculators,YES,Guides & References
+international-building-code-ibc-reference,International Building Code (IBC) Reference,guides,Calculators,YES,Guides & References
+national-electrical-code-nec-reference,National Electrical Code (NEC/NFPA 70) Reference,guides,Calculators,YES,Guides & References
+plumbing-code-ipc-reference,International Plumbing Code (IPC) Reference,guides,Calculators,YES,Guides & References
+ada-standards-accessibility-reference,ADA Standards for Accessible Design Reference,guides,Calculators,YES,Guides & References
+concrete-aci-standards-reference,ACI Concrete Design & Construction Standards Reference,guides,Calculators,YES,Guides & References
+structural-steel-aisc-reference,AISC Structural Steel Construction Reference,guides,Calculators,YES,Guides & References
+wood-construction-awc-reference,AWC Wood Construction & Framing Reference,guides,Calculators,YES,Guides & References
+masonry-msjc-standards-reference,TMS/MSJC Masonry Standards Reference,guides,Calculators,YES,Guides & References
+hvac-ashrae-standards-reference,ASHRAE HVAC & Ventilation Standards Reference,guides,Calculators,YES,Guides & References
+soil-astm-classification-reference,ASTM Soil Classification & Engineering Reference,guides,Calculators,YES,Guides & References
+roofing-nrca-guidelines-reference,NRCA Roofing & Waterproofing Guidelines Reference,guides,Calculators,YES,Guides & References
+waterproofing-astm-reference,ASTM Building Waterproofing & Vapor Retarder Reference,guides,Calculators,YES,Guides & References
+fireproofing-ul-assemblies-reference,Underwriters Laboratories (UL) Fireproofing Reference,guides,Calculators,YES,Guides & References
+asbestos-lead-mitigation-reference,Asbestos & Lead Paint Remediation Reference,guides,Calculators,YES,Guides & References
+geotechnical-soil-bearing-reference,Geotechnical Soil Bearing Capacity Reference,guides,Calculators,YES,Guides & References
+seismic-design-asce-reference,ASCE 7 Seismic Design & Earthquake Reference,guides,Calculators,YES,Guides & References
+sound-transmission-stc-reference,Acoustical STC & IIC Building Code Reference,guides,Calculators,YES,Guides & References
+energy-efficiency-iecc-reference,International Energy Conservation Code (IECC) Reference,guides,Calculators,YES,Guides & References
+architectural-drawing-symbols-reference,Architectural Drawing & Blueprint Symbols Reference,guides,Calculators,YES,Guides & References
+construction-contract-types-reference,Construction Contract Types & Delivery Methods Reference,guides,Calculators,YES,Guides & References
+iso-9001-quality-management-reference,ISO 9001 Quality Management System Reference,guides,Business & Management,YES,Guides & References
+six-sigma-lean-manufacturing-reference,Six Sigma & Lean Manufacturing Principles Reference,guides,Calculators,YES,Guides & References
+iso-14001-environmental-reference,ISO 14001 Environmental Management System Reference,guides,Business & Management,YES,Guides & References
+osha-industrial-safety-reference,OSHA Industrial Safety & Machine Guarding Reference,guides,Calculators,YES,Guides & References
+iso-45001-occupational-health-reference,ISO 45001 Occupational Health & Safety Reference,guides,Calculators,YES,Guides & References
+supply-chain-scors-model-reference,Supply Chain Operations Reference (SCOR) Model,guides,Calculators,YES,Guides & References
+incoterms-2020-shipping-reference,Incoterms 2020 International Shipping Reference,guides,Calculators,YES,Guides & References
+gd-t-ansi-y14-5-reference,GD&T (ASME Y14.5) Geometric Tolerancing Reference,guides,Calculators,YES,Guides & References
+material-science-metals-reference,Engineering Material Science & Metals Reference,guides,Calculators,YES,Guides & References
+plastic-polymers-injection-reference,Plastic Polymers & Injection Molding Reference,guides,Calculators,YES,Guides & References
+machining-speeds-feeds-reference,Machining Speeds & Feeds Reference Handbook,guides,Calculators,YES,Guides & References
+hydraulic-pneumatic-symbols-reference,Hydraulic & Pneumatic Schematic Symbols Reference,guides,Calculators,YES,Guides & References
+warehouse-safety-storage-reference,Warehouse Safety & Pallet Racking Reference,guides,Calculators,YES,Guides & References
+forklift-operation-safety-reference,Forklift Operation & Industrial Truck Safety Reference,guides,Calculators,YES,Guides & References
+additive-manufacturing-3d-reference,Additive Manufacturing & 3D Printing Reference,guides,Calculators,YES,Guides & References
+smt-pcb-assembly-reference,Surface Mount Technology (SMT) PCB Assembly Reference,guides,Trackers,YES,Guides & References
+ndt-non-destructive-testing-reference,Non-Destructive Testing (NDT) Methods Reference,guides,Testers,YES,Guides & References
+corrosion-prevention-coatings-reference,Corrosion Prevention & Industrial Coatings Reference,guides,Calculators,YES,Guides & References
+industrial-robotics-safety-reference,Industrial Robotics & Automation Safety Reference,guides,Calculators,YES,Guides & References
+total-productive-maintenance-tpm-reference,Total Productive Maintenance (TPM) Reference,guides,Calculators,YES,Guides & References
+si-base-derived-units-reference,SI Base & Derived Units Reference Guide,guides,Calculators,YES,Guides & References
+fundamental-physical-constants-reference,Fundamental Physical Constants Reference,guides,Calculators,YES,Guides & References
+periodic-table-elements-reference,Periodic Table of Elements Comprehensive Reference,guides,Calculators,YES,Guides & References
+standard-reduction-potentials-reference,Standard Reduction Potentials & Electrochemical Reference,guides,Calculators,YES,Guides & References
+amino-acids-protein-structure-reference,Amino Acids & Protein Biochemistry Reference,guides,Calculators,YES,Guides & References
+electromagnetic-spectrum-reference,Electromagnetic Spectrum Reference Guide,guides,Calculators,YES,Guides & References
+thermodynamic-laws-reference,Laws of Thermodynamics Reference Guide,guides,Calculators,YES,Guides & References
+quantum-mechanics-principles-reference,Quantum Mechanics Principles Reference,guides,Calculators,YES,Guides & References
+organic-functional-groups-reference,Organic Chemistry Functional Groups Reference,guides,Calculators,YES,Guides & References
+calculus-derivatives-integrals-reference,Calculus Derivatives & Integrals Reference,guides,Calculators,YES,Guides & References
+linear-algebra-matrix-identities-reference,Linear Algebra Matrix Identities Reference,guides,Calculators,YES,Guides & References
+probability-distributions-reference,Probability Distributions Reference Guide,guides,Calculators,YES,Guides & References
+scientific-method-research-ethics-reference,Scientific Method & Research Ethics Reference,guides,Calculators,YES,Guides & References
+apa-mla-harvard-citation-reference,"Academic Citation Styles (APA, MLA, Chicago, IEEE) Reference",guides,Calculators,YES,Guides & References
+lab-safety-symbols-hazards-reference,Laboratory Safety Symbols & GHS Hazards Reference,guides,Calculators,YES,Guides & References
+taxonomy-biological-classification-reference,Biological Taxonomy & Linnaean Classification Reference,guides,Trackers,YES,Guides & References
+cell-organelles-biochemistry-reference,Cell Organelles & Eukaryotic Biochemistry Reference,guides,Calculators,YES,Guides & References
+geological-time-scale-reference,Geological Time Scale Reference Guide,guides,Trackers,YES,Guides & References
+astronomical-solar-system-reference,Solar System Astronomical Reference Guide,guides,Calculators,YES,Guides & References
+nobel-prize-physics-chemistry-reference,Nobel Prize in Physics & Chemistry Historical Reference,guides,Calculators,YES,Guides & References
+household-stain-removal-reference,Household Stain Removal Master Reference,guides,Calculators,YES,Guides & References
+fabric-textile-care-labels-reference,Fabric & Textile Care Labels Reference Guide,guides,Calculators,YES,Guides & References
+gardening-companion-planting-reference,Gardening Companion Planting Reference Guide,guides,Planners,YES,Guides & References
+pet-toxic-foods-plants-reference,Pet Toxic Foods & Houseplants Safety Reference,guides,Planners,YES,Guides & References
+kitchen-knife-skills-cuts-reference,Kitchen Knife Skills & Culinary Cuts Reference,guides,Calculators,YES,Guides & References
+home-fire-extinguisher-types-reference,Home Fire Extinguisher Classes Reference Guide,guides,Calculators,YES,Guides & References
+recycling-sorting-materials-reference,Recycling Sorting & Materials Reference Guide,guides,Calculators,YES,Guides & References
+essential-oil-dilution-safety-reference,Essential Oil Dilution & Aromatherapy Safety Reference,guides,Calculators,YES,Guides & References
+wine-cheese-pairing-reference,Wine & Cheese Flavor Pairing Reference Guide,guides,Calculators,YES,Guides & References
+coffee-roasting-brew-methods-reference,Coffee Roasting & Brewing Methods Reference,guides,Calculators,YES,Guides & References
+household-hand-tools-reference,Household Hand Tools & Hardware Reference Guide,guides,Calculators,YES,Guides & References
+sewing-stitches-seams-reference,Sewing Stitches & Seam Types Reference Guide,guides,Calculators,YES,Guides & References
+houseplant-care-sunlight-reference,Houseplant Care & Sunlight Requirements Reference,guides,Planners,YES,Guides & References
+emergency-preparedness-disaster-reference,Emergency Preparedness & Disaster Ready Reference,guides,Document & PDF,YES,Guides & References
+camping-hiking-gear-checklist-reference,Camping & Hiking Essential Gear Reference,guides,Checkers,YES,Guides & References
+baking-substitution-ingredients-reference,Baking Ingredient Substitutions Reference Guide,guides,Calculators,YES,Guides & References
+home-pest-identification-reference,Home Pest Identification & Prevention Reference,guides,Calculators,YES,Guides & References
+laundry-symbol-glossary-reference,Laundry Symbol Glossary & Fabric Care Reference,guides,Calculators,YES,Guides & References
+bicycle-maintenance-checklist-reference,Bicycle Maintenance & ABC Quick Check Reference,guides,Checkers,YES,Guides & References
+home-water-shutoff-valve-reference,Home Water Main Shut-off Valve & Plumbing Reference,guides,Calculators,YES,Guides & References
+business-entity-types-reference,"Business Entity Types (LLC, C-Corp, S-Corp) Reference",guides,Business & Management,YES,Guides & References
+phase23-project-management-methodologies-reference,Project Management Methodologies Reference,guides,Trackers,YES,Guides & References
+agile-scrum-glossary-reference,Agile & Scrum Terminology Glossary Reference,guides,Trackers,YES,Guides & References
+design-thinking-framework-reference,Design Thinking Framework Reference,guides,Calculators,YES,Guides & References
+swot-pestle-analysis-reference,SWOT & PESTLE Strategic Analysis Reference,guides,Calculators,YES,Guides & References
+porter-five-forces-reference,Porter's Five Forces Industry Analysis Reference,guides,Calculators,YES,Guides & References
+balanced-scorecard-reference,Balanced Scorecard Strategic Reference,guides,Calculators,YES,Guides & References
+okr-kpi-framework-reference,OKRs vs. KPIs Performance Framework Reference,guides,Calculators,YES,Guides & References
+six-sigma-lean-reference,Six Sigma & Lean Manufacturing Reference,guides,Calculators,YES,Guides & References
+gdpr-compliance-reference,GDPR Data Protection Compliance Reference,guides,Calculators,YES,Guides & References
+ccpa-privacy-reference,CCPA & State Privacy Laws Reference,guides,Calculators,YES,Guides & References
+soc2-compliance-reference,SOC 2 Trust Services Criteria Reference,guides,Calculators,YES,Guides & References
+iso-27001-reference,ISO/IEC 27001 Information Security Reference,guides,Formatters,YES,Guides & References
+owasp-top-10-reference,OWASP Top 10 Web Vulnerabilities Reference,guides,Calculators,YES,Guides & References
+rest-api-design-reference,REST API Design Best Practices Reference,guides,Calculators,YES,Guides & References
+git-workflow-branching-reference,Git Workflow & Branching Strategies Reference,guides,Calculators,YES,Guides & References
+semantic-versioning-reference,Semantic Versioning (SemVer) Reference,guides,Calculators,YES,Guides & References
+invoice-billing-glossary-reference,Invoice & Accounts Receivable Glossary Reference,guides,Counters,YES,Guides & References
+intellectual-property-basics-reference,"Intellectual Property (Patents, Trademarks, Copyrights) Reference",guides,Calculators,YES,Guides & References
+business-negotiation-strategies-reference,Business Negotiation Strategies & BATNA Reference,guides,Business & Management,YES,Guides & References

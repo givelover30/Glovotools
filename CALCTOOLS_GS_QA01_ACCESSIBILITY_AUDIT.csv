@@ -1,0 +1,12 @@
+accessibility_requirement,dom_evidence,result,defect_details
+"Search input has role='combobox'","<input role='combobox' ... />","PASS","None"
+"aria-autocomplete='list' present on input","<input aria-autocomplete='list' ... />","PASS","None"
+"aria-controls references listbox ID","aria-controls='global-search-results-list' matching id on listbox div","PASS","None"
+"aria-expanded accurately reflects open state","aria-expanded={true} while modal is open","PASS","None"
+"aria-activedescendant references active option ID","aria-activedescendant={searchResults.length > 0 ? `global-search-option-${selectedIndex}` : undefined}","PASS","None"
+"Results container has role='listbox'","<div role='listbox' id='global-search-results-list' ... />","PASS","None"
+"Individual results have role='option'","<div role='option' aria-selected={isSelected} ... />","PASS","None"
+"aria-selected accurately reflects active result","aria-selected={isSelected} (true for active index, false otherwise)","PASS","None"
+"Every option has a stable, unique DOM ID","id={`global-search-option-${idx}`}","PASS","None"
+"No invalid or contradictory ARIA relationships","Combobox + listbox + option semantic hierarchy properly maintained","PASS","None"
+"Screen reader identification of search field, results, and active item","Supported via combobox pattern and aria-activedescendant","PASS","None"

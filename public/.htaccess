@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Do not rewrite existing static files or directories (assets, robots.txt, sitemap.xml)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Prevent rewrite loop on index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # Route all SPA application paths to the Vite entry point
+  RewriteRule . /index.html [L]
+</IfModule>

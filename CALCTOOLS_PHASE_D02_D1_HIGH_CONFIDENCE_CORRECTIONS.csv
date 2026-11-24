@@ -1,0 +1,2 @@
+tool_id,current_primary_hub,proposed_primary_hub,actual_functional_evidence,confidence_level,correction_reason,batch_group,rollback_value
+calc-sample-hc,Calculators,Converters,"Explicit category match",High,"Correction example","Batch D1-A",Calculators

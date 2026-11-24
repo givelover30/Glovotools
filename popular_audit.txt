@@ -1,0 +1,156 @@
+Total popular: 155
+area-shapes || Area & Perimeter Calculator || Calculate area and perimeter of 2D geometric shapes
+loan-mortgage || Loan & Mortgage Calculator || Monthly payment, total interest, and full amortization schedule
+bmi || BMI Calculator || Body mass index and healthy weight classification
+exact-age || Age Calculator || Exact age in years, months, days, total hours, and next birthday countdown
+fraction-arithmetic || Fraction Arithmetic Calculator || Add, subtract, multiply, and divide fractions with step-by-step reduction
+percent-change || Percentage Increase & Decrease Calculator || Compute relative growth, percentage change, and markdown rate
+proportion-solver || Proportion & Cross Multiplication Calculator || Solve missing term in equivalent fractions A/B = C/D
+average-calculator || Average & Arithmetic Mean Calculator || Calculate average, total sum, count, and range of number sequences
+linear-equation || Linear Equation Solver (ax + b = c) || Solve single-variable linear equations with complete step-by-step isolation
+two-variable-linear || Systems of 2 Linear Equations Solver || Solve 2x2 simultaneous linear equations using substitution or elimination
+factoring-trinomials || Trinomial Factoring Calculator || Factor quadratic trinomials ax² + bx + c into binomial products (px + q)(rx + s)
+distance-2d || 2D Coordinate Distance Calculator || Euclidean distance and slope angle between two Cartesian points
+circle-calculator || Circle Area & Circumference Calculator || Radius, diameter, circumference, and planar area of circle
+triangle-area || Triangle Area & Heron's Formula Calculator || Compute area using base/height or 3 sides via Heron's formula
+rectangular-prism || Rectangular Prism (Box) Calculator || Volume, total surface area, and 3D diagonal of rectangular cuboid
+cylinder-calc || Cylinder Volume & Surface Calculator || Right circular cylinder volume, lateral area, and total surface area
+sphere-calc || Sphere Volume & Surface Area Calculator || Solid sphere volume and spherical curved surface area
+right-triangle-solver || Right Triangle Angle & Side Solver || Solve all sides, angles, area, and hypotenuse from any 2 inputs
+law-of-sines || Law of Sines Triangle Calculator || Solve non-right oblique triangles using sine proportion rule
+law-of-cosines || Law of Cosines Triangle Calculator || Solve SAS and SSS oblique triangles using cosine rule
+standard-deviation || Standard Deviation Calculator || Sample standard deviation, population std dev, mean, and spread
+mean-median-mode || Mean, Median & Mode Calculator || Comprehensive measures of central tendency for numerical datasets
+weighted-average || Weighted Average & Grade Calculator || Compute weighted score from values and assigned percentage weights
+z-score || Z-Score & Standard Normal Score Calculator || Standardize observation distance from mean in standard deviations
+combinations-calc || Combinations Calculator (nCr) || Compute unordered subsets n choose r without repetition
+probability-calc || Single Event Probability & Odds Calculator || Evaluate favorable vs total outcomes, percentage, and odds in favor
+confidence-interval || Confidence Interval Calculator || Calculate 90%, 95%, and 99% confidence margins for a sample mean
+scientific-notation || Scientific & Engineering Notation Calculator || Convert large and small numbers into scientific (m × 10ⁿ) and E-notation
+logarithm-base-n || Logarithm Calculator (Any Base) || Evaluate log_b(x) using change-of-base formula with arbitrary base
+exponential-growth || Exponential Growth & Decay Calculator || Model continuous population growth, biology growth, and decay rate
+auto-loan-calc || Auto Loan Calculator || Calculate monthly car payments, total interest, and vehicle financing cost
+extra-payment-calc || Mortgage Extra Payment Calculator || See how additional principal payments shorten your loan and slash total interest
+simple-interest-calc || Simple Interest Calculator || Calculate non-compounding interest earned or paid: I = P × r × t
+apr-to-apy-calc || APR to APY Converter & Calculator || Convert nominal Annual Percentage Rate (APR) to effective Annual Percentage Yield (APY)
+rule-of-72-calc || Rule of 72 Calculator || Estimate years or required interest rate needed to double your invested wealth
+401k-savings-calc || 401(k) Retirement Calculator || Project 401(k) retirement balance including company employer match contribution
+roth-ira-calc || Roth IRA Growth Calculator || Forecast tax-free compound growth and withdrawal balance at retirement age
+safe-withdrawal-rate-calc || Safe Withdrawal Rate (4% Rule) Calculator || Determine sustainable annual retirement spending from accumulated nest egg
+fire-calculator || FIRE (Financial Independence) Calculator || Calculate your exact target FIRE number and estimated years until early retirement
+straight-line-depreciation-calc || Straight-Line Depreciation Calculator || Calculate equal annual asset depreciation write-off: (Cost - Salvage) / Useful Life
+capital-gains-tax-calc || Capital Gains Tax Calculator || Calculate taxable net capital gains and estimated tax liability on investment sales
+effective-tax-rate-calc || Effective Tax Rate Calculator || Calculate your actual percentage of total income paid in tax vs marginal tax bracket
+net-paycheck-calc || Take-Home Paycheck Calculator || Estimate net take-home salary after federal tax, state tax, FICA, and deductions
+target-profit-calc || Target Profit Sales Calculator || Calculate required sales unit volume and revenue to achieve a target dollar profit
+contribution-margin-calc || Contribution Margin Calculator || Calculate dollar contribution margin and contribution margin ratio percentage
+markup-to-margin-calc || Markup to Margin Converter & Calculator || Convert cost markup percentage to gross profit margin and solve selling price
+ebitda-margin-calc || EBITDA & EBITDA Margin Calculator || Calculate EBITDA cash earnings and operating profitability percentage
+gross-margin-pricing-calc || Target Gross Margin Price Solver || Calculate the exact retail sales price needed to hit your target gross margin %
+npv-calculator || Net Present Value (NPV) Calculator || Evaluate capital project profitability by discounting expected multi-year cash flows
+irr-calculator || Internal Rate of Return (IRR) Calculator || Determine the annualized discount rate where net present value equals zero
+annualized-roi-calc || Annualized ROI & CAGR Calculator || Calculate Compound Annual Growth Rate (CAGR) and annualized return on investment
+customer-acquisition-cost-calc || CAC & Customer LTV Ratio Calculator || Calculate Customer Acquisition Cost (CAC) and LTV:CAC business viability ratio
+churn-rate-calc || Customer Churn & Retention Calculator || Calculate periodic churn rate percentage, retention rate, and average customer lifespan
+concrete-footing-calc || Concrete Footing & Pier Calculator || Calculate cubic yards and 80lb/60lb pre-mix bags for continuous strip and pad footings
+cinder-block-calc || CMU Cinder Block Wall Calculator || Estimate standard 8x8x16 concrete masonry blocks and mortar bags needed for a wall
+gravel-aggregate-calc || Gravel & Crushed Stone Calculator || Determine cubic yards and tons of aggregate gravel required for base driveway fill
+hardwood-flooring-calc || Hardwood & Laminate Flooring Calculator || Calculate total floor square footage, waste margin (10%), and cartons/boxes needed
+tile-grout-calc || Tile & Grout Volume Calculator || Calculate tile piece count and pounds of tile grout based on joint width and depth
+vinyl-plank-calc || Luxury Vinyl Plank (LVP) Calculator || Calculate LVP plank cartons and square footage required including staggered end waste
+deck-boards-calc || Decking Board & Fastener Calculator || Calculate composite or wood decking boards (5.5" wide) and hidden deck screw counts
+wall-stud-calc || Wall Stud Calculator || Calculate 2x4 / 2x6 framing studs (16" or 24" O.C.) plus top and bottom plates
+drywall-sheet-calc || Drywall Sheet & Mud Calculator || Estimate 4x8 or 4x12 drywall panels, screws, and gallons of joint compound mud
+board-feet-calc || Lumber Board Feet (BF) Calculator || Calculate hardwood lumber volume: (Thickness in × Width in × Length ft) / 12
+stair-rise-run-calc || Stair Stringer Rise & Run Calculator || Calculate exact step count, riser height (7-7.75"), tread depth, and total stringer run
+fence-picket-calc || Wood Fence Pickets & Posts Calculator || Estimate 4x4 posts (8ft spacing), 2x4 rails, and 5.5" dog-ear privacy fence pickets
+interior-paint-calc || Interior Wall Paint Calculator || Calculate net wall surface area excluding windows/doors and paint gallons (350 sq ft/gal)
+roof-shingle-calc || Roofing Shingles & Bundles Calculator || Estimate roofing squares (100 sq ft) and 3-bundle per square architectural shingles
+roof-pitch-calc || Roof Pitch & Slope Multiplier Calculator || Convert pitch rise/run (e.g. 6:12) to slope multiplier angle and true rafter slope area
+mulch-landscaping-calc || Mulch & Topsoil Landscaping Calculator || Compute cubic yards and 2 cu ft bagged mulch needed for garden bedding coverage
+body-fat-navy-calc || US Navy Body Fat Calculator || Estimate body fat percentage using circumference measurements (neck, waist, hip)
+ideal-body-weight-calc || Ideal Body Weight (IBW) Calculator || Calculate healthy weight ranges using Devine, Robinson, and Miller clinical formulas
+waist-to-hip-calc || Waist-to-Hip Ratio (WHR) Calculator || Evaluate visceral fat distribution and cardiovascular metabolic risk thresholds
+calorie-deficit-calc || Calorie Deficit & Weight Loss Date Calculator || Calculate target daily calorie intake and projected calendar date to achieve target weight
+calories-burned-activity-calc || Exercise Calories Burned (MET) Calculator || Compute energy expenditure using Metabolic Equivalent of Task (MET) values
+intermittent-fasting-calc || Intermittent Fasting Schedule Calculator || Calculate exact eating and fasting windows for 16:8, 18:6, and 20:4 intermittent fasting
+karvonen-heart-rate-calc || Karvonen Heart Rate Zone Calculator || Calculate 5 targeted aerobic/anaerobic cardio training zones using Heart Rate Reserve
+zone-2-cardio-calc || Zone 2 Heart Rate Endurance Calculator || Calculate precise Zone 2 (60-70% HRmax) range for mitochondrial fat oxidation
+one-rep-max-calc || One-Rep Max (1RM) Calculator || Calculate maximum single-repetition lift strength using Brzycki, Epley, and Lombardi formulas
+running-pace-calc || Running Pace & Race Time Calculator || Calculate mile/km splits and predicted finish times for 5K, 10K, Half Marathon, and Marathon
+macro-protein-calc || Daily Protein Requirement Calculator || Calculate grams of daily protein tailored to endurance, hypertrophy, or fat loss goals
+keto-macro-calc || Ketogenic Diet Macro Calculator || Calculate exact daily grams of fat, protein, and net carbohydrates for nutritional ketosis
+water-intake-calc || Daily Water Intake & Hydration Calculator || Calculate daily fluid ounces and liters of water needed based on body weight and exercise
+pet-age-dog-cat-calc || Pet Age Calculator (Dog & Cat to Human Years) || Convert canine and feline physiological age into exact equivalent human years
+add-subtract-days-calc || Add or Subtract Days from Date Calculator || Compute forward or backward calendar date by adding or subtracting calendar days/weeks
+countdown-timer-calc || Event Countdown & Days Until Calculator || Calculate exact days, hours, minutes, and weekends remaining until a future date
+working-days-calc || Business Working Days Calculator || Calculate net workdays between dates excluding Saturday/Sunday weekends
+add-business-days-calc || Add Business Days Deadline Calculator || Calculate contractual legal deadline dates by adding N business working days
+billable-hours-calc || Billable Hours & Fee Calculator || Calculate total decimal billable hours worked and gross client invoicing charges
+time-duration-calc || Time Duration & Elapsed Hours Calculator || Calculate hours, minutes, and seconds between two clock times across midnight
+time-card-payroll-calc || Weekly Employee Timecard & Overtime Calculator || Sum daily clock-in/out hours, lunch breaks, regular 40h pay, and 1.5x overtime
+sleep-cycle-calc || 90-Minute Sleep Cycle Alarm Calculator || Calculate optimal wake-up or bedtimes matching natural 90-minute REM sleep cycles
+electric-power-kw-calc || Electrical Power (Watts, Volts & Amps) Calculator || Solve single-phase electrical power: Watts (P) = Volts (V) × Amperes (I)
+three-phase-power-calc || Three-Phase Electric Power (kW & kVA) Calculator || Calculate 3-phase real power (kW), apparent power (kVA), and line current
+appliance-daily-kwh-calc || Appliance Daily & Annual Energy Usage Calculator || Calculate daily kilowatt-hours (kWh) and annual utility electricity cost for any appliance
+electric-vehicle-charging-calc || Electric Vehicle (EV) Charging Time & Cost Calculator || Compute Level 1/2 EV charge duration, battery kWh replenished, and driving cost per mile
+solar-panel-output-calc || Solar Panel Daily Energy Output Calculator || Estimate daily and monthly solar electricity production (kWh) based on peak sun hours
+voltage-drop-awg-calc || AWG Wire Voltage Drop Calculator || Determine circuit voltage drop percentage across copper wire runs (NEC 3% branch limit)
+wire-ampacity-calc || NEC Conductor Wire Gauge & Ampacity Calculator || Determine required copper wire gauge (14, 12, 10, 8, 6 AWG) based on breaker amperage
+circuit-breaker-calc || Circuit Breaker Sizing (80% Continuous Rule) Calculator || Size branch circuit breakers according to continuous and non-continuous electrical loads
+series-parallel-resistors-calc || Series & Parallel Resistors Calculator || Calculate equivalent total resistance for series (R1+R2) and parallel circuits (1/(1/R1+1/R2))
+led-resistor-calc || LED Series Current Limiting Resistor Calculator || Calculate exact resistance (Ohms) and resistor wattage rating to protect an LED from burning out
+reynolds-number-calc || Reynolds Number Fluid Flow Calculator || Determine laminar, transient, or turbulent flow regime in pipes: Re = (ρ × v × D) / μ
+pipe-flow-velocity-calc || Pipe Flow Rate & Velocity Calculator || Calculate volumetric flow rate in GPM / CFM and fluid velocity through circular pipes
+hydraulic-pump-hp-calc || Hydraulic Pump Power (HP) Calculator || Calculate input mechanical horsepower needed to drive a hydraulic pump: HP = (PSI × GPM) / 1714
+torque-hp-rpm-calc || Torque, Horsepower & RPM Calculator || Convert rotational mechanical power: Horsepower = (Torque lb-ft × RPM) / 5252
+mechanical-spring-calc || Hooke's Law Spring Force & Energy Calculator || Calculate spring restoring force (F = -k × x) and stored elastic potential energy (PE = 0.5 × k × x²)
+gear-ratio-calc || Gear Ratio & Mechanical Advantage Calculator || Calculate driver-to-driven gear ratio, speed multiplication, and mechanical torque amplification
+beam-bending-stress-calc || Beam Bending Stress (Flexure) Calculator || Calculate extreme fiber flexural bending stress in structural beams: σ = (M × y) / I
+moment-of-inertia-calc || Area Moment of Inertia Calculator || Calculate second moment of area for rectangular beams (b×h³/12) and solid circular shafts (π×d⁴/64)
+heat-transfer-q-calc || Sensible Heat Transfer (Q = mcΔT) Calculator || Calculate thermal energy required to change material temperature: Q = m × c × ΔT
+ideal-gas-law-calc || Ideal Gas Law (PV = nRT) Solver || Solve pressure, volume, moles, or temperature in ideal gas thermodynamic systems
+group-split-bill-calc || Group Restaurant Bill & Tax Split Calculator || Evenly or proportionally split dinner checks among party guests with tip and sales tax
+food-delivery-tip-calc || Food Delivery Driver Tip Calculator || Calculate fair gratuity for delivery couriers based on miles driven, weather, and order value
+double-discount-calc || Stackable Double Discount & Markdown Calculator || Calculate combined savings from stacked coupons (e.g. 30% off clearance plus extra 15% VIP)
+unit-price-comparison-calc || Grocery Unit Price & Best Value Comparison || Compare two different size packages to find the lower cost per ounce, pound, or gram
+road-trip-fuel-calc || Road Trip Gas Cost & Passenger Split Calculator || Calculate total gas gallons, highway travel fuel expenditure, and equal passenger cost split
+mpg-cost-per-mile-calc || Fuel Economy & Cost per Mile Calculator || Determine your vehicle exact fuel cost per mile driven based on MPG and pump gas prices
+ev-vs-gas-savings-calc || EV vs Gas Car Annual Fuel Savings Calculator || Compare annual electric vehicle charging utility cost against traditional internal combustion gasoline
+recipe-multiplier-calc || Recipe Serving Scaling & Multiplier Calculator || Scale recipe ingredient quantities up or down precisely based on original and desired servings
+bakers-percentage-calc || Baker's Percentage & Bread Hydration Calculator || Calculate sourdough water hydration %, salt, and yeast ratios where total flour equals 100%
+cooking-time-per-pound-calc || Roast Cooking Time per Pound Calculator || Calculate oven roasting minutes and doneness resting time for turkey, chicken, prime rib, and ham
+income-tax-calc || Income Tax Bracket & Effective Rate Calculator || Calculate federal income tax liability, marginal bracket, and effective tax rate
+sales-tax-calc || Sales Tax & VAT Calculator || Compute total purchase price with sales tax or extract pre-tax base amount
+mortgage-payment-calc || Mortgage Payment & Amortization Calculator || Calculate monthly principal and interest mortgage payments with loan breakdown
+rental-roi-calc || Rental Property Cap Rate & ROI Calculator || Evaluate rental property cash-on-cash return, net operating income, and capitalization rate
+amazon-fba-fee-calc || Amazon FBA & E-commerce Fee Calculator || Calculate Amazon FBA fulfillment fees, referral percentages, and net profit per unit
+profit-margin-calc || Product Profit Margin & Markup Calculator || Compute gross profit margin, markup percentage, and profit from cost and revenue
+solar-panel-roi-calc || Solar Panel System ROI & Payback Calculator || Calculate annual solar energy generation, electric bill savings, and payback period
+life-insurance-needs-calc || Life Insurance Needs Calculator || Calculate recommended term life insurance coverage based on income replacement and debts
+car-depreciation-calc || Car Loan & Trade-In Depreciation Calculator || Estimate vehicle resale value over time factoring in annual depreciation and loan equity
+student-loan-payoff-calc || Student Loan Payoff & Repayment Calculator || Calculate student loan amortization, total interest, and accelerated principal payoff
+hourly-to-salary-calc || Hourly to Annual Salary & Overtime Calculator || Convert hourly wages into annual compensation, monthly pay, and overtime earnings
+net-salary-calc || Take-Home Pay & Net Salary Calculator || Estimate net take-home salary after federal/state income taxes, FICA, and deductions
+retirement-401k-calc || Retirement 401(k) & Employer Match Calculator || Project long-term retirement nest egg accumulation with employee and employer contributions
+cd-interest-calc || Certificate of Deposit (CD) Calculator || Calculate total maturity value and earned interest for fixed-term Certificates of Deposit
+compound-savings-calc || Compound Savings & Regular Deposit Calculator || Project long-term savings growth from initial lump sums and recurring monthly deposits
+ltv-cac-calc || Customer Lifetime Value (LTV) & CAC Calculator || Evaluate customer profitability by comparing lifetime value against customer acquisition cost
+dimensional-weight-calc || Dimensional Weight & Billable Shipping Calculator || Compute carrier billable weight by comparing actual weight against volumetric dimensional weight
+eoq-calc || Economic Order Quantity (EOQ) Calculator || Determine optimal inventory order quantity that minimizes holding and ordering costs
+oee-calc || Manufacturing OEE (Overall Equipment Effectiveness) || Measure manufacturing productivity by evaluating Availability, Performance, and Quality
+crop-yield-calc || Crop Yield & Harvest Estimator || Estimate total agricultural crop harvest output and gross market value from acreage
+patient-wait-calc || Patient Wait Time & Facility Throughput || Model outpatient clinic queue wait times and provider capacity utilization
+iv-drip-calc || Medical IV Drip Rate & Infusion Calculator || Calculate intravenous fluid infusion drop rates in gtt/min and hourly volume delivery
+download-time-calc || Data Download Transfer Time Calculator || Compute exact file download transfer duration across various internet connection speeds
+pomodoro-planner-calc || Time Management & Pomodoro Planner || Plan focused work blocks, break intervals, and total task execution timelines
+net-worth-calc || Personal Net Worth & Asset Growth Planner || Compute total personal net worth by tallying liquid assets, investments, real estate, and debts
+carbon-footprint-calc || Carbon Footprint & CO₂ Emission Estimator || Estimate annual household carbon footprint from electricity usage, gas, mileage, and air travel
+recipe-cost-calc || Restaurant Recipe Cost & Pricing Calculator || Compute individual recipe ingredient costs, plate cost, food cost percentage, and menu price
+flight-airspeed-calc || Flight Ground Speed & Airspeed Calculator || Compute aircraft true airspeed, wind correction angles, and ground speed for flight planning
+password-entropy-calc || Password Entropy & Crack Time Estimator || Calculate password bit entropy and estimate brute-force cracking resistance time
+raid-capacity-calc || RAID Storage Capacity & Fault Tolerance || Determine usable storage capacity and drive fault tolerance across RAID levels (0, 1, 5, 6, 10)
+nda-damages-calc || NDA Breach Damage & Liquidated Damages Estimator || Estimate trade secret misappropriation damages and enforceable liquidated damages under contract law
+cre-cap-rate-calc || Commercial Real Estate Cap Rate & NOI Calculator || Compute Net Operating Income (NOI), Capitalization Rate (Cap Rate), and property valuation
+open-to-buy-calc || Retail Open-to-Buy (OTB) Plan Calculator || Calculate merchandise Open-to-Buy budget to optimize inventory levels and prevent overbuying
+running-race-predictor-calc || Running Race Time Predictor (Riegel Formula) || Predict finish times for running distances using Peter Riegel’s endurance mathematical formula
