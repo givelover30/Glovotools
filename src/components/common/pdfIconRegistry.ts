@@ -32,6 +32,10 @@ export type PdfIconGlyph =
   | 'blank-detector'
   | 'size-analyzer'
   | 'split-count'
+  | 'sign-pen'
+  | 'signature-pad'
+  | 'fill-sign'
+  | 'initials-date'
   | 'generic-pdf';
 
 export interface PdfIconPaletteStyle {
@@ -263,6 +267,28 @@ export const PDF_TOOL_ICON_MAP: Record<string, PdfToolIconConfig> = {
     glyph: 'split-count',
     palette: 'red',
     label: 'PDF Split by Page Count Tool'
+  },
+
+  // PDF E-SIGNATURE SUITE
+  'sign-pdf': {
+    glyph: 'sign-pen',
+    palette: 'blue',
+    label: 'Sign PDF'
+  },
+  'create-signature': {
+    glyph: 'signature-pad',
+    palette: 'purple',
+    label: 'Create Signature'
+  },
+  'fill-and-sign': {
+    glyph: 'fill-sign',
+    palette: 'teal',
+    label: 'Fill & Sign PDF'
+  },
+  'add-date-initials': {
+    glyph: 'initials-date',
+    palette: 'orange',
+    label: 'Add Date & Initials to PDF'
   }
 };
 

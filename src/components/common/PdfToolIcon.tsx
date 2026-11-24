@@ -820,6 +820,115 @@ function renderGlyphContent(glyph: PdfIconGlyph, accent: string, accentLight: st
         </g>
       );
 
+    case 'sign-pen':
+      return (
+        <g>
+          <SingleDocBase />
+          <path
+            d="M10.2 23.6C11.4 20.8 12.6 24.1 14 21.8C15.1 20.2 16.2 23.4 17.8 22.4"
+            fill="none"
+            stroke={accent}
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17.2 22.8L18.1 19.8L22.3 15.6C22.8 15.1 23.6 15.1 24.1 15.6L24.5 16C25 16.5 25 17.3 24.5 17.8L20.3 22L17.2 22.8Z"
+            fill={accentLight}
+            stroke={accent}
+            strokeWidth="1.35"
+            strokeLinejoin="round"
+          />
+        </g>
+      );
+
+    case 'signature-pad':
+      return (
+        <g>
+          <rect
+            x="4"
+            y="6"
+            width="24"
+            height="19.5"
+            rx="3"
+            fill="#FFFFFF"
+            stroke={accent}
+            strokeWidth="1.5"
+          />
+          <path
+            d="M7.5 19.8C9.2 14.8 11.1 21.2 13.3 16.2C14.8 13.4 16.3 19.6 18.4 17.4C19.5 16.3 20.5 18.6 22.2 18.1"
+            fill="none"
+            stroke={accent}
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <line
+            x1="7.2"
+            y1="22.3"
+            x2="24.8"
+            y2="22.3"
+            stroke={accent}
+            strokeWidth="1.2"
+            strokeOpacity="0.45"
+            strokeLinecap="round"
+          />
+        </g>
+      );
+
+    case 'fill-sign':
+      return (
+        <g>
+          <SingleDocBase />
+          <rect x="10.2" y="16" width="8.5" height="2.4" rx="0.8" fill={accentLight} stroke={accent} strokeWidth="1.1" />
+          <path
+            d="M10.4 23.6C11.7 21.2 13 24.2 14.6 22C15.6 20.8 16.6 23.2 18 22.5"
+            fill="none"
+            stroke={accent}
+            strokeWidth="1.45"
+            strokeLinecap="round"
+          />
+          <circle cx="22.6" cy="22.2" r="4.1" fill={accent} stroke="#FFFFFF" strokeWidth="1.15" />
+          <path
+            d="M20.9 22.2L22.1 23.4L24.5 20.9"
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth="1.45"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+      );
+
+    case 'initials-date':
+      return (
+        <g>
+          <SingleDocBase />
+          <rect
+            x="9.8"
+            y="16.2"
+            width="12.4"
+            height="9.4"
+            rx="1.6"
+            fill={accentLight}
+            stroke={accent}
+            strokeWidth="1.35"
+          />
+          <path d="M9.8 19H22.2M13.2 14.9V17M18.8 14.9V17" stroke={accent} strokeWidth="1.35" strokeLinecap="round" />
+          <text
+            x="16"
+            y="23.8"
+            textAnchor="middle"
+            fill={accent}
+            fontSize="4.6"
+            fontWeight="800"
+            fontFamily="system-ui, sans-serif"
+          >
+            JD
+          </text>
+        </g>
+      );
+
     case 'generic-pdf':
     default:
       return (

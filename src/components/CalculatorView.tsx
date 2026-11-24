@@ -80,6 +80,7 @@ const EverydayCalculator = lazy(() => import('./calculators/EverydayCalculator.t
 const UnitConverterCalculator = lazy(() => import('./calculators/UnitConverterCalculator.tsx'));
 const ToolsWorkspace = lazy(() => import('./calculators/ToolsWorkspace.tsx'));
 const PdfToolsWorkspace = lazy(() => import('./calculators/PdfToolsWorkspace.tsx'));
+const PdfESignWorkspace = lazy(() => import('./esign/PdfESignWorkspace.tsx'));
 const DocumentConvertersWorkspace = lazy(() => import('./calculators/DocumentConvertersWorkspace.tsx'));
 const PasswordGeneratorCalculator = lazy(() => import('./calculators/PasswordGeneratorCalculator.tsx'));
 const QrCodeGeneratorCalculator = lazy(() => import('./calculators/QrCodeGeneratorCalculator.tsx'));
@@ -610,6 +611,16 @@ export default function CalculatorView({
         return <CronExpressionCalculator />;
       case 'image-dimension-calculator':
         return <ImageDimensionCalculator />;
+      case 'sign-pdf':
+      case 'create-signature':
+      case 'fill-and-sign':
+      case 'add-date-initials':
+        return (
+          <PdfESignWorkspace
+            initialTool={calculator.id}
+            onNavigateTool={onSelectCalculator}
+          />
+        );
       default:
         if (calculator.category === 'tools') {
           return <ToolsWorkspace initialTool={calculator.id} />;

@@ -36,7 +36,7 @@ export default function StatBar() {
             return (
               <div
                 key={idx}
-                className={`flex items-center gap-3.5 min-w-0 ${
+                className={`kpi-hover-wobble flex items-center gap-3.5 min-w-0 ${
                   idx < stats.length - 1
                     ? 'xl:border-r xl:border-border-subtle xl:pr-6'
                     : ''

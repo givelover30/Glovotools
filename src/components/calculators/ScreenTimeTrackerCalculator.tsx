@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -123,6 +124,7 @@ export default function ScreenTimeTrackerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar Tiempo de Pantalla (JSON)' : 'Export Screen Time (JSON)'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={() => setLogs(INITIAL_LOGS)}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>

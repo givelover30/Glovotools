@@ -9,11 +9,23 @@ import {
   SlidersHorizontal
 } from 'lucide-react';
 import { UiStatusLabel, UiStatusTone } from '../ui/AppPrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 
 /* ============================================================================
    CALCTOOLS 2.0 — PHASE 4 UNIVERSAL TOOL WORKSPACE PRIMITIVES
    Utily-inspired compact surfaces · Single-elevation depth · Light + Dark tokens
    ============================================================================ */
+
+export type KpiHoverAnimation = 'bounce' | 'shake' | 'wobble' | 'pulse' | 'elastic' | 'none';
+
+export const KPI_HOVER_ANIMATION_CLASS: Record<KpiHoverAnimation, string> = {
+  bounce: 'kpi-hover-bounce',
+  shake: 'kpi-hover-shake',
+  wobble: 'kpi-hover-wobble',
+  pulse: 'kpi-hover-pulse',
+  elastic: 'kpi-hover-elastic',
+  none: ''
+};
 
 interface ToolSplitWorkspaceProps {
   inputs: React.ReactNode;
@@ -33,11 +45,11 @@ export function ToolSplitWorkspace({
 
   return (
     <div className="space-y-5">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-        <div className={`${leftSpan} min-w-0`}>{inputs}</div>
-        <div className={`${rightSpan} min-w-0`}>{results}</div>
+      <div className="glovo-print-split grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        <div className={`${leftSpan} min-w-0 glovo-print-inputs-col`}>{inputs}</div>
+        <div className={`${rightSpan} min-w-0 glovo-print-results-col`}>{results}</div>
       </div>
-      {below && <div>{below}</div>}
+      {below && <div className="glovo-print-below">{below}</div>}
     </div>
   );
 }
@@ -64,14 +76,14 @@ export function ToolInputPanel({
   children
 }: ToolInputPanelProps) {
   return (
-    <section className="ui-panel p-5 sm:p-6 space-y-5">
+    <section className="glovo-print-input-panel ui-panel p-5 sm:p-6 space-y-5">
       <div className="flex flex-wrap items-start justify-between gap-3 pb-4 border-b border-border-subtle">
         <div className="min-w-0">
           <h2 className="text-sm font-bold text-text-primary">{title}</h2>
           {subtitle && <p className="text-xs text-text-secondary mt-0.5">{subtitle}</p>}
         </div>
 
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="no-print flex items-center gap-1.5 shrink-0">
           {headerExtra}
           {onClear && (
             <button
@@ -121,7 +133,7 @@ export function ToolFieldGroup({
   children
 }: ToolFieldGroupProps) {
   return (
-    <div className="space-y-1.5">
+    <div className="glovo-field-group space-y-1.5">
       <div className="flex items-center justify-between gap-2">
         <label htmlFor={htmlFor} className="ui-label block">
           {label}
@@ -203,7 +215,7 @@ interface ToolPresetBarProps {
 export function ToolPresetBar({ label = 'Examples:', presets }: ToolPresetBarProps) {
   if (presets.length === 0) return null;
   return (
-    <div className="flex flex-wrap items-center gap-1.5 pt-1">
+    <div className="no-print flex flex-wrap items-center gap-1.5 pt-1">
       <span className="text-xs font-medium text-text-tertiary mr-1">{label}</span>
       {presets.map((preset, idx) => (
         <button
@@ -238,7 +250,7 @@ export function ToolAdvancedToggle({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="w-full flex items-center justify-between py-1.5 text-xs font-semibold text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
+        className="no-print w-full flex items-center justify-between py-1.5 text-xs font-semibold text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
       >
         <span className="inline-flex items-center gap-1.5">
           <SlidersHorizontal className="w-3.5 h-3.5 text-accent" />
@@ -272,6 +284,14 @@ interface ToolResultsPanelProps {
   emptyDescription?: string;
   errorTitle?: string;
   errorMessage?: string;
+  /** Whether to show the Print Result action button when results are ready (defaults to true) */
+  printable?: boolean;
+  /** Print scoping mode */
+  printScope?: 'workspace' | 'result-only';
+  /** Optional extra result action controls */
+  extraActions?: React.ReactNode;
+  /** Optional hover animation override for primary KPI result card */
+  primaryHoverAnimation?: KpiHoverAnimation;
   children?: React.ReactNode;
 }
 
@@ -291,9 +311,18 @@ export function ToolResultsPanel({
   emptyDescription = 'Adjust any input on the left to view live formatted results here.',
   errorTitle = 'Check your inputs',
   errorMessage = 'Please enter valid values to complete the calculation.',
+  printable = true,
+  printScope = 'workspace',
+  extraActions,
+  primaryHoverAnimation,
   children
 }: ToolResultsPanelProps) {
   const [copied, setCopied] = useState(false);
+
+  // Main calculation result KPI cards receive Bounce; important successful result cards receive Pulse
+  const resolvedPrimaryAnim: KpiHoverAnimation =
+    primaryHoverAnimation ?? (statusTone === 'success' ? 'pulse' : 'bounce');
+  const primaryAnimClass = KPI_HOVER_ANIMATION_CLASS[resolvedPrimaryAnim];
 
   const handleCopy = () => {
     if (!copyText || typeof navigator === 'undefined') return;
@@ -305,19 +334,25 @@ export function ToolResultsPanel({
   return (
     <section
       aria-live="polite"
-      className="ui-panel p-5 sm:p-6 space-y-5 lg:sticky lg:top-28"
+      className="glovo-print-results-panel ui-panel p-5 sm:p-6 space-y-5 lg:sticky lg:top-28"
     >
-      <div className="flex items-center justify-between gap-3 pb-4 border-b border-border-subtle">
+      <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-border-subtle">
         <h2 className="text-sm font-bold text-text-primary">{title}</h2>
-        {state === 'ready' && copyText && (
-          <button
-            type="button"
-            onClick={handleCopy}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-result-icon hover:bg-result-bg border border-border-subtle transition-colors cursor-pointer whitespace-nowrap"
-          >
-            {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-            <span>{copied ? copiedLabel : copyLabel}</span>
-          </button>
+        {state === 'ready' && (copyText || printable || extraActions) && (
+          <div className="no-print flex flex-wrap items-center gap-1.5">
+            {extraActions}
+            {copyText && (
+              <button
+                type="button"
+                onClick={handleCopy}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-result-icon hover:bg-result-bg border border-border-subtle transition-colors cursor-pointer whitespace-nowrap"
+              >
+                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                <span>{copied ? copiedLabel : copyLabel}</span>
+              </button>
+            )}
+            {printable && <PrintResultButton scope={printScope} />}
+          </div>
         )}
       </div>
 
@@ -337,7 +372,9 @@ export function ToolResultsPanel({
       ) : (
         <div className="space-y-5">
           {primaryValue !== undefined && (
-            <div className="rounded-xl border border-result-border bg-result-bg p-4 sm:p-5 space-y-2">
+            <div
+              className={`print-avoid-break glovo-print-primary-card ${primaryAnimClass} rounded-xl border border-result-border bg-result-bg p-4 sm:p-5 space-y-2`.trim()}
+            >
               <div className="flex items-center justify-between gap-2">
                 {primaryLabel && (
                   <span className="text-xs font-semibold text-result-text-secondary">
@@ -385,11 +422,22 @@ interface ToolMetricTileProps {
   value: string;
   hint?: string;
   accent?: boolean;
+  /** Hover animation style (defaults to 'shake' for secondary result metric cards) */
+  hoverAnimation?: KpiHoverAnimation;
 }
 
-export function ToolMetricTile({ label, value, hint, accent = false }: ToolMetricTileProps) {
+export function ToolMetricTile({
+  label,
+  value,
+  hint,
+  accent = false,
+  hoverAnimation = 'shake'
+}: ToolMetricTileProps) {
+  const animClass = KPI_HOVER_ANIMATION_CLASS[hoverAnimation];
   return (
-    <div className="rounded-xl border border-border-subtle bg-surface-secondary/70 dark:bg-surface-elevated/60 p-3.5 min-w-0">
+    <div
+      className={`print-avoid-break ${animClass} rounded-xl border border-border-subtle bg-surface-secondary/70 dark:bg-surface-elevated/60 p-3.5 min-w-0`.trim()}
+    >
       <span className="block text-xs text-text-secondary truncate">{label}</span>
       <span
         className={`mt-1 block text-base font-bold font-mono tabular-nums break-words [overflow-wrap:anywhere] ${
@@ -409,9 +457,9 @@ interface ToolBreakdownListProps {
 
 export function ToolBreakdownList({ items }: ToolBreakdownListProps) {
   return (
-    <div className="divide-y divide-border-subtle border-t border-border-subtle text-xs">
+    <div className="glovo-print-breakdown divide-y divide-border-subtle border-t border-border-subtle text-xs">
       {items.map((item, idx) => (
-        <div key={idx} className="flex items-center justify-between gap-3 py-2.5">
+        <div key={idx} className="print-avoid-break flex items-center justify-between gap-3 py-2.5">
           <span className={item.highlight ? 'font-semibold text-text-primary' : 'text-text-secondary'}>
             {item.label}
           </span>

@@ -97,7 +97,7 @@ export default function CalculationHistoryWidget({ onSelectCalculator }: Calcula
             return (
               <div
                 key={item.id}
-                className="p-3 rounded-xl border border-border-subtle bg-surface-secondary/50 hover:bg-surface-secondary transition-colors text-xs space-y-2"
+                className="kpi-hover-elastic p-3 rounded-xl border border-border-subtle bg-surface-secondary/50 hover:bg-surface-secondary transition-colors text-xs space-y-2"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div>

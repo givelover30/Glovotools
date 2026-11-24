@@ -16,6 +16,7 @@ import { CALCULATORS } from '../../data/calculators.ts';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { DOC_CONVERTER_LOCALE } from '../../i18n/docConverterTranslations.ts';
 import { getDocumentContract } from '../../engine/contracts/phase27_document_converter_contracts.ts';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   inspectSpreadsheetSheets
 } from '../../services/document/documentConversionEngine.ts';
@@ -305,7 +306,7 @@ export default function DocumentConvertersWorkspace({
     <ToolSplitWorkspace
       ratio="7-5"
       inputs={
-        <section className="ui-panel p-5 sm:p-6 space-y-5">
+        <section data-print-dropzone="true" className="ui-panel p-5 sm:p-6 space-y-5">
           {/* Panel Header */}
           <div className="flex flex-wrap items-start justify-between gap-3 pb-4 border-b border-border-subtle">
             <div className="min-w-0">
@@ -656,16 +657,19 @@ export default function DocumentConvertersWorkspace({
       results={
         <section
           aria-live="polite"
-          className="ui-panel p-5 sm:p-6 space-y-4 lg:sticky lg:top-28"
+          className="glovo-print-results-panel ui-panel p-5 sm:p-6 space-y-4 lg:sticky lg:top-28"
         >
-          <div className="flex items-center justify-between gap-2 pb-4 border-b border-border-subtle">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-border-subtle">
             <h2 className="text-sm font-bold text-text-primary tracking-tight">
               {isEs ? 'Salida y descarga' : 'Output & Download'}
             </h2>
             {result && (
-              <span className="text-xs font-mono tabular-nums text-text-tertiary">
-                {formatBytes(result.output.stats.outputSizeBytes)}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono tabular-nums text-text-tertiary">
+                  {formatBytes(result.output.stats.outputSizeBytes)}
+                </span>
+                <PrintResultButton scope="result-only" />
+              </div>
             )}
           </div>
 
@@ -690,7 +694,7 @@ export default function DocumentConvertersWorkspace({
             </div>
           ) : result ? (
             <div className="space-y-4">
-              <div className="rounded-xl border border-result-border bg-result-bg p-4 space-y-3">
+              <div className="print-avoid-break glovo-print-primary-card kpi-hover-pulse rounded-xl border border-result-border bg-result-bg p-4 space-y-3">
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-result-icon shrink-0 mt-0.5" />
                   <div className="min-w-0">
@@ -705,7 +709,7 @@ export default function DocumentConvertersWorkspace({
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2">
+                <div className="no-print flex flex-col sm:flex-row gap-2">
                   <a
                     href={result.blobUrl}
                     download={result.output.fileName}

@@ -74,7 +74,7 @@ export default function GlobalBreadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className="bg-[#FFFFFF] dark:bg-[#0B0E11]/90 backdrop-blur-lg border-b border-border-subtle py-2 px-4 sm:px-6 lg:px-8 text-xs text-text-secondary sticky top-14 z-30 transition-colors"
+      className="no-print bg-[#FFFFFF] dark:bg-[#0B0E11]/90 backdrop-blur-lg border-b border-border-subtle py-2 px-4 sm:px-6 lg:px-8 text-xs text-text-secondary sticky top-14 z-30 transition-colors"
     >
       <div className="max-w-7xl mx-auto flex items-center gap-1.5 overflow-x-auto whitespace-nowrap">
         <button

@@ -4,7 +4,10 @@ export const PT_UI_STRINGS: Record<string, string> = {
   // Navigation & Common
   'nav.home': 'Início',
   'nav.allTools': 'Todas as Ferramentas',
+  'nav.categories': 'Categorias',
+  'nav.popular': 'Ferramentas Populares',
   'nav.popularTools': 'Ferramentas Populares',
+  'nav.favorites': 'Favoritos',
   'nav.workspace': 'Espaço de trabalho',
   'nav.toolHubs': 'Categorias de Ferramentas',
   'nav.guidesArticles': 'Guias e Artigos',
@@ -47,6 +50,14 @@ export const PT_UI_STRINGS: Record<string, string> = {
   'btn.print': 'Imprimir Resultado',
   'btn.close': 'Fechar',
   'btn.clearRecent': 'Limpar Histórico',
+
+  // Print Document Headings
+  'print.generatedOn': 'Calculado em',
+  'print.inputs': 'Valores de Entrada',
+  'print.results': 'Resultado do Cálculo',
+  'print.notes': 'Notas',
+  'print.footer': 'Gerado com Glovotools · Resumo de cálculo no navegador',
+  'print.toastTriggered': 'Caixa de impressão aberta',
 
   // Breadcrumbs & Common Labels
   'breadcrumb.home': 'Início',
@@ -220,6 +231,7 @@ export const PT_UI_STRINGS: Record<string, string> = {
   'subcat.p25-sub-conv': 'Conversão e Otimização PDF',
   'subcat.p25-sub-sec': 'Segurança e Análise PDF',
   'subcat.p25-sub-adv': 'Processamento PDF Avançado',
+  'subcat.p25-sub-esign': 'Assinatura Eletrônica PDF e Preenchimento',
   'subcat.p27-sub-pdf-to-office': 'Conversores de PDF para Office',
   'subcat.p27-sub-office-to-pdf': 'Conversores de Office e Texto para PDF',
   'subcat.p27-sub-web-text-to-pdf': 'Web, Dados e Texto Rico para PDF',

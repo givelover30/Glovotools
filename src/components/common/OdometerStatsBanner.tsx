@@ -171,7 +171,7 @@ function OdometerCounterPanel({
 
   return (
     <div
-      className="relative w-full rounded-[20px] p-[3px] shadow-[0_14px_34px_rgba(0,0,0,0.65),0_0_26px_rgba(16,245,140,0.28)]"
+      className="kpi-hover-wobble relative w-full rounded-[20px] p-[3px] shadow-[0_14px_34px_rgba(0,0,0,0.65),0_0_26px_rgba(16,245,140,0.28)]"
       style={{
         background:
           'linear-gradient(155deg, #d2dbd7 0%, #5c6863 22%, #1d2522 50%, #55615c 78%, #b9c4bf 100%)'

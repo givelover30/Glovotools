@@ -250,7 +250,9 @@ export default function ToolHoverPreviewModal({
             </div>
 
             {/* Live Result Strip */}
-            <div className="mt-3 p-3 rounded-xl bg-result-bg border border-result-border flex items-center justify-between">
+            <div
+              className={`${executionResult?.success ? 'kpi-hover-pulse' : 'kpi-hover-bounce'} mt-3 p-3 rounded-xl bg-result-bg border border-result-border flex items-center justify-between`}
+            >
               <div className="min-w-0 pr-2">
                 <div className="text-[10px] font-semibold text-result-icon uppercase tracking-wider">
                   {isEs ? 'Resultado en Vivo' : 'Live Output'}

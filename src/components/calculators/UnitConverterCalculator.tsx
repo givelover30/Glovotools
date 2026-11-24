@@ -14,6 +14,7 @@ import {
   ToolPresetBar,
   ToolSegmentedControl
 } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 
 type DimensionKey =
   | 'length'
@@ -614,7 +615,7 @@ export default function UnitConverterCalculator({
   return (
     <div className="space-y-5">
       {/* 1. Static Accessible Dimension Tabs */}
-      <div className="flex items-center gap-1.5">
+      <div className="no-print flex items-center gap-1.5">
         <button
           type="button"
           onClick={() => handleScrollTabs('left')}
@@ -688,7 +689,7 @@ export default function UnitConverterCalculator({
             </p>
           </div>
 
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="no-print flex items-center gap-1.5 shrink-0">
             <button
               type="button"
               onClick={handleClear}
@@ -739,7 +740,7 @@ export default function UnitConverterCalculator({
           </div>
 
           {/* Swap Control */}
-          <div className="md:col-span-1 flex justify-center md:pb-1">
+          <div className="no-print md:col-span-1 flex justify-center md:pb-1">
             <button
               type="button"
               onClick={handleSwap}
@@ -758,7 +759,7 @@ export default function UnitConverterCalculator({
             </label>
             <div
               aria-live="polite"
-              className="w-full px-3.5 py-3 rounded-[10px] border border-result-border bg-result-bg text-xl font-bold font-mono tabular-nums text-result-text flex items-center justify-between gap-2 min-h-[50px]"
+              className="kpi-hover-bounce w-full px-3.5 py-3 rounded-[10px] border border-result-border bg-result-bg text-xl font-bold font-mono tabular-nums text-result-text flex items-center justify-between gap-2 min-h-[50px]"
             >
               <span className="truncate">{formattedResult}</span>
               <span className="text-xs font-semibold text-result-icon shrink-0">
@@ -792,8 +793,8 @@ export default function UnitConverterCalculator({
           </div>
         )}
 
-        {/* Toolbar: Precision + Copy Result */}
-        <div className="pt-4 border-t border-border-subtle flex flex-wrap items-center justify-between gap-3">
+        {/* Toolbar: Precision + Copy Result + Print Result */}
+        <div className="no-print pt-4 border-t border-border-subtle flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs font-medium text-text-secondary">
               {language === 'es' ? 'Precisión:' : 'Precision:'}
@@ -810,23 +811,26 @@ export default function UnitConverterCalculator({
             />
           </div>
 
-          <button
-            type="button"
-            disabled={isEmpty || isInvalid}
-            onClick={handleCopy}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-result-icon hover:bg-result-bg border border-border-subtle transition-colors cursor-pointer disabled:opacity-45 disabled:cursor-not-allowed"
-          >
-            {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-            <span>
-              {copied
-                ? language === 'es'
-                  ? 'Copiado'
-                  : 'Copied'
-                : language === 'es'
-                  ? 'Copiar resultado'
-                  : 'Copy result'}
-            </span>
-          </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              disabled={isEmpty || isInvalid}
+              onClick={handleCopy}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-result-icon hover:bg-result-bg border border-border-subtle transition-colors cursor-pointer disabled:opacity-45 disabled:cursor-not-allowed"
+            >
+              {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>
+                {copied
+                  ? language === 'es'
+                    ? 'Copiado'
+                    : 'Copied'
+                  : language === 'es'
+                    ? 'Copiar resultado'
+                    : 'Copy result'}
+              </span>
+            </button>
+            <PrintResultButton disabled={isEmpty || isInvalid} />
+          </div>
         </div>
 
         {/* Presets */}
@@ -886,7 +890,7 @@ export default function UnitConverterCalculator({
                   key={unit.id}
                   type="button"
                   onClick={() => setToUnitId(unit.id)}
-                  className={`text-left p-3.5 rounded-xl border transition-colors cursor-pointer flex items-center justify-between gap-2 ${
+                  className={`print-keep print-avoid-break kpi-hover-elastic text-left p-3.5 rounded-xl border transition-colors cursor-pointer flex items-center justify-between gap-2 ${
                     isTarget
                       ? 'border-result-border bg-result-bg'
                       : isSource

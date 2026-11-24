@@ -40,7 +40,7 @@ export default function WorkedExamples({ example }: WorkedExamplesProps) {
           {Object.entries(example.inputs).map(([key, val], idx) => (
             <div
               key={idx}
-              className="p-3 rounded-xl border border-border-subtle bg-white dark:bg-neutral-900 flex flex-col justify-between"
+              className="kpi-hover-wobble p-3 rounded-xl border border-border-subtle bg-white dark:bg-neutral-900 flex flex-col justify-between"
             >
               <span className="text-[11px] text-text-tertiary truncate font-medium">{key}</span>
               <span className="text-xs sm:text-sm font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5 truncate">
@@ -70,7 +70,7 @@ export default function WorkedExamples({ example }: WorkedExamplesProps) {
       </div>
 
       {/* Verified Final Result */}
-      <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 flex items-center justify-between gap-4">
+      <div className="kpi-hover-pulse p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 flex items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-xs font-semibold text-emerald-800 dark:text-emerald-300">
           <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
           <span>{t('label.verifiedSolution')}</span>

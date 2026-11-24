@@ -16,6 +16,7 @@ import {
   ToolSegmentedControl,
   ToolFieldGroup
 } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -259,6 +260,7 @@ export default function WeddingPlanningOrganizerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar Plan (JSON)' : 'Export Wedding Plan (JSON)'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={handleReset}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>

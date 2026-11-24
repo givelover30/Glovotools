@@ -61,7 +61,7 @@ export default function QuickActionsMenu({
   };
 
   return (
-    <div ref={menuRef} className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <div ref={menuRef} className="no-print fixed bottom-6 right-6 z-40 flex flex-col items-end">
       {isOpen && (
         <div
           role="menu"

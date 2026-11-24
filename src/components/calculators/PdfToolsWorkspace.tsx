@@ -16,6 +16,7 @@ import { type PdfErrorInput } from '../common/PdfErrorAlert.tsx';
 import PdfErrorDisplay from '../common/PdfErrorDisplay.tsx';
 import PdfPageRangePreviewGrid from '../common/PdfPageRangePreviewGrid.tsx';
 import PdfThumbnailPreview from '../common/PdfThumbnailPreview.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   createSafeBlob,
   revokeObjectUrlSafely
@@ -739,7 +740,7 @@ export default function PdfToolsWorkspace({
     <ToolSplitWorkspace
       ratio="7-5"
       inputs={
-        <section className="ui-panel p-5 sm:p-6 space-y-5">
+        <section data-print-dropzone="true" className="ui-panel p-5 sm:p-6 space-y-5">
           {/* Panel Header */}
           <div className="flex flex-wrap items-start justify-between gap-3 pb-4 border-b border-border-subtle">
             <div className="min-w-0">
@@ -1477,16 +1478,19 @@ export default function PdfToolsWorkspace({
       results={
         <section
           aria-live="polite"
-          className="ui-panel p-5 sm:p-6 space-y-4 lg:sticky lg:top-28"
+          className="glovo-print-results-panel ui-panel p-5 sm:p-6 space-y-4 lg:sticky lg:top-28"
         >
-          <div className="flex items-center justify-between gap-2 pb-4 border-b border-border-subtle">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-border-subtle">
             <h2 className="text-sm font-bold text-text-primary tracking-tight">
               {language === 'es' ? 'Salida y descarga' : 'Output & Download'}
             </h2>
             {resultOutput && (
-              <span className="text-xs font-mono text-text-tertiary">
-                {resultOutput.sizeText}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono text-text-tertiary">
+                  {resultOutput.sizeText}
+                </span>
+                <PrintResultButton scope="result-only" />
+              </div>
             )}
           </div>
 
@@ -1513,7 +1517,7 @@ export default function PdfToolsWorkspace({
             </div>
           ) : resultOutput ? (
             <div className="space-y-4">
-              <div className="rounded-xl border border-result-border bg-result-bg p-4 space-y-3">
+              <div className="print-avoid-break glovo-print-primary-card kpi-hover-pulse rounded-xl border border-result-border bg-result-bg p-4 space-y-3">
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-result-icon shrink-0 mt-0.5" />
                   <div className="min-w-0">
@@ -1529,7 +1533,7 @@ export default function PdfToolsWorkspace({
                 <a
                   href={resultOutput.blobUrl}
                   download={resultOutput.fileName}
-                  className="ui-btn-result w-full"
+                  className="no-print ui-btn-result w-full"
                 >
                   <Download className="w-4 h-4" />
                   <span>{language === 'es' ? 'Descargar resultado' : 'Download Result'}</span>
@@ -1566,7 +1570,7 @@ export default function PdfToolsWorkspace({
                         <a
                           href={extra.blobUrl}
                           download={extra.fileName}
-                          className="text-result-icon font-semibold hover:underline shrink-0"
+                          className="no-print text-result-icon font-semibold hover:underline shrink-0"
                         >
                           Download
                         </a>

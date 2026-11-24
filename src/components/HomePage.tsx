@@ -36,7 +36,6 @@ import { getLocalizedCalculator, getLocalizedCategory } from '../i18n/esTranslat
 import Hero from './Hero.tsx';
 import CompactToolCard from './common/CompactToolCard.tsx';
 import HomeCategoryCard from './home/HomeCategoryCard.tsx';
-import PopularToolsChart from './home/PopularToolsChart.tsx';
 import ToolHoverPreviewModal from './home/ToolHoverPreviewModal.tsx';
 import { useToolHoverPreview } from './home/useToolHoverPreview.ts';
 import { UiButton, UiEmptyState } from './ui/AppPrimitives.tsx';
@@ -636,15 +635,6 @@ export default function HomePage({
                 </section>
               </div>
             </div>
-
-            {/* 3B. TOP 5 MOST USED CALCULATORS CHART (Recharts horizontal bar chart from recentUsageCounts) */}
-            <PopularToolsChart
-              recentUsageCounts={recentUsageCounts}
-              recentIds={recentIds}
-              onSelectCalculator={onSelectCalculator}
-              onClearRecent={onClearRecent}
-              onOpenSearch={handleOpenSearch}
-            />
 
             {/* 4. CATEGORY DISCOVERY (Verified CATEGORIES with dynamically derived tool counts) */}
             <section

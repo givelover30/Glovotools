@@ -168,13 +168,54 @@ export default function EngineCalculatorView({ calculator }: EngineCalculatorVie
         }`
       : undefined;
 
+  // Structured non-empty input summary exclusively for print output (excludes empty fields)
+  const printableInputRows = inputSchema.fields
+    .map((field) => {
+      const val = inputs[field.name];
+      if (field.type !== 'checkbox' && (val === '' || val === undefined || val === null)) {
+        return null;
+      }
+      const rawLabel = translateTerm(field.label, language);
+      const localizedLabel = rawLabel.replace(/\(\$\)/g, `(${currency})`);
+      const rawUnit = field.unit ? translateTerm(field.unit, language) : undefined;
+      const localizedUnit =
+        rawUnit === 'USD'
+          ? currency
+          : rawUnit === '$'
+            ? currencyMeta.symbol
+            : rawUnit?.startsWith('$/')
+              ? `${currencyMeta.symbol}${rawUnit.slice(1)}`
+              : rawUnit;
+
+      let displayValue = '';
+      if (field.type === 'checkbox') {
+        displayValue = Boolean(val) ? (isEs ? 'Sí' : 'Yes') : 'No';
+      } else if (field.type === 'select' && field.options) {
+        const matched = field.options.find((opt) => String(opt.value) === String(val));
+        displayValue = matched ? translateTerm(matched.label, language) : String(val);
+      } else if (field.type === 'currency') {
+        displayValue = `${currencyMeta.symbol}${val}`;
+      } else if (field.type === 'percentage') {
+        displayValue = `${val}%`;
+      } else {
+        displayValue = localizedUnit ? `${val} ${localizedUnit}` : String(val);
+      }
+
+      return {
+        name: field.name,
+        label: localizedLabel,
+        value: displayValue
+      };
+    })
+    .filter((row): row is { name: string; label: string; value: string } => row !== null);
+
   return (
     <div className="space-y-4">
       {contract.isSyntheticFallback && (
         <div
           role="note"
           data-testid="synthetic-fallback-notice"
-          className="rounded-2xl border border-amber-300 dark:border-amber-800/70 bg-amber-50/80 dark:bg-amber-950/30 px-4 py-3.5 flex items-start gap-3"
+          className="print-avoid-break rounded-2xl border border-amber-300 dark:border-amber-800/70 bg-amber-50/80 dark:bg-amber-950/30 px-4 py-3.5 flex items-start gap-3"
         >
           <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
           <div className="text-xs text-amber-950 dark:text-amber-200 space-y-1 leading-relaxed">
@@ -192,15 +233,30 @@ export default function EngineCalculatorView({ calculator }: EngineCalculatorVie
         </div>
       )}
 
+      {printableInputRows.length > 0 && (
+        <section className="print-only-block glovo-print-inputs-summary print-avoid-break">
+          <h2 className="glovo-print-section-heading">{t('print.inputs')}</h2>
+          <div className="glovo-print-kv-grid">
+            {printableInputRows.map((row) => (
+              <div key={row.name} className="glovo-print-kv-item">
+                <span className="glovo-print-kv-label">{row.label}</span>
+                <span className="glovo-print-kv-value">{row.value}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <ToolSplitWorkspace
         inputs={
-          <ToolInputPanel
-            title={t('section.inputParameters')}
-            onReset={handleReset}
-            onClear={handleClear}
-            resetLabel={t('btn.reset')}
-            clearLabel={isEs ? 'Limpiar' : 'Clear'}
-          >
+          <div className="no-print">
+            <ToolInputPanel
+              title={t('section.inputParameters')}
+              onReset={handleReset}
+              onClear={handleClear}
+              resetLabel={t('btn.reset')}
+              clearLabel={isEs ? 'Limpiar' : 'Clear'}
+            >
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             {inputSchema.fields.map((field) => {
               const hasError = Boolean(fieldErrors[field.name]);
@@ -316,6 +372,7 @@ export default function EngineCalculatorView({ calculator }: EngineCalculatorVie
             })}
           </form>
         </ToolInputPanel>
+          </div>
       }
       results={
         <div className="space-y-4">
@@ -382,7 +439,7 @@ export default function EngineCalculatorView({ calculator }: EngineCalculatorVie
           </ToolResultsPanel>
 
           {contract.formulaMeta?.formulaExpression && (
-            <div className="ui-panel p-4 space-y-1.5">
+            <div className="print-avoid-break ui-panel p-4 space-y-1.5">
               <div className="text-xs font-semibold text-text-secondary">
                 {t('section.formulaExpression')}
               </div>

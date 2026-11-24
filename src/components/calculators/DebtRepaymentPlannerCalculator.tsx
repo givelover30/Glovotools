@@ -17,6 +17,7 @@ import {
   ToolSegmentedControl,
   ToolFieldGroup
 } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -201,6 +202,7 @@ export default function DebtRepaymentPlannerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar Plan de Deuda (JSON)' : 'Export Debt Plan (JSON)'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={() => setDebts(INITIAL_DEBTS)}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>

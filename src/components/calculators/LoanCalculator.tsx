@@ -141,6 +141,22 @@ export default function LoanCalculator({ initialTermYears = '1' }: { initialTerm
     return schedule;
   }, [isEmpty, hasErrors, numberOfPayments, principal, monthlyRate, monthlyPayment]);
 
+  const completeScheduleJson = useMemo(() => {
+    if (fullSchedule.length === 0) return '';
+    return JSON.stringify({
+      title: `Complete Amortization Schedule (${fullSchedule.length} Months)`,
+      subtitle: `${formatCurrency(monthlyPayment)} / mo`,
+      headers: ['Month', 'Payment', 'Principal', 'Interest', 'Remaining Balance'],
+      rows: fullSchedule.map((row) => [
+        `Month ${row.month}`,
+        formatCurrency(monthlyPayment),
+        formatCurrency(row.principal),
+        formatCurrency(row.interest),
+        formatCurrency(row.balance)
+      ])
+    });
+  }, [fullSchedule, monthlyPayment, formatCurrency]);
+
   const handleReset = () => {
     setLoanAmount(DEFAULTS.loanAmount);
     setInterestRate(DEFAULTS.interestRate);
@@ -371,7 +387,7 @@ export default function LoanCalculator({ initialTermYears = '1' }: { initialTerm
           <ToolBreakdownList items={breakdownItems} />
 
           {resultState === 'ready' && fullSchedule.length > 0 && (
-            <div className="space-y-2 pt-2">
+            <div className="print-avoid-break space-y-2 pt-2">
               <h4 className="text-xs font-semibold text-text-secondary uppercase tracking-wider">
                 Principal Balance Over Time
               </h4>
@@ -383,6 +399,15 @@ export default function LoanCalculator({ initialTermYears = '1' }: { initialTerm
                 />
               </div>
             </div>
+          )}
+
+          {resultState === 'ready' && completeScheduleJson && (
+            <div
+              className="hidden"
+              aria-hidden="true"
+              data-print-complete-table="true"
+              data-table-json={completeScheduleJson}
+            />
           )}
 
           <button

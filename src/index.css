@@ -494,18 +494,372 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* Print-only document elements (zero visual or layout impact on screen) */
+.print-only-block {
+  display: none;
+}
+
 @media print {
-  body {
-    background: white !important;
-    color: black !important;
+  @page {
+    margin: 14mm 15mm;
   }
-  header, footer, nav, aside, button, .no-print {
+
+  /* Force crisp light-mode palette & high-contrast typography even when UI is in dark mode */
+  :root,
+  html,
+  html.dark,
+  body {
+    color-scheme: light !important;
+    --bg-primary: #ffffff !important;
+    --bg-surface: #ffffff !important;
+    --bg-secondary: #f8fafc !important;
+    --bg-elevated: #ffffff !important;
+    --bg-hover: #f8fafc !important;
+    --input-bg: #ffffff !important;
+    --text-primary: #0f172a !important;
+    --text-secondary: #334155 !important;
+    --text-tertiary: #475569 !important;
+    --border-main: #cbd5e1 !important;
+    --border-subtle: #e2e8f0 !important;
+    --border-strong: #94a3b8 !important;
+    --accent: #0f766e !important;
+    --result-bg: #f0fdf4 !important;
+    --result-border: #86efac !important;
+    --result-text: #064e3b !important;
+    --result-text-secondary: #065f46 !important;
+    --result-icon: #047857 !important;
+    --result-badge-bg: #dcfce7 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reveal print-only document chrome & structured summaries */
+  .print-only-block {
+    display: block !important;
+  }
+
+  /* Exclude global navigation, sidebar, header, footer, floating buttons, interactive actions & empty fields */
+  header,
+  footer,
+  nav,
+  aside,
+  .no-print,
+  [data-print-empty="true"],
+  [data-print-scope="result-only"] [data-print-dropzone="true"],
+  input[type="range"],
+  button:not(.print-keep),
+  a.ui-btn-result {
     display: none !important;
   }
-  article {
+
+  /* Remove scroll traps, shadows, sticky positioning, and fixed widths */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Reset AppShell flex & overflow-x-clip ancestors so multi-page print pagination never clips */
+  html,
+  body,
+  #root,
+  #root > div,
+  .min-h-screen,
+  .overflow-x-clip,
+  main,
+  article,
+  [data-print-workspace="true"] {
+    display: block !important;
     max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    overflow: visible !important;
+  }
+
+  .glovo-print-results-panel,
+  .lg\:sticky {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Stack split workspaces vertically into clean full-width printable document sections */
+  .glovo-print-split {
+    display: block !important;
+  }
+
+  .glovo-print-inputs-col,
+  .glovo-print-results-col,
+  .glovo-print-below {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 14pt !important;
+  }
+
+  /* Branded Glovotools Print Document Header */
+  .glovo-print-doc-header {
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+    border-bottom: 1.5pt solid #0f172a;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .glovo-print-brand-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12pt;
+    margin-bottom: 8pt;
+  }
+
+  .glovo-print-brand {
+    display: flex !important;
+    align-items: center;
+    gap: 8pt;
+  }
+
+  .glovo-print-logo {
+    flex-shrink: 0;
+  }
+
+  .glovo-print-brand-name {
+    font-size: 13pt;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    line-height: 1.15;
+  }
+
+  .glovo-print-category {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 1pt;
+  }
+
+  .glovo-print-meta {
+    text-align: right;
+  }
+
+  .glovo-print-meta-label {
+    font-size: 7.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+  }
+
+  .glovo-print-meta-value {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #0f172a;
+    margin-top: 1pt;
+  }
+
+  .glovo-print-title-block {
+    margin-top: 4pt;
+  }
+
+  .glovo-print-title {
+    font-size: 16pt !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+  }
+
+  .glovo-print-subtitle {
+    font-size: 9pt !important;
+    color: #475569 !important;
+    margin: 3pt 0 0 0 !important;
+  }
+
+  /* Structured Print-Only Inputs Summary (Engine Calculators) */
+  .glovo-print-inputs-summary {
+    border: 1px solid #cbd5e1;
+    border-radius: 6pt;
+    padding: 10pt 12pt;
+    margin-bottom: 12pt;
+    background: #f8fafc !important;
+  }
+
+  .glovo-print-section-heading {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 8pt 0 !important;
+    padding-bottom: 4pt;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .glovo-print-kv-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6pt 14pt !important;
+  }
+
+  .glovo-print-kv-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8pt;
+    padding: 3pt 0;
+    border-bottom: 1px dotted #e2e8f0;
+    font-size: 9.5pt;
+  }
+
+  .glovo-print-kv-label {
+    color: #334155;
+    font-weight: 500;
+  }
+
+  .glovo-print-kv-value {
+    color: #0f172a;
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    text-align: right;
+  }
+
+  /* Panels, Primary Result Highlight & Page-Break Protection */
+  .ui-panel {
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6pt !important;
+    background: #ffffff !important;
+    padding: 12pt !important;
+    margin-bottom: 12pt !important;
+    overflow: visible !important;
+  }
+
+  .print-avoid-break,
+  .glovo-print-primary-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .glovo-print-primary-card {
+    background-color: #f0fdf4 !important;
+    border: 1.5px solid #86efac !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Clean print rendering for input fields inside custom calculators */
+  .ui-input,
+  .ui-select,
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 4pt !important;
+    min-height: auto !important;
+    padding: 4pt 7pt !important;
+    font-size: 9.5pt !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  /* Expand clipped scroll containers (e.g. OCR/extracted text previews & calculation tapes) */
+  pre,
+  .overflow-x-auto,
+  .overflow-y-auto {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    font-size: 8.5pt !important;
+  }
+
+  /* Tables & Amortization Schedules: fit printable width and repeat headers across pages */
+  table,
+  .ui-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: auto !important;
+    font-size: 9pt !important;
+    page-break-inside: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+  }
+
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid #cbd5e1 !important;
+    padding: 5pt 6pt !important;
+    color: #0f172a !important;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    font-weight: 700 !important;
+    border-bottom: 1.5px solid #94a3b8 !important;
+  }
+
+  /* Charts, SVGs & Graphs */
+  svg,
+  canvas,
+  img {
+    max-width: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Printable interactive cards explicitly marked .print-keep */
+  button.print-keep {
+    display: flex !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* Subtle Print Document Footer */
+  .glovo-print-doc-footer {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12pt;
+    margin-top: 16pt;
+    padding-top: 8pt;
+    border-top: 1px solid #cbd5e1;
+    font-size: 8pt;
+    color: #64748b;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
 
@@ -626,6 +980,128 @@ input[type="number"] {
   animation: uiSlideUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* ============================================================================
+   GLOVOTOOLS — ADVANCED KPI & METRIC CARD HOVER ANIMATIONS
+   Centralized reusable single-play pointer hover keyframes:
+   - Shake  (400ms, ±2.5px)   : Secondary result metric cards
+   - Wobble (520ms, ±1.8deg)  : Reference & informational KPI cards
+   - Bounce (520ms, -5px)     : Main calculation result KPI cards
+   - Pulse  (680ms, 1.022)    : Important successful result cards
+   - Elastic(440ms, 1.032)    : Interactive metric cards
+   ============================================================================ */
+@keyframes kpiHoverShake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  18% {
+    transform: translate3d(-2.5px, 0, 0);
+  }
+  36% {
+    transform: translate3d(2.5px, 0, 0);
+  }
+  54% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  72% {
+    transform: translate3d(1.5px, 0, 0);
+  }
+  88% {
+    transform: translate3d(-0.75px, 0, 0);
+  }
+}
+
+@keyframes kpiHoverWobble {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-1.8deg);
+  }
+  42% {
+    transform: rotate(1.6deg);
+  }
+  64% {
+    transform: rotate(-0.9deg);
+  }
+  82% {
+    transform: rotate(0.45deg);
+  }
+}
+
+@keyframes kpiHoverBounce {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -5px, 0);
+  }
+  55% {
+    transform: translate3d(0, 1px, 0);
+  }
+  75% {
+    transform: translate3d(0, -2px, 0);
+  }
+  90% {
+    transform: translate3d(0, 0.5px, 0);
+  }
+}
+
+@keyframes kpiHoverPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+  45% {
+    transform: scale(1.022);
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.16), 0 6px 18px rgba(16, 185, 129, 0.12);
+  }
+}
+
+@keyframes kpiHoverElastic {
+  0%, 100% {
+    transform: scale(1);
+  }
+  32% {
+    transform: scale(1.032);
+  }
+  58% {
+    transform: scale(0.992);
+  }
+  78% {
+    transform: scale(1.008);
+  }
+}
+
+.kpi-hover-shake,
+.kpi-hover-wobble,
+.kpi-hover-bounce,
+.kpi-hover-pulse,
+.kpi-hover-elastic {
+  transform-origin: center center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .kpi-hover-shake:hover {
+    animation: kpiHoverShake 400ms cubic-bezier(0.36, 0.07, 0.19, 0.97) 1 both;
+  }
+
+  .kpi-hover-wobble:hover {
+    animation: kpiHoverWobble 520ms cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  }
+
+  .kpi-hover-bounce:hover {
+    animation: kpiHoverBounce 520ms cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  }
+
+  .kpi-hover-pulse:hover {
+    animation: kpiHoverPulse 680ms cubic-bezier(0.4, 0, 0.2, 1) 1 both;
+  }
+
+  .kpi-hover-elastic:hover {
+    animation: kpiHoverElastic 440ms cubic-bezier(0.34, 1.56, 0.64, 1) 1 both;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -633,8 +1109,16 @@ input[type="number"] {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .animate-orb-1, .animate-orb-2, .animate-orb-3 {
+  .animate-orb-1,
+  .animate-orb-2,
+  .animate-orb-3,
+  .kpi-hover-shake,
+  .kpi-hover-wobble,
+  .kpi-hover-bounce,
+  .kpi-hover-pulse,
+  .kpi-hover-elastic {
     animation: none !important;
+    transform: none !important;
   }
 }
 

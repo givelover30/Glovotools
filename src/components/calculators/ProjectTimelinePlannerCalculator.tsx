@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -168,6 +169,7 @@ export default function ProjectTimelinePlannerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar JSON' : 'Export JSON'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={() => setTasks(INITIAL_TASKS)}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>

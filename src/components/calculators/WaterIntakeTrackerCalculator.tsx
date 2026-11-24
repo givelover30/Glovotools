@@ -4,7 +4,6 @@ import {
   Plus,
   Minus,
   RotateCcw,
-  Printer,
   Download,
   Save,
   Trash2,
@@ -14,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -169,10 +169,7 @@ export default function WaterIntakeTrackerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>JSON</span>
           </UiButton>
-          <UiButton variant="secondary" size="sm" onClick={() => window.print()}>
-            <Printer className="w-3.5 h-3.5" />
-            <span>{isEs ? 'Imprimir' : 'Print'}</span>
-          </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={handleResetSample}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>

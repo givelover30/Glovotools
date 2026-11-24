@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -342,6 +343,7 @@ export default function PetGrowthTrackerCalculator() {
                 <Download className="w-3.5 h-3.5" />
                 <span>JSON</span>
               </UiButton>
+          <PrintResultButton size="sm" />
             </div>
 
             {chartData ? (

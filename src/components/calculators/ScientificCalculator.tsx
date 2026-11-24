@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Copy, Check, History, Trash2 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolSegmentedControl } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 
 type AngleUnit = 'DEG' | 'RAD';
 type CalcMode = 'scientific' | 'basic';
@@ -465,24 +466,27 @@ export default function ScientificCalculator() {
         {/* Main Keypad */}
         <section className="lg:col-span-8 ui-panel p-4 sm:p-5 space-y-3">
           {/* Display */}
-          <div className="bg-surface-secondary border border-border-main rounded-xl p-4 space-y-1">
+          <div className="kpi-hover-bounce bg-surface-secondary border border-border-main rounded-xl p-4 space-y-1">
             <div className="flex items-center justify-between gap-2">
               <span className="text-xs text-text-tertiary font-mono truncate">
                 {history[0] || (isEs ? `Listo (${angleUnit})` : `Ready (${angleUnit})`)}
               </span>
-              <button
-                type="button"
-                onClick={handleCopyDisplay}
-                aria-label={isEs ? 'Copiar pantalla' : 'Copy display value'}
-                className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover cursor-pointer shrink-0"
-              >
-                {copiedDisplay ? (
-                  <Check className="w-3.5 h-3.5 text-status-success" />
-                ) : (
-                  <Copy className="w-3.5 h-3.5" />
-                )}
-                <span>{copiedDisplay ? (isEs ? 'Copiado' : 'Copied') : isEs ? 'Copiar' : 'Copy'}</span>
-              </button>
+              <div className="no-print flex items-center gap-1.5 shrink-0">
+                <button
+                  type="button"
+                  onClick={handleCopyDisplay}
+                  aria-label={isEs ? 'Copiar pantalla' : 'Copy display value'}
+                  className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover cursor-pointer shrink-0"
+                >
+                  {copiedDisplay ? (
+                    <Check className="w-3.5 h-3.5 text-status-success" />
+                  ) : (
+                    <Copy className="w-3.5 h-3.5" />
+                  )}
+                  <span>{copiedDisplay ? (isEs ? 'Copiado' : 'Copied') : isEs ? 'Copiar' : 'Copy'}</span>
+                </button>
+                <PrintResultButton />
+              </div>
             </div>
             <div
               data-testid="calc-display"
@@ -494,7 +498,7 @@ export default function ScientificCalculator() {
           </div>
 
           {/* Memory Row */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="no-print grid grid-cols-4 gap-2">
             {(['MC', 'MR', 'M+', 'M-'] as const).map((memBtn) => (
               <button
                 key={memBtn}
@@ -509,7 +513,7 @@ export default function ScientificCalculator() {
 
           {/* Scientific Function Row */}
           {isScientific && (
-            <div className="grid grid-cols-6 gap-1.5 sm:gap-2">
+            <div className="no-print grid grid-cols-6 gap-1.5 sm:gap-2">
               {[
                 { label: 'sin', aria: 'Sine', action: () => handleSpecial('sin') },
                 { label: 'cos', aria: 'Cosine', action: () => handleSpecial('cos') },
@@ -538,7 +542,7 @@ export default function ScientificCalculator() {
           )}
 
           {/* Standard Keypad */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="no-print grid grid-cols-4 gap-2">
             <button
               type="button"
               onClick={handleClear}
@@ -684,7 +688,7 @@ export default function ScientificCalculator() {
                     const res = eqIdx >= 0 ? item.slice(eqIdx + 1).trim() : '';
                     if (res) setDisplay(res);
                   }}
-                  className="w-full p-2.5 rounded-lg bg-surface-secondary hover:bg-surface-hover border border-border-subtle hover:border-accent/50 transition-colors text-text-primary text-right cursor-pointer break-all"
+                  className="print-keep kpi-hover-elastic w-full p-2.5 rounded-lg bg-surface-secondary hover:bg-surface-hover border border-border-subtle hover:border-accent/50 transition-colors text-text-primary text-right cursor-pointer break-all"
                 >
                   {item}
                 </button>
@@ -692,7 +696,7 @@ export default function ScientificCalculator() {
             </div>
           )}
 
-          <p className="pt-3 border-t border-border-subtle text-xs text-text-tertiary leading-relaxed">
+          <p className="no-print pt-3 border-t border-border-subtle text-xs text-text-tertiary leading-relaxed">
             {isEs
               ? 'Consejo: Puedes usar el teclado físico (0-9, +, -, *, /, ^, Enter, Esc) o pulsar cualquier resultado previo.'
               : 'Tip: Use keyboard shortcuts (0-9, +, -, *, /, ^, Enter, Esc) or click any history entry to recall.'}

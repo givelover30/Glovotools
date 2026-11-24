@@ -1,10 +1,15 @@
 // Comprehensive Spanish UI Translations and Domain Terms for CalcTools
 
+import { getESignText } from './esignTranslations.ts';
+
 export const ES_UI_STRINGS: Record<string, string> = {
   // Navigation & Common
   'nav.home': 'Inicio',
   'nav.allTools': 'Todas las Herramientas',
+  'nav.categories': 'Categorías',
+  'nav.popular': 'Herramientas Populares',
   'nav.popularTools': 'Herramientas Populares',
+  'nav.favorites': 'Favoritos',
   'nav.workspace': 'Espacio de trabajo',
   'nav.toolHubs': 'Categorías de Herramientas',
   'nav.guidesArticles': 'Guías y Artículos',
@@ -47,6 +52,14 @@ export const ES_UI_STRINGS: Record<string, string> = {
   'btn.print': 'Imprimir Resultado',
   'btn.close': 'Cerrar',
   'btn.clearRecent': 'Limpiar Historial',
+
+  // Print Document Headings
+  'print.generatedOn': 'Calculado el',
+  'print.inputs': 'Valores de Entrada',
+  'print.results': 'Resultado del Cálculo',
+  'print.notes': 'Notas',
+  'print.footer': 'Generado con Glovotools · Resumen de cálculo en navegador',
+  'print.toastTriggered': 'Diálogo de impresión abierto',
 
   // Breadcrumbs & Common Labels
   'breadcrumb.home': 'Inicio',
@@ -220,6 +233,7 @@ export const ES_UI_STRINGS: Record<string, string> = {
   'subcat.p25-sub-conv': 'Conversión y Optimización PDF',
   'subcat.p25-sub-sec': 'Seguridad y Análisis PDF',
   'subcat.p25-sub-adv': 'Procesamiento PDF Avanzado',
+  'subcat.p25-sub-esign': 'Firma Electrónica PDF y Relleno de Formularios',
   'subcat.p27-sub-pdf-to-office': 'Convertidores de PDF a Office',
   'subcat.p27-sub-office-to-pdf': 'Convertidores de Office y Texto a PDF',
   'subcat.p27-sub-web-text-to-pdf': 'Web, Datos y Texto Enriquecido a PDF',
@@ -657,6 +671,25 @@ export const ES_CALCULATOR_OVERRIDES: Record<string, { name: string; description
 };
 
 export function getLocalizedCalculator(calc: any, language: string) {
+  if (
+    calc &&
+    (calc.id === 'sign-pdf' ||
+      calc.id === 'create-signature' ||
+      calc.id === 'fill-and-sign' ||
+      calc.id === 'add-date-initials')
+  ) {
+    const titleKeyMap = {
+      'sign-pdf': 'esign.tool.signPdf',
+      'create-signature': 'esign.tool.createSignature',
+      'fill-and-sign': 'esign.tool.fillAndSign',
+      'add-date-initials': 'esign.tool.addDateInitials',
+    } as const;
+    const id = calc.id as keyof typeof titleKeyMap;
+    return {
+      ...calc,
+      name: getESignText(language as Parameters<typeof getESignText>[0], titleKeyMap[id]),
+    };
+  }
   if (language === 'es') {
     const override = ES_CALCULATOR_OVERRIDES[calc.id];
     if (override) {

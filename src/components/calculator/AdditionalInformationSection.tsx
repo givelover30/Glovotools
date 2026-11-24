@@ -90,7 +90,7 @@ export default function AdditionalInformationSection({
                 {Object.entries(details.workedExample.inputs).map(([key, val], idx) => (
                   <div
                     key={idx}
-                    className="p-3 rounded-xl border border-border-subtle bg-surface-secondary/60 flex flex-col justify-between min-w-0"
+                    className="kpi-hover-wobble p-3 rounded-xl border border-border-subtle bg-surface-secondary/60 flex flex-col justify-between min-w-0"
                   >
                     <span className="text-[11px] text-text-tertiary truncate font-medium">
                       {key}
@@ -102,7 +102,7 @@ export default function AdditionalInformationSection({
                 ))}
               </div>
 
-              <div className="p-3.5 rounded-xl bg-result-bg border border-result-border flex flex-wrap items-center justify-between gap-3">
+              <div className="kpi-hover-pulse p-3.5 rounded-xl bg-result-bg border border-result-border flex flex-wrap items-center justify-between gap-3">
                 <span className="text-xs font-semibold text-result-text-secondary">
                   {t('label.finalResult')}
                 </span>

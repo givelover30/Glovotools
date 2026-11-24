@@ -12,6 +12,7 @@ import {
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { useCurrency } from '../../i18n/CurrencyContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -148,6 +149,7 @@ export default function SubscriptionTrackerCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar JSON' : 'Export JSON'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={() => setSubs([])}>
             <Trash2 className="w-3.5 h-3.5" />
             <span>{isEs ? 'Limpiar Todo' : 'Clear All'}</span>

@@ -56,12 +56,133 @@ export const BATCH1_PRIMARY_HUB_OVERRIDES: Readonly<Partial<Record<string, ToolH
   'w4-withholding-calc': 'Estimators'
 };
 
+export const ESIGNATURE_CANONICAL_IDS = [
+  'sign-pdf',
+  'create-signature',
+  'fill-and-sign',
+  'add-date-initials'
+] as const;
+
+export type ESignatureCanonicalId = typeof ESIGNATURE_CANONICAL_IDS[number];
+
+export interface ESignatureToolClassificationPlaceholder extends ToolClassification {
+  canonicalId: ESignatureCanonicalId;
+  displayName: string;
+  description: string;
+  targetCategory: 'pdf-tools';
+  targetSubcategoryId: 'p25-sub-esign';
+  aliases: readonly string[];
+  status: 'placeholder';
+}
+
+/**
+ * E-Signature Suite canonical IDs and placeholder classifications.
+ * Registers the 4 browser-local visual PDF e-signature tools ahead of full engine/UI rollout
+ * so hub classification and verification resolve deterministically to 'Document & PDF'.
+ */
+export const ESIGNATURE_SUITE_CLASSIFICATIONS: Readonly<
+  Record<ESignatureCanonicalId, ESignatureToolClassificationPlaceholder>
+> = {
+  'sign-pdf': {
+    toolId: 'sign-pdf',
+    canonicalId: 'sign-pdf',
+    displayName: 'Sign PDF',
+    description:
+      'Upload a PDF, create or apply a visual electronic signature, position and resize it on selected pages, and download the signed document locally.',
+    primaryToolHub: 'Document & PDF',
+    secondaryToolHubs: ['Editors'],
+    subjectCategories: ['pdf-tools'],
+    targetCategory: 'pdf-tools',
+    targetSubcategoryId: 'p25-sub-esign',
+    aliases: ['pdf-sign', 'esign-pdf', 'electronic-signature-pdf'],
+    status: 'placeholder'
+  },
+  'create-signature': {
+    toolId: 'create-signature',
+    canonicalId: 'create-signature',
+    displayName: 'Create Signature',
+    description:
+      'Draw, type, or upload a signature in your browser, preview transparent PNG output, and reuse it across PDF signing tools in the current session.',
+    primaryToolHub: 'Document & PDF',
+    secondaryToolHubs: ['Generators', 'Editors'],
+    subjectCategories: ['pdf-tools'],
+    targetCategory: 'pdf-tools',
+    targetSubcategoryId: 'p25-sub-esign',
+    aliases: ['pdf-create-signature', 'signature-maker', 'draw-signature'],
+    status: 'placeholder'
+  },
+  'fill-and-sign': {
+    toolId: 'fill-and-sign',
+    canonicalId: 'fill-and-sign',
+    displayName: 'Fill & Sign PDF',
+    description:
+      'Add visual signatures, initials, dates, checkmarks, and text fields onto PDF pages and export the flattened document locally.',
+    primaryToolHub: 'Document & PDF',
+    secondaryToolHubs: ['Editors'],
+    subjectCategories: ['pdf-tools'],
+    targetCategory: 'pdf-tools',
+    targetSubcategoryId: 'p25-sub-esign',
+    aliases: ['pdf-fill-and-sign', 'fill-sign-pdf', 'pdf-form-filler-signer'],
+    status: 'placeholder'
+  },
+  'add-date-initials': {
+    toolId: 'add-date-initials',
+    canonicalId: 'add-date-initials',
+    displayName: 'Add Date & Initials to PDF',
+    description:
+      'Place formatted dates and personal initials onto one or multiple PDF pages with consistent visual positioning.',
+    primaryToolHub: 'Document & PDF',
+    secondaryToolHubs: ['Editors'],
+    subjectCategories: ['pdf-tools'],
+    targetCategory: 'pdf-tools',
+    targetSubcategoryId: 'p25-sub-esign',
+    aliases: ['pdf-add-initials-date', 'add-initials-pdf', 'pdf-initials-date'],
+    status: 'placeholder'
+  }
+};
+
+/**
+ * Canonical classification lookup registry indexed by canonical tool ID.
+ */
+export const TOOL_CLASSIFICATION_REGISTRY: Readonly<Record<string, ToolClassification>> = {
+  ...ESIGNATURE_SUITE_CLASSIFICATIONS
+};
+
+const ESIGNATURE_ALIAS_LOOKUP: Readonly<Record<string, ESignatureCanonicalId>> = (() => {
+  const map: Record<string, ESignatureCanonicalId> = {};
+  for (const entry of Object.values(ESIGNATURE_SUITE_CLASSIFICATIONS)) {
+    map[entry.canonicalId] = entry.canonicalId;
+    for (const alias of entry.aliases) {
+      map[alias] = entry.canonicalId;
+    }
+  }
+  return map;
+})();
+
+/**
+ * Resolves a canonical ID or registered alias for the E-Signature Suite
+ * to its placeholder ToolClassification entry.
+ */
+export function resolveESignatureClassification(
+  toolId: string | null | undefined
+): ESignatureToolClassificationPlaceholder | undefined {
+  if (!toolId) return undefined;
+  const normalized = toolId.trim().toLowerCase();
+  const canonicalId = ESIGNATURE_ALIAS_LOOKUP[normalized];
+  return canonicalId ? ESIGNATURE_SUITE_CLASSIFICATIONS[canonicalId] : undefined;
+}
+
 /**
  * Strictly classifies any calculator into its canonical primary Tool Hub.
  */
 export function getPrimaryToolHub(calc: CalculatorMeta): ToolHubTitle {
   if (calc?.category === 'guides') {
     return 'Guides & References';
+  }
+
+  const esignClassification = resolveESignatureClassification(calc?.id);
+  if (esignClassification) {
+    return esignClassification.primaryToolHub;
   }
 
   const batch1Override = calc?.id ? BATCH1_PRIMARY_HUB_OVERRIDES[calc.id] : undefined;
@@ -377,7 +498,7 @@ export function isVerifiedHubCategoryTool(calc: CalculatorMeta, hubTitle: ToolHu
     }
 
     case 'Document & PDF': {
-      if (cat === 'pdf-tools' || cat === 'document-converters') {
+      if (cat === 'pdf-tools' || cat === 'document-converters' || Boolean(resolveESignatureClassification(id))) {
         return true;
       }
       // Exclude 'emergency', 'merger', 'bill split', 'workout split', physical compressors, web compression, NoSQL document stores

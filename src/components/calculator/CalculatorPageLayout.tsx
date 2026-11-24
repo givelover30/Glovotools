@@ -24,6 +24,11 @@ import {
   getLocalizedSubcategory,
   getLocalizedCalculatorDetail
 } from '../../i18n/esTranslations.ts';
+import {
+  PrintDocumentFooter,
+  PrintDocumentHeader
+} from '../common/PrintDocumentChrome.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 
 interface CalculatorPageLayoutProps {
   calculator: CalculatorMeta;
@@ -131,76 +136,95 @@ export default function CalculatorPageLayout({
       className="bg-background text-text-primary pb-14 animate-fadeIn transition-colors duration-200"
     >
       {/* 1. Compact Utily-Inspired Tool Header (Breadcrumbs handled once cleanly by GlobalBreadcrumbs) */}
-      <CalculatorHeader
-        calculator={localizedCalc}
-        category={category}
-        subcategory={subcategory}
-        variant={variant}
-        onNavigateCategory={onNavigateCategory || (() => onBack())}
-        onNavigateSubcategory={onNavigateSubcategory}
-        actions={
-          <CalculatorActions
-            calculatorId={calculator.id}
-            calculatorName={localizedCalc.name}
-            isFavorite={isFavorite}
-            onToggleFavorite={onToggleFavorite || (() => {})}
-            onReset={handleReset}
-            showReset={!isNativeWorkspace}
-          />
-        }
-      />
+      <div className="no-print">
+        <CalculatorHeader
+          calculator={localizedCalc}
+          category={category}
+          subcategory={subcategory}
+          variant={variant}
+          onNavigateCategory={onNavigateCategory || (() => onBack())}
+          onNavigateSubcategory={onNavigateSubcategory}
+          actions={
+            <CalculatorActions
+              calculatorId={calculator.id}
+              calculatorName={localizedCalc.name}
+              isFavorite={isFavorite}
+              onToggleFavorite={onToggleFavorite || (() => {})}
+              onReset={handleReset}
+              showReset={!isNativeWorkspace}
+            />
+          }
+        />
+      </div>
 
       {/* 2. Main Tool Viewport */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-8">
-        {/* Primary Interactive Workspace — immediately focal above the fold */}
-        {isNativeWorkspace ? (
-          <div key={resetCounter} className="space-y-5">
-            {children}
-          </div>
-        ) : (
-          <section className="ui-panel p-5 sm:p-6 space-y-5">
-            <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
-              <h2 className="text-sm font-bold text-text-primary tracking-tight">
-                {variant === 'document-utility'
-                  ? language === 'es'
-                    ? 'Espacio de trabajo del documento'
-                    : 'Document workspace'
-                  : t('section.interactiveWorkspace')}
-              </h2>
-              <span className="text-xs font-medium text-accent">
-                {variant === 'document-utility'
-                  ? language === 'es'
-                    ? 'Local en navegador'
-                    : 'Browser-local'
-                  : t('section.liveResults')}
-              </span>
-            </div>
-
-            <div key={resetCounter}>{children}</div>
-
-            <CalculatorChart calculatorId={calculator.id} />
-          </section>
-        )}
-
-        {/* 3. How It Works, Formula/Methodology, Worked Example & FAQs */}
-        <AdditionalInformationSection details={details} variant={variant} />
-
-        {/* 4. Compact Accuracy & Usability Rating (Below Workspace) */}
-        <CalculatorRating calculatorId={calculator.id} />
-
-        {/* 4b. Recent Session Calculations History Widget (Last 5) */}
-        <CalculationHistoryWidget onSelectCalculator={onSelectCalculator} />
-
-        {/* 5. Related Tools (Reusing unified HomeToolCard) */}
-        {related.length > 0 && (
-          <RelatedCalculators
-            related={related}
+        {/* Primary Interactive Workspace — immediately focal above the fold & print target */}
+        <div data-print-workspace="true">
+          <PrintDocumentHeader
+            calculatorName={localizedCalc.name}
             categoryTitle={category?.title}
-            favoriteIds={favoriteIds}
-            onSelectCalculator={onSelectCalculator}
-            onToggleFavorite={onToggleFavorite}
+            subcategoryName={subcategory?.name}
+            description={localizedCalc.shortDesc}
           />
-        )}
+
+          {isNativeWorkspace ? (
+            <div key={resetCounter} className="space-y-5">
+              {children}
+            </div>
+          ) : (
+            <section className="ui-panel p-5 sm:p-6 space-y-5">
+              <div className="no-print flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-border-subtle">
+                <h2 className="text-sm font-bold text-text-primary tracking-tight">
+                  {variant === 'document-utility'
+                    ? language === 'es'
+                      ? 'Espacio de trabajo del documento'
+                      : 'Document workspace'
+                    : t('section.interactiveWorkspace')}
+                </h2>
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xs font-medium text-accent">
+                    {variant === 'document-utility'
+                      ? language === 'es'
+                        ? 'Local en navegador'
+                        : 'Browser-local'
+                      : t('section.liveResults')}
+                  </span>
+                  <PrintResultButton documentTitle={localizedCalc.name} />
+                </div>
+              </div>
+
+              <div key={resetCounter}>{children}</div>
+
+              <CalculatorChart calculatorId={calculator.id} />
+            </section>
+          )}
+
+          <PrintDocumentFooter />
+        </div>
+
+        {/* Non-result supplementary sections excluded from printed calculation results */}
+        <div className="no-print space-y-8">
+          {/* 3. How It Works, Formula/Methodology, Worked Example & FAQs */}
+          <AdditionalInformationSection details={details} variant={variant} />
+
+          {/* 4. Compact Accuracy & Usability Rating (Below Workspace) */}
+          <CalculatorRating calculatorId={calculator.id} />
+
+          {/* 4b. Recent Session Calculations History Widget (Last 5) */}
+          <CalculationHistoryWidget onSelectCalculator={onSelectCalculator} />
+
+          {/* 5. Related Tools (Reusing unified HomeToolCard) */}
+          {related.length > 0 && (
+            <RelatedCalculators
+              related={related}
+              categoryTitle={category?.title}
+              favoriteIds={favoriteIds}
+              onSelectCalculator={onSelectCalculator}
+              onToggleFavorite={onToggleFavorite}
+            />
+          )}
+        </div>
       </div>
     </article>
   );

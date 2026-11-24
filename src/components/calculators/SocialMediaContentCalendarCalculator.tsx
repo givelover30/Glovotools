@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { ToolMetricTile, ToolFieldGroup } from '../calculator/ToolWorkspacePrimitives.tsx';
+import PrintResultButton from '../common/PrintResultButton.tsx';
 import {
   UiButton,
   UiInput,
@@ -149,6 +150,7 @@ export default function SocialMediaContentCalendarCalculator() {
             <Download className="w-3.5 h-3.5" />
             <span>{isEs ? 'Exportar Calendario (JSON)' : 'Export Content Calendar (JSON)'}</span>
           </UiButton>
+          <PrintResultButton size="sm" />
           <UiButton variant="ghost" size="sm" onClick={() => setPosts(INITIAL_POSTS)}>
             <RotateCcw className="w-3.5 h-3.5" />
             <span>{isEs ? 'Restaurar' : 'Reset'}</span>
