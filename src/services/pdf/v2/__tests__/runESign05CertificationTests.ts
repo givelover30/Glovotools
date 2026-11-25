@@ -13,6 +13,7 @@ import { PDFDocument, StandardFonts, degrees, rgb } from '@cantoo/pdf-lib';
 import {
   applyESignatureElementsToPdfV2,
   ESIGNATURE_OPERATION_REGISTRY,
+  extractPdfMetadataForESign,
   formatESignDate,
   transformVisualRectToPdfSpace,
   validateSignatureImageBytes,
@@ -690,6 +691,97 @@ async function main() {
     const heapAfter = process.memoryUsage().heapUsed;
     const heapDeltaMb = ((heapAfter - heapBefore) / (1024 * 1024)).toFixed(2);
     console.log(`    -> 10x cycle heap delta: ${heapDeltaMb} MB, activeSessions: ${pdfLifecycleManager.getActiveSessionCount()}`);
+  });
+
+  // =========================================================================
+  // SECTION 11: DOCUMENT METADATA EXTRACTION & PRE-EXPORT MODIFICATION
+  // =========================================================================
+  await runTest('11', 'extractPdfMetadataForESign & applyESignatureElementsToPdfV2 read, update, and clear Title/Author/Subject with 0 leaked sessions', async () => {
+    // Create PDF with initial metadata
+    const metaDoc = await PDFDocument.create();
+    metaDoc.addPage([612, 792]);
+    metaDoc.setTitle('Initial Contract Draft');
+    metaDoc.setAuthor('Jordan Taylor');
+    metaDoc.setSubject('Master Services Agreement');
+    const metaBytes = new Uint8Array(await metaDoc.save());
+
+    // 1. Extract metadata cleanly
+    const extracted = await extractPdfMetadataForESign({
+      fileName: 'draft.pdf',
+      bytes: metaBytes
+    });
+    assertLifecycleZero('metadata extraction');
+    assert.equal(extracted.success, true);
+    assert.equal(extracted.metadata.title, 'Initial Contract Draft');
+    assert.equal(extracted.metadata.author, 'Jordan Taylor');
+    assert.equal(extracted.metadata.subject, 'Master Services Agreement');
+
+    // 2. Extraction error path (empty & corrupt bytes) leaves 0 sessions
+    const badExtract = await extractPdfMetadataForESign({
+      fileName: 'empty.pdf',
+      bytes: new Uint8Array(0)
+    });
+    assert.equal(badExtract.success, false);
+    assertLifecycleZero('empty metadata extraction');
+
+    const corruptExtract = await extractPdfMetadataForESign({
+      fileName: 'corrupt.pdf',
+      bytes: new TextEncoder().encode('%PDF-1.7\ncorrupt-payload')
+    });
+    assert.equal(corruptExtract.success, false);
+    assertLifecycleZero('corrupt metadata extraction');
+
+    // 3. Metadata-only export (0 visual elements) updates /Info fields cleanly
+    const metaOnlyRes = await applyESignatureElementsToPdfV2(
+      { fileName: 'draft.pdf', bytes: metaBytes },
+      {
+        canonicalId: 'sign-pdf',
+        elements: [],
+        metadata: {
+          title: 'Final Signed Contract',
+          author: 'Alex Morgan',
+          subject: 'Executed Agreement 2026'
+        }
+      }
+    );
+    assertLifecycleZero('metadata-only update');
+    assert.equal(metaOnlyRes.status, 'SUCCESS');
+    assert.equal(metaOnlyRes.details?.metadataApplied, true);
+
+    const reopenedMetaOnly = await PDFDocument.load(metaOnlyRes.primaryFile!.bytes);
+    assert.equal(reopenedMetaOnly.getTitle(), 'Final Signed Contract');
+    assert.equal(reopenedMetaOnly.getAuthor(), 'Alex Morgan');
+    assert.equal(reopenedMetaOnly.getSubject(), 'Executed Agreement 2026');
+
+    // 4. Combined signature + metadata clearing (empty string clears field)
+    const sigAndClearRes = await applyESignatureElementsToPdfV2(
+      { fileName: 'draft.pdf', bytes: metaBytes },
+      {
+        canonicalId: 'sign-pdf',
+        elements: [
+          {
+            id: 'meta-sig-1',
+            kind: 'signature',
+            pageNumber: 1,
+            rect: { u: 0.2, v: 0.7, w: 0.25, h: 0.08 },
+            imageBytes: validPng,
+            assetKey: 'meta-sig'
+          }
+        ],
+        metadata: {
+          title: 'Signed NDA',
+          author: '',
+          subject: 'Confidentiality'
+        }
+      }
+    );
+    assertLifecycleZero('signature + metadata clearing');
+    assert.equal(sigAndClearRes.status, 'SUCCESS');
+
+    const reopenedCleared = await PDFDocument.load(sigAndClearRes.primaryFile!.bytes);
+    assert.equal(reopenedCleared.getTitle(), 'Signed NDA');
+    assert.equal(reopenedCleared.getAuthor() ?? '', '');
+    assert.equal(reopenedCleared.getSubject(), 'Confidentiality');
   });
 
   // Summary

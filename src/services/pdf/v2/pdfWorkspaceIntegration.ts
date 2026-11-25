@@ -58,6 +58,7 @@ import {
   resolvePdfOperationCapabilities,
 } from './pdfRegistry';
 import { executeSecurityOperationV2 } from './pdfSecurityEngine';
+import { clearDocumentSession, registerActivePdfBlobUrl } from './pdfLifecycle';
 import {
   PdfDocumentInput,
   PdfEngineModuleId,
@@ -1177,5 +1178,7 @@ export {
   formatByteSize,
   resolvePdfOperationCapabilities,
   terminateOcrWorkerPoolV2,
+  clearDocumentSession,
+  registerActivePdfBlobUrl,
 };
 

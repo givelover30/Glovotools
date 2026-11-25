@@ -826,6 +826,19 @@ export const RAW_CATEGORIES: Omit<CategoryMeta, 'count'>[] = [
     isActive: true
   },
   {
+    id: 'e-signature',
+    slug: 'e-signature',
+    title: 'E-Signature Suite',
+    subtitle: 'Sign PDFs, draw signatures, fill forms & add initials',
+    description: 'Browser-local electronic signature suite for signing PDF documents, creating reusable transparent signature assets, filling forms, and placing dates and initials securely.',
+    iconName: 'PenTool',
+    iconColor: '#2563EB',
+    iconBg: '#DBEAFE',
+    borderColor: '#BFDBFE',
+    sortOrder: 48,
+    isActive: true
+  },
+  {
     id: 'document-converters',
     slug: 'document-converters',
     title: 'Document Converters',
@@ -1996,7 +2009,8 @@ export const TOOLBOX_CATEGORIES = [
   { id: 'trackers', resolvedCategoryId: 'trackers', i18nKey: 'hero.cat.trackers' },
   { id: 'guides', resolvedCategoryId: 'guides', i18nKey: 'hero.cat.guides' },
   { id: 'pdf-tools', resolvedCategoryId: 'pdf-tools', i18nKey: 'hero.cat.pdfTools' },
-  { id: 'document-converters', resolvedCategoryId: 'document-converters', i18nKey: 'hero.cat.docConverters' }
+  { id: 'document-converters', resolvedCategoryId: 'document-converters', i18nKey: 'hero.cat.docConverters' },
+  { id: 'e-signature', resolvedCategoryId: 'e-signature', i18nKey: 'hero.cat.eSignature' }
 ] as const;
 
 export function getRegisteredToolboxCategoriesCount(): number {

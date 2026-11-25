@@ -6,7 +6,7 @@ export const PHASE25_SUBCATEGORIES: Omit<SubcategoryMeta, 'count'>[] = [
   { id: 'p25-sub-conv', categoryId: 'pdf-tools', name: 'PDF Conversion & Optimization', slug: 'pdf-conversion-optimization', description: 'Compress file size, convert images to PDF, render PDF to images, extract images, and convert PDF to text', sortOrder: 252 },
   { id: 'p25-sub-sec', categoryId: 'pdf-tools', name: 'PDF Security & Analysis', slug: 'pdf-security-analysis', description: 'Password encryption, password removal, metadata inspection, and PDF document comparison', sortOrder: 253 },
   { id: 'p25-sub-adv', categoryId: 'pdf-tools', name: 'Advanced PDF Processing', slug: 'pdf-advanced-processing', description: 'Browser-local OCR text recognition and damaged PDF file structure repair', sortOrder: 254 },
-  { id: 'p25-sub-esign', categoryId: 'pdf-tools', name: 'PDF E-Signature & Form Filling', slug: 'pdf-esignature-filling', description: 'Sign PDF documents, create reusable transparent signatures, fill forms, and place dates and initials locally in your browser', sortOrder: 255 }
+  { id: 'p25-sub-esign', categoryId: 'e-signature', name: 'PDF E-Signature & Form Filling', slug: 'pdf-esignature-filling', description: 'Sign PDF documents, create reusable transparent signatures, fill forms, and place dates and initials locally in your browser', sortOrder: 255 }
 ];
 
 export const PHASE25_METADATA: CalculatorMeta[] = [
@@ -350,7 +350,7 @@ export const PHASE25_METADATA: CalculatorMeta[] = [
     id: 'sign-pdf',
     name: 'Sign PDF',
     shortDesc: 'Draw, type, or upload your visual signature, position and resize it on any page, and download your signed PDF locally',
-    category: 'pdf-tools',
+    category: 'e-signature',
     subcategoryId: 'p25-sub-esign',
     tags: ['pdf', 'sign', 'signature', 'esign', 'esignature', 'document', 'browser-local'],
     formula: 'Visual signature embedding & coordinate-mapped PDF stamping via pdf-lib',
@@ -363,7 +363,7 @@ export const PHASE25_METADATA: CalculatorMeta[] = [
     id: 'create-signature',
     name: 'Create Signature',
     shortDesc: 'Draw with mouse or touch, type in handwriting styles, or upload a signature image to export a transparent PNG or reuse across tools',
-    category: 'pdf-tools',
+    category: 'e-signature',
     subcategoryId: 'p25-sub-esign',
     tags: ['signature', 'create', 'draw', 'type', 'png', 'transparent', 'esign'],
     formula: 'HiDPI vector Bézier smoothing & transparent alpha PNG rendering',
@@ -376,7 +376,7 @@ export const PHASE25_METADATA: CalculatorMeta[] = [
     id: 'fill-and-sign',
     name: 'Fill & Sign PDF',
     shortDesc: 'Complete PDF forms by adding signatures, initials, dates, text annotations, and checkmarks with drag-and-drop placement',
-    category: 'pdf-tools',
+    category: 'e-signature',
     subcategoryId: 'p25-sub-esign',
     tags: ['pdf', 'fill', 'sign', 'form', 'initials', 'date', 'checkmark', 'text', 'esign'],
     formula: 'Multi-element interactive PDF overlay and coordinate transformation',
@@ -389,7 +389,7 @@ export const PHASE25_METADATA: CalculatorMeta[] = [
     id: 'add-date-initials',
     name: 'Add Date & Initials to PDF',
     shortDesc: 'Quickly stamp formatted dates and custom initials onto single or multiple PDF pages with exact visual positioning',
-    category: 'pdf-tools',
+    category: 'e-signature',
     subcategoryId: 'p25-sub-esign',
     tags: ['pdf', 'date', 'initials', 'stamp', 'sign', 'esign', 'multi-page'],
     formula: 'Precision date and initials PDF coordinate stamping',

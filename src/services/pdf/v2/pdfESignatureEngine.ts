@@ -72,9 +72,16 @@ export interface ESignPlacedElement {
   opacity?: number;
 }
 
+export interface ESignDocumentMetadata {
+  title: string;
+  author: string;
+  subject: string;
+}
+
 export interface ApplyESignatureOptions {
   canonicalId?: ESignCanonicalToolId;
   elements: ESignPlacedElement[];
+  metadata?: Partial<ESignDocumentMetadata>;
   outputFileName?: string;
   signal?: AbortSignal;
   onProgress?: (progress: PdfProcessingProgress) => void;
@@ -667,6 +674,53 @@ async function drawPlacedTextElement(params: {
 }
 
 /**
+ * Extracts Title, Author, and Subject fields from an uploaded PDF for display/editing
+ * in the E-Signature Suite prior to export, guaranteeing deterministic lifecycle cleanup.
+ */
+export async function extractPdfMetadataForESign(input: PdfDocumentInput): Promise<{
+  success: boolean;
+  metadata: ESignDocumentMetadata;
+  error?: PdfProcessingError;
+}> {
+  const empty: ESignDocumentMetadata = { title: '', author: '', subject: '' };
+  if (!input || !input.bytes || inspectByteLength(input.bytes) === 0) {
+    return {
+      success: false,
+      metadata: empty,
+      error: createPdfProcessingError('ERR_EMPTY_FILE', 'No input PDF file was provided.')
+    };
+  }
+
+  const loadRes = await loadPdfDocumentV2(input, { password: input.password });
+  try {
+    if (!loadRes.success || !loadRes.document || loadRes.error) {
+      return {
+        success: false,
+        metadata: empty,
+        error: loadRes.error || createPdfProcessingError('ERR_INVALID_PDF')
+      };
+    }
+
+    return {
+      success: true,
+      metadata: {
+        title: loadRes.metadata?.title ?? '',
+        author: loadRes.metadata?.author ?? '',
+        subject: loadRes.metadata?.subject ?? ''
+      }
+    };
+  } catch (err: unknown) {
+    return {
+      success: false,
+      metadata: empty,
+      error: normalizeCaughtPdfError(err, { phase: 'load' })
+    };
+  } finally {
+    await loadRes.dispose();
+  }
+}
+
+/**
  * Core browser-local PDF E-Signature flattening engine.
  *
  * Guarantees:
@@ -674,6 +728,7 @@ async function drawPlacedTextElement(params: {
  * - Image signature assets are strictly validated (magic bytes + structure) and embedded once per document.
  * - All 5 Fill & Sign element types (signature, initials, date, text, checkmark) are placed accurately
  *   across rotated and cropped pages.
+ * - Document Title, Author, and Subject metadata can be updated cleanly prior to serialization.
  * - Output is verified via `serializeAndVerifyPdfV2` (header, EOF, PDF.js independent reopen, page count).
  * - `loadRes.dispose()` is unconditionally executed in `finally` so `pdfLifecycleManager.getActiveSessionCount()`
  *   always returns to 0 after completion or error.
@@ -706,7 +761,13 @@ export async function applyESignatureElementsToPdfV2(
   }
 
   const elements = Array.isArray(options?.elements) ? options.elements : [];
-  if (elements.length === 0) {
+  const hasMetadataPayload = Boolean(
+    options?.metadata &&
+      (options.metadata.title !== undefined ||
+        options.metadata.author !== undefined ||
+        options.metadata.subject !== undefined)
+  );
+  if (elements.length === 0 && !hasMetadataPayload) {
     return buildErrorResult(
       canonicalId,
       createPdfProcessingError(
@@ -915,6 +976,19 @@ export async function applyESignatureElementsToPdfV2(
       }
     }
 
+    if (options.metadata) {
+      if (options.metadata.title !== undefined) {
+        doc.setTitle(String(options.metadata.title));
+      }
+      if (options.metadata.author !== undefined) {
+        doc.setAuthor(String(options.metadata.author));
+      }
+      if (options.metadata.subject !== undefined) {
+        doc.setSubject(String(options.metadata.subject));
+      }
+      doc.setModificationDate(new Date());
+    }
+
     options.onProgress?.({
       stage: 'VERIFYING_OUTPUT',
       percent: 82,
@@ -955,6 +1029,10 @@ export async function applyESignatureElementsToPdfV2(
     };
 
     const modifiedPageNumbers = Array.from(modifiedPageSet).sort((a, b) => a - b);
+    const summaryText =
+      elements.length > 0
+        ? `Applied ${elements.length} element(s) across ${modifiedPageNumbers.length} page(s) of "${input.fileName}".`
+        : `Updated document metadata on "${input.fileName}".`;
 
     return {
       status: 'SUCCESS',
@@ -962,7 +1040,7 @@ export async function applyESignatureElementsToPdfV2(
       primaryFile,
       outputFiles: [primaryFile],
       outputBytes: verifiedBytes,
-      summary: `Applied ${elements.length} element(s) across ${modifiedPageNumbers.length} page(s) of "${input.fileName}".`,
+      summary: summaryText,
       metrics: {
         inputBytes,
         outputBytes: verifiedBytes.byteLength,
@@ -981,7 +1059,13 @@ export async function applyESignatureElementsToPdfV2(
         elementsApplied: elements.length,
         modifiedPageNumbers,
         embeddedUniqueImages: embeddedImageCache.size,
-        usedUnicodeFallback
+        usedUnicodeFallback,
+        metadataApplied: hasMetadataPayload,
+        metadata: {
+          title: doc.getTitle() ?? '',
+          author: doc.getAuthor() ?? '',
+          subject: doc.getSubject() ?? ''
+        }
       }
     };
   } catch (err: unknown) {

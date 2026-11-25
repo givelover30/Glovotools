@@ -438,16 +438,6 @@ export default function EngineCalculatorView({ calculator }: EngineCalculatorVie
             )}
           </ToolResultsPanel>
 
-          {contract.formulaMeta?.formulaExpression && (
-            <div className="print-avoid-break ui-panel p-4 space-y-1.5">
-              <div className="text-xs font-semibold text-text-secondary">
-                {t('section.formulaExpression')}
-              </div>
-              <div className="font-mono text-xs sm:text-sm font-semibold text-accent bg-surface-secondary/70 px-3 py-2 rounded-lg border border-border-subtle overflow-x-auto">
-                {contract.formulaMeta.formulaExpression}
-              </div>
-            </div>
-          )}
         </div>
       }
     />

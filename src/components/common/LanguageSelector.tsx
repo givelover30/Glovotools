@@ -50,16 +50,17 @@ export default function LanguageSelector({
         aria-label="Select language"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        className={`flex items-center justify-between gap-1.5 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong text-text-primary transition-colors cursor-pointer text-xs font-medium shrink-0 ${
-          compact ? 'h-9 px-2.5' : 'min-h-[40px] px-3 w-full'
+        className={`flex items-center justify-between gap-1 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong text-text-primary transition-colors cursor-pointer text-xs font-medium shrink-0 ${
+          compact ? 'h-8 sm:h-9 px-1.5 sm:px-2.5' : 'min-h-[40px] px-3 w-full'
         }`}
       >
-        <span className="flex items-center gap-2 min-w-0">
-          <span className="text-base shrink-0" role="img" aria-label={currentLang.name}>
+        <span className="flex items-center gap-1.5 min-w-0">
+          <span className="text-sm sm:text-base shrink-0" role="img" aria-label={currentLang.name}>
             {currentLang.flag}
           </span>
-          <span className="truncate">
-            {compact ? currentLang.code.toUpperCase() : currentLang.nativeName}
+          <span className="truncate text-[11px] sm:text-xs">
+            <span className="sm:hidden">{currentLang.code.toUpperCase()}</span>
+            <span className="hidden sm:inline">{currentLang.nativeName}</span>
           </span>
         </span>
         <ChevronDown

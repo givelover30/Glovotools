@@ -75,13 +75,14 @@ export default function CurrencySelector({
         aria-label={isEs ? 'Seleccionar moneda' : 'Select currency'}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        className={`flex items-center justify-between gap-1.5 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong text-text-primary transition-colors cursor-pointer text-xs font-medium shrink-0 ${
-          compact ? 'h-9 px-2.5' : 'min-h-[40px] px-3 w-full'
+        className={`flex items-center justify-between gap-1 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong text-text-primary transition-colors cursor-pointer text-xs font-medium shrink-0 ${
+          compact ? 'h-8 sm:h-9 px-1.5 sm:px-2.5' : 'min-h-[40px] px-3 w-full'
         }`}
       >
-        <span className="flex items-center gap-1.5 min-w-0">
-          <span className="truncate font-semibold font-mono">
-            {formatCurrencyLabel(currentCurr)}
+        <span className="flex items-center gap-1 min-w-0">
+          <span className="truncate font-semibold font-mono text-[11px] sm:text-xs">
+            <span className="hidden sm:inline">{currentCurr.symbol !== currentCurr.code ? `${currentCurr.symbol} ` : ''}</span>
+            <span>{currentCurr.code}</span>
           </span>
         </span>
         <ChevronDown

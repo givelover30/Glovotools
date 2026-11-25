@@ -94,6 +94,20 @@ export interface ESignTranslations {
   'esign.notice.localPrivacy': string;
   'esign.notice.visualScope': string;
 
+  // Document Metadata Editor
+  'esign.metadata.heading': string;
+  'esign.metadata.subtitle': string;
+  'esign.metadata.titleLabel': string;
+  'esign.metadata.titlePlaceholder': string;
+  'esign.metadata.authorLabel': string;
+  'esign.metadata.authorPlaceholder': string;
+  'esign.metadata.subjectLabel': string;
+  'esign.metadata.subjectPlaceholder': string;
+  'esign.metadata.reset': string;
+  'esign.metadata.emptyHint': string;
+  'esign.metadata.loading': string;
+  'esign.metadata.modifiedNote': string;
+
   // Validation & Error Messages
   'esign.error.emptySignature': string;
   'esign.error.noPdfUploaded': string;
@@ -190,6 +204,19 @@ const EN_ESIGN: ESignTranslations = {
   'esign.notice.localPrivacy': 'Files and signatures stay in your browser memory and are never uploaded.',
   'esign.notice.visualScope': 'Visual electronic signature only — does not apply a cryptographic PKI/X.509 digital certificate.',
 
+  'esign.metadata.heading': 'Document Metadata',
+  'esign.metadata.subtitle': 'View and edit PDF info fields before export',
+  'esign.metadata.titleLabel': 'Title',
+  'esign.metadata.titlePlaceholder': 'Document title',
+  'esign.metadata.authorLabel': 'Author',
+  'esign.metadata.authorPlaceholder': 'Author name',
+  'esign.metadata.subjectLabel': 'Subject',
+  'esign.metadata.subjectPlaceholder': 'Document subject or summary',
+  'esign.metadata.reset': 'Restore Original',
+  'esign.metadata.emptyHint': 'Upload a PDF to view and edit its title, author, and subject.',
+  'esign.metadata.loading': 'Reading document metadata...',
+  'esign.metadata.modifiedNote': 'Modified · Saved on final export',
+
   'esign.error.emptySignature': 'Please draw, type, or upload a signature first.',
   'esign.error.noPdfUploaded': 'Please upload a PDF document before exporting.',
   'esign.error.noElementsPlaced': 'Place at least one signature, initial, date, text, or checkmark before exporting.',
@@ -284,6 +311,19 @@ const ES_ESIGN: ESignTranslations = {
 
   'esign.notice.localPrivacy': 'Tus archivos y firmas permanecen en la memoria de tu navegador y nunca se suben.',
   'esign.notice.visualScope': 'Solo firma electrónica visual: no aplica un certificado digital criptográfico PKI/X.509.',
+
+  'esign.metadata.heading': 'Metadatos del Documento',
+  'esign.metadata.subtitle': 'Consulta y edita los campos del PDF antes de exportar',
+  'esign.metadata.titleLabel': 'Título',
+  'esign.metadata.titlePlaceholder': 'Título del documento',
+  'esign.metadata.authorLabel': 'Autor',
+  'esign.metadata.authorPlaceholder': 'Nombre del autor',
+  'esign.metadata.subjectLabel': 'Asunto',
+  'esign.metadata.subjectPlaceholder': 'Asunto o resumen del documento',
+  'esign.metadata.reset': 'Restaurar Original',
+  'esign.metadata.emptyHint': 'Sube un PDF para ver y editar su título, autor y asunto.',
+  'esign.metadata.loading': 'Leyendo metadatos del documento...',
+  'esign.metadata.modifiedNote': 'Modificado · Se guardará al exportar',
 
   'esign.error.emptySignature': 'Primero dibuja, escribe o sube una firma.',
   'esign.error.noPdfUploaded': 'Sube un documento PDF antes de exportar.',
@@ -380,6 +420,19 @@ const FR_ESIGN: ESignTranslations = {
   'esign.notice.localPrivacy': 'Vos fichiers et signatures restent dans la mémoire du navigateur sans aucun envoi.',
   'esign.notice.visualScope': 'Signature électronique visuelle uniquement — sans certificat cryptographique PKI/X.509.',
 
+  'esign.metadata.heading': 'Métadonnées du Document',
+  'esign.metadata.subtitle': 'Afficher et modifier les champs du PDF avant l’export',
+  'esign.metadata.titleLabel': 'Titre',
+  'esign.metadata.titlePlaceholder': 'Titre du document',
+  'esign.metadata.authorLabel': 'Auteur',
+  'esign.metadata.authorPlaceholder': 'Nom de l’auteur',
+  'esign.metadata.subjectLabel': 'Objet',
+  'esign.metadata.subjectPlaceholder': 'Objet ou résumé du document',
+  'esign.metadata.reset': 'Rétablir l’original',
+  'esign.metadata.emptyHint': 'Importez un PDF pour afficher et modifier son titre, son auteur et son objet.',
+  'esign.metadata.loading': 'Lecture des métadonnées du document...',
+  'esign.metadata.modifiedNote': 'Modifié · Enregistré lors de l’export',
+
   'esign.error.emptySignature': 'Veuillez d’abord dessiner, saisir ou importer une signature.',
   'esign.error.noPdfUploaded': 'Veuillez importer un document PDF avant d’exporter.',
   'esign.error.noElementsPlaced': 'Placez au moins une signature, initiale, date, texte ou coche avant d’exporter.',
@@ -474,6 +527,19 @@ const PT_ESIGN: ESignTranslations = {
 
   'esign.notice.localPrivacy': 'Arquivos e assinaturas permanecem na memória do navegador e nunca são enviados.',
   'esign.notice.visualScope': 'Apenas assinatura eletrônica visual — não aplica certificado digital criptográfico PKI/X.509.',
+
+  'esign.metadata.heading': 'Metadados do Documento',
+  'esign.metadata.subtitle': 'Visualize e edite os campos do PDF antes de exportar',
+  'esign.metadata.titleLabel': 'Título',
+  'esign.metadata.titlePlaceholder': 'Título do documento',
+  'esign.metadata.authorLabel': 'Autor',
+  'esign.metadata.authorPlaceholder': 'Nome do autor',
+  'esign.metadata.subjectLabel': 'Assunto',
+  'esign.metadata.subjectPlaceholder': 'Assunto ou resumo do documento',
+  'esign.metadata.reset': 'Restaurar Original',
+  'esign.metadata.emptyHint': 'Envie um PDF para visualizar e editar o título, autor e assunto.',
+  'esign.metadata.loading': 'Lendo metadados do documento...',
+  'esign.metadata.modifiedNote': 'Modificado · Salvo na exportação final',
 
   'esign.error.emptySignature': 'Desenhe, digite ou envie uma assinatura primeiro.',
   'esign.error.noPdfUploaded': 'Envie um documento PDF antes de exportar.',
@@ -570,6 +636,19 @@ const DE_ESIGN: ESignTranslations = {
   'esign.notice.localPrivacy': 'Dateien und Unterschriften bleiben im Browserspeicher und werden nie hochgeladen.',
   'esign.notice.visualScope': 'Nur visuelle elektronische Signatur — kein kryptografisches PKI/X.509-Zertifikat.',
 
+  'esign.metadata.heading': 'Dokument-Metadaten',
+  'esign.metadata.subtitle': 'PDF-Infoparameter vor dem Export anzeigen und bearbeiten',
+  'esign.metadata.titleLabel': 'Titel',
+  'esign.metadata.titlePlaceholder': 'Dokumenttitel',
+  'esign.metadata.authorLabel': 'Autor',
+  'esign.metadata.authorPlaceholder': 'Name des Autors',
+  'esign.metadata.subjectLabel': 'Betreff',
+  'esign.metadata.subjectPlaceholder': 'Thema oder Zusammenfassung',
+  'esign.metadata.reset': 'Original wiederherstellen',
+  'esign.metadata.emptyHint': 'Laden Sie ein PDF hoch, um Titel, Autor und Betreff anzuzeigen und zu bearbeiten.',
+  'esign.metadata.loading': 'Dokument-Metadaten werden gelesen...',
+  'esign.metadata.modifiedNote': 'Geändert · Wird beim Export gespeichert',
+
   'esign.error.emptySignature': 'Bitte zeichnen, tippen oder laden Sie zuerst eine Unterschrift hoch.',
   'esign.error.noPdfUploaded': 'Bitte laden Sie vor dem Export ein PDF-Dokument hoch.',
   'esign.error.noElementsPlaced': 'Platzieren Sie mindestens eine Unterschrift, Initialen, Datum, Text oder Häkchen.',
@@ -664,6 +743,19 @@ const IT_ESIGN: ESignTranslations = {
 
   'esign.notice.localPrivacy': 'File e firme restano nella memoria del browser e non vengono mai caricati online.',
   'esign.notice.visualScope': 'Solo firma elettronica visiva — non applica un certificato digitale crittografico PKI/X.509.',
+
+  'esign.metadata.heading': 'Metadati Documento',
+  'esign.metadata.subtitle': 'Visualizza e modifica i campi del PDF prima dell’esportazione',
+  'esign.metadata.titleLabel': 'Titolo',
+  'esign.metadata.titlePlaceholder': 'Titolo del documento',
+  'esign.metadata.authorLabel': 'Autore',
+  'esign.metadata.authorPlaceholder': 'Nome autore',
+  'esign.metadata.subjectLabel': 'Oggetto',
+  'esign.metadata.subjectPlaceholder': 'Oggetto o riepilogo',
+  'esign.metadata.reset': 'Ripristina Originali',
+  'esign.metadata.emptyHint': 'Carica un PDF per visualizzare e modificare titolo, autore e oggetto.',
+  'esign.metadata.loading': 'Lettura metadati documento...',
+  'esign.metadata.modifiedNote': 'Modificato · Salvato all’esportazione',
 
   'esign.error.emptySignature': 'Disegna, digita o carica prima una firma.',
   'esign.error.noPdfUploaded': 'Carica un documento PDF prima di esportare.',
@@ -760,6 +852,19 @@ const JA_ESIGN: ESignTranslations = {
   'esign.notice.localPrivacy': 'ファイルと署名はブラウザのメモリ内のみで処理され、外部へ送信されません。',
   'esign.notice.visualScope': '視覚的な電子署名のみ対応（暗号化PKI/X.509電子証明書は付与されません）。',
 
+  'esign.metadata.heading': 'ドキュメントメタデータ',
+  'esign.metadata.subtitle': '書き出し前にPDFのタイトル・作成者・件名を確認・編集',
+  'esign.metadata.titleLabel': 'タイトル',
+  'esign.metadata.titlePlaceholder': 'ドキュメントタイトル',
+  'esign.metadata.authorLabel': '作成者',
+  'esign.metadata.authorPlaceholder': '作成者名',
+  'esign.metadata.subjectLabel': '件名',
+  'esign.metadata.subjectPlaceholder': '件名または概要',
+  'esign.metadata.reset': '元に戻す',
+  'esign.metadata.emptyHint': 'PDFをアップロードするとタイトル・作成者・件名を編集できます。',
+  'esign.metadata.loading': 'メタデータを読み込み中...',
+  'esign.metadata.modifiedNote': '変更済み・書き出し時に保存されます',
+
   'esign.error.emptySignature': '先に署名を描画、入力、またはアップロードしてください。',
   'esign.error.noPdfUploaded': '書き出す前にPDFドキュメントをアップロードしてください。',
   'esign.error.noElementsPlaced': '書き出す前に署名・イニシャル・日付・テキスト・チェックを1つ以上配置してください。',
@@ -855,6 +960,19 @@ const ZH_ESIGN: ESignTranslations = {
   'esign.notice.localPrivacy': '文件和签名仅保留在您的浏览器内存中，绝不会上传到服务器。',
   'esign.notice.visualScope': '仅提供可视电子签名，不包含加密 PKI/X.509 数字证书。',
 
+  'esign.metadata.heading': '文档元数据',
+  'esign.metadata.subtitle': '导出前查看并修改 PDF 标题、作者和主题',
+  'esign.metadata.titleLabel': '标题',
+  'esign.metadata.titlePlaceholder': '文档标题',
+  'esign.metadata.authorLabel': '作者',
+  'esign.metadata.authorPlaceholder': '作者姓名',
+  'esign.metadata.subjectLabel': '主题',
+  'esign.metadata.subjectPlaceholder': '文档主题或摘要',
+  'esign.metadata.reset': '恢复原始值',
+  'esign.metadata.emptyHint': '上传 PDF 后可查看并修改标题、作者和主题。',
+  'esign.metadata.loading': '正在读取文档元数据...',
+  'esign.metadata.modifiedNote': '已修改 · 导出时将一并保存',
+
   'esign.error.emptySignature': '请先绘制、输入或上传签名。',
   'esign.error.noPdfUploaded': '导出前请先上传 PDF 文档。',
   'esign.error.noElementsPlaced': '导出前请至少放置一个签名、缩写、日期、文本或勾选标记。',
@@ -949,6 +1067,19 @@ const PL_ESIGN: ESignTranslations = {
 
   'esign.notice.localPrivacy': 'Pliki i podpisy pozostają w pamięci przeglądarki i nigdy nie są wysyłane na serwer.',
   'esign.notice.visualScope': 'Tylko wizualny podpis elektroniczny — bez kryptograficznego certyfikatu PKI/X.509.',
+
+  'esign.metadata.heading': 'Metadane Dokumentu',
+  'esign.metadata.subtitle': 'Wyświetl i edytuj pola PDF przed eksportem',
+  'esign.metadata.titleLabel': 'Tytuł',
+  'esign.metadata.titlePlaceholder': 'Tytuł dokumentu',
+  'esign.metadata.authorLabel': 'Autor',
+  'esign.metadata.authorPlaceholder': 'Imię i nazwisko autora',
+  'esign.metadata.subjectLabel': 'Temat',
+  'esign.metadata.subjectPlaceholder': 'Temat lub podsumowanie dokumentu',
+  'esign.metadata.reset': 'Przywróć Oryginał',
+  'esign.metadata.emptyHint': 'Prześlij plik PDF, aby wyświetlić i edytować tytuł, autora oraz temat.',
+  'esign.metadata.loading': 'Odczytywanie metadanych dokumentu...',
+  'esign.metadata.modifiedNote': 'Zmodyfikowano · Zostanie zapisane przy eksporcie',
 
   'esign.error.emptySignature': 'Najpierw narysuj, wpisz lub prześlij podpis.',
   'esign.error.noPdfUploaded': 'Prześlij dokument PDF przed eksportem.',

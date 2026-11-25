@@ -153,3 +153,41 @@ class PdfLifecycleRegistry {
 }
 
 export const pdfLifecycleManager = new PdfLifecycleRegistry();
+
+const activePdfBlobUrls = new Set<string>();
+
+export function registerActivePdfBlobUrl(url: string): void {
+  if (typeof url === 'string' && url.startsWith('blob:')) {
+    activePdfBlobUrls.add(url);
+  }
+}
+
+export function revokeActivePdfBlobUrls(): void {
+  for (const url of activePdfBlobUrls) {
+    revokeObjectUrlSafely(url);
+  }
+  activePdfBlobUrls.clear();
+}
+
+/**
+ * Explicitly invokes garbage collection for PDF.js document objects and revokes
+ * all active Blob URLs created during the document preview or editing process.
+ */
+export async function clearDocumentSession(): Promise<void> {
+  try {
+    await pdfLifecycleManager.disposeAllSessions();
+  } catch {
+    // Ignore session disposal errors
+  }
+
+  revokeActivePdfBlobUrls();
+
+  try {
+    if (typeof window !== 'undefined' && typeof (window as any).gc === 'function') {
+      (window as any).gc();
+    }
+  } catch {
+    // Ignore GC failures
+  }
+}
+

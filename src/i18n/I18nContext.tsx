@@ -10,6 +10,18 @@ interface I18nContextType {
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
+export function formatMissingTranslationFallback(key: string): string {
+  if (/^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(key)) {
+    const lastSegment = key.split('.').pop() || key;
+    const spaced = lastSegment
+      .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+      .replace(/[-_]+/g, ' ')
+      .trim();
+    return spaced.replace(/\b\w/g, (ch) => ch.toUpperCase());
+  }
+  return key;
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     try {
@@ -43,7 +55,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (fallback) {
       return fallback;
     }
-    return key;
+    return formatMissingTranslationFallback(key);
   };
 
   return (

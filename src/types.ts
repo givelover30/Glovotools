@@ -73,6 +73,7 @@ export type CategoryId =
   | 'additional-tools'
   | 'pdf-tools'
   | 'document-converters'
+  | 'e-signature'
   | 'all';
 
 export type CalculatorId = string;

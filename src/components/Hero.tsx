@@ -638,20 +638,20 @@ export default function Hero({
               <UiButton
                 variant="primary"
                 onClick={handleBrowseAll}
-                className="h-10 px-3.5 sm:px-4 text-[13px] flex-1 sm:flex-none bg-[#2563EB] hover:bg-[#1D4ED8] text-white border-transparent shadow-[0_6px_20px_rgba(37,99,235,0.35)]"
+                className="h-10 px-3.5 sm:px-4 text-[13px] flex-1 sm:flex-none bg-[#2563EB] hover:bg-[#3B82F6] text-white border-transparent shadow-[0_6px_20px_rgba(37,99,235,0.35)] hover:shadow-[0_12px_28px_rgba(37,99,235,0.45)] transition-all duration-250 ease-out hover:-translate-y-[3px] hover:scale-[1.02] active:scale-[0.98] group cursor-pointer motion-reduce:transform-none motion-reduce:transition-none"
               >
-                <LayoutGrid className="w-4 h-4 shrink-0" />
+                <LayoutGrid className="w-4 h-4 shrink-0 transition-transform duration-250 ease-out group-hover:scale-110 group-hover:rotate-6" />
                 <span>{t('hero.browseAll')}</span>
               </UiButton>
 
               <UiButton
                 variant="secondary"
                 onClick={() => onSelectCategory?.('all')}
-                className="h-10 px-3.5 sm:px-4 text-[13px] flex-1 sm:flex-none bg-white hover:bg-slate-50 text-slate-800 border-slate-200 hover:border-slate-300 dark:bg-transparent dark:hover:bg-white/10 dark:text-white dark:border-white/25 dark:hover:border-white/40"
+                className="h-10 px-3.5 sm:px-4 text-[13px] flex-1 sm:flex-none bg-white hover:bg-slate-50 text-slate-800 border-slate-200 hover:border-cyan-400 dark:bg-transparent dark:hover:bg-white/10 dark:text-white dark:border-white/25 dark:hover:border-cyan-400 shadow-sm hover:shadow-[0_12px_28px_rgba(6,182,212,0.25)] transition-all duration-250 ease-out hover:-translate-y-[3px] hover:scale-[1.02] active:scale-[0.98] group cursor-pointer motion-reduce:transform-none motion-reduce:transition-none"
               >
-                <Layers className="w-4 h-4 text-[#0891B2] dark:text-[#22D3EE] shrink-0" />
+                <Layers className="w-4 h-4 text-[#0891B2] dark:text-[#22D3EE] shrink-0 transition-transform duration-250 ease-out group-hover:-translate-y-0.5 group-hover:scale-110" />
                 <span>{t('nav.categories')}</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500 dark:text-slate-300 shrink-0 hidden sm:inline" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-500 dark:text-slate-300 shrink-0 hidden sm:inline transition-transform duration-250 ease-out group-hover:translate-x-0.5" />
               </UiButton>
             </div>
           </div>

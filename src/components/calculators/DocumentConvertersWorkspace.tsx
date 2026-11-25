@@ -33,6 +33,7 @@ import {
   revokeObjectUrlSafely
 } from '../../services/pdf/pdfRuntime.ts';
 import {
+  clearDocumentSession,
   executeDocumentConverterWorkspaceV2
 } from '../../services/pdf/v2/pdfWorkspaceIntegration.ts';
 import { type PdfErrorInput } from '../common/PdfErrorAlert.tsx';
@@ -115,6 +116,7 @@ export default function DocumentConvertersWorkspace({
     return () => {
       cancelActiveConversion();
       revokeActiveBlob();
+      void clearDocumentSession();
     };
   }, []);
 

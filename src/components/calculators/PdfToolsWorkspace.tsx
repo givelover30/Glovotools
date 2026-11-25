@@ -27,6 +27,7 @@ import {
   parsePageRangeExpression
 } from '../../services/pdf/v2/pdfPageRangeParser';
 import {
+  clearDocumentSession,
   executePdfWorkspaceFilesV2,
   formatByteSize,
   getWorkspaceToolUiConfigV2,
@@ -137,6 +138,7 @@ export default function PdfToolsWorkspace({
       cancelActiveOperation();
       revokeActiveBlobUrls();
       void terminateOcrWorkerPoolV2();
+      void clearDocumentSession();
     };
   }, []);
 

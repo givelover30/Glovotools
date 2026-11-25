@@ -31,12 +31,14 @@ import {
   revokeObjectUrlSafely
 } from '../../services/pdf/pdfRuntime.ts';
 import { validatePdfInput } from '../../services/pdf/v2/pdfValidation.ts';
-import { formatByteSize } from '../../services/pdf/v2/pdfWorkspaceIntegration.ts';
+import { clearDocumentSession, formatByteSize } from '../../services/pdf/v2/pdfWorkspaceIntegration.ts';
 import {
   applyESignatureElementsToPdfV2,
+  extractPdfMetadataForESign,
   formatESignDate,
   type ESignCanonicalToolId,
   type ESignDateFormatId,
+  type ESignDocumentMetadata,
   type ESignNormalizedRect
 } from '../../services/pdf/v2/pdfESignatureEngine.ts';
 import {
@@ -48,6 +50,7 @@ import {
 import InteractivePdfCanvasViewer, {
   type InteractivePdfElement
 } from './InteractivePdfCanvasViewer.tsx';
+import PdfMetadataEditor from './PdfMetadataEditor.tsx';
 import SignatureCreatorPanel from './SignatureCreatorPanel.tsx';
 
 export interface PdfESignWorkspaceProps {
@@ -65,6 +68,12 @@ const EMPTY_HISTORY: HistoryState = {
   past: [],
   present: [],
   future: []
+};
+
+const EMPTY_METADATA: ESignDocumentMetadata = {
+  title: '',
+  author: '',
+  subject: ''
 };
 
 function cloneElements(list: readonly InteractivePdfElement[]): InteractivePdfElement[] {
@@ -115,6 +124,10 @@ export default function PdfESignWorkspace({
   const [creatorModalKind, setCreatorModalKind] = useState<SessionSignatureKind | null>(null);
   const [isDraggingFile, setIsDraggingFile] = useState(false);
 
+  const [originalMetadata, setOriginalMetadata] = useState<ESignDocumentMetadata>(EMPTY_METADATA);
+  const [metadataDraft, setMetadataDraft] = useState<ESignDocumentMetadata>(EMPTY_METADATA);
+  const [metadataLoading, setMetadataLoading] = useState(false);
+
   const [exporting, setExporting] = useState(false);
   const [pdfError, setPdfError] = useState<PdfErrorInput | null>(null);
   const [statusNotice, setStatusNotice] = useState<string | null>(null);
@@ -131,6 +144,7 @@ export default function PdfESignWorkspace({
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const activeBlobUrlsRef = useRef<string[]>([]);
   const abortControllerRef = useRef<AbortController | null>(null);
+  const metadataLoadSeqRef = useRef<number>(0);
 
   const revokeActiveBlobUrls = useCallback(() => {
     for (const url of activeBlobUrlsRef.current) {
@@ -151,6 +165,7 @@ export default function PdfESignWorkspace({
     return () => {
       cancelActiveExport();
       revokeActiveBlobUrls();
+      void clearDocumentSession();
     };
   }, [cancelActiveExport, revokeActiveBlobUrls]);
 
@@ -175,6 +190,7 @@ export default function PdfESignWorkspace({
 
   // Reset document state when switching between the 4 tools (while preserving RAM session signatures!)
   useEffect(() => {
+    metadataLoadSeqRef.current += 1;
     cancelActiveExport();
     revokeActiveBlobUrls();
     setPdfFile(null);
@@ -188,6 +204,9 @@ export default function PdfESignWorkspace({
     setHistory(EMPTY_HISTORY);
     setSelectedElementId(null);
     setCreatorModalKind(null);
+    setOriginalMetadata(EMPTY_METADATA);
+    setMetadataDraft(EMPTY_METADATA);
+    setMetadataLoading(false);
     setPdfError(null);
     setStatusNotice(null);
     setExportOutput(null);
@@ -195,6 +214,66 @@ export default function PdfESignWorkspace({
       fileInputRef.current.value = '';
     }
   }, [canonicalTool, cancelActiveExport, revokeActiveBlobUrls]);
+
+  // Extract PDF Title, Author, and Subject whenever a document is loaded or unlocked
+  useEffect(() => {
+    const seq = ++metadataLoadSeqRef.current;
+
+    if (!pdfBytes || !pdfFile || passwordPromptOpen) {
+      setOriginalMetadata(EMPTY_METADATA);
+      setMetadataDraft(EMPTY_METADATA);
+      setMetadataLoading(false);
+      return;
+    }
+
+    setMetadataLoading(true);
+    void extractPdfMetadataForESign({
+      fileName: pdfFile.name,
+      mimeType: 'application/pdf',
+      bytes: pdfBytes,
+      password: activePassword
+    })
+      .then((res) => {
+        if (seq !== metadataLoadSeqRef.current) return;
+        if (res.success) {
+          setOriginalMetadata(res.metadata);
+          setMetadataDraft(res.metadata);
+        } else {
+          setOriginalMetadata(EMPTY_METADATA);
+          setMetadataDraft(EMPTY_METADATA);
+        }
+      })
+      .catch(() => {
+        if (seq !== metadataLoadSeqRef.current) return;
+        setOriginalMetadata(EMPTY_METADATA);
+        setMetadataDraft(EMPTY_METADATA);
+      })
+      .finally(() => {
+        if (seq === metadataLoadSeqRef.current) {
+          setMetadataLoading(false);
+        }
+      });
+  }, [pdfBytes, pdfFile, activePassword, passwordPromptOpen]);
+
+  const isMetadataDirty = useMemo(
+    () =>
+      metadataDraft.title !== originalMetadata.title ||
+      metadataDraft.author !== originalMetadata.author ||
+      metadataDraft.subject !== originalMetadata.subject,
+    [metadataDraft, originalMetadata]
+  );
+
+  const handleMetadataChange = useCallback((next: ESignDocumentMetadata) => {
+    setMetadataDraft(next);
+    setExportOutput(null);
+    setStatusNotice(null);
+  }, []);
+
+  const handleMetadataReset = useCallback(() => {
+    setMetadataDraft(originalMetadata);
+    setExportOutput(null);
+    setStatusNotice(null);
+  }, [originalMetadata]);
 
   const commitHistory = useCallback(
     (updater: (prev: InteractivePdfElement[]) => InteractivePdfElement[]) => {
@@ -262,6 +341,7 @@ export default function PdfESignWorkspace({
   }, [handleRedo, handleUndo]);
 
   const handleResetDocument = useCallback(() => {
+    metadataLoadSeqRef.current += 1;
     cancelActiveExport();
     revokeActiveBlobUrls();
     setPdfFile(null);
@@ -274,6 +354,9 @@ export default function PdfESignWorkspace({
     setTotalPages(0);
     setHistory(EMPTY_HISTORY);
     setSelectedElementId(null);
+    setOriginalMetadata(EMPTY_METADATA);
+    setMetadataDraft(EMPTY_METADATA);
+    setMetadataLoading(false);
     setPdfError(null);
     setStatusNotice(null);
     setExportOutput(null);
@@ -519,7 +602,7 @@ export default function PdfESignWorkspace({
       return;
     }
 
-    if (history.present.length === 0) {
+    if (history.present.length === 0 && !isMetadataDirty) {
       setPdfError({
         code: 'ERR_EMPTY_WATERMARK_CONTENT',
         message: tr('esign.error.noElementsPlaced')
@@ -545,6 +628,7 @@ export default function PdfESignWorkspace({
         {
           canonicalId: canonicalTool,
           elements: history.present,
+          metadata: isMetadataDirty ? metadataDraft : undefined,
           signal: controller.signal
         }
       );
@@ -967,11 +1051,26 @@ export default function PdfESignWorkspace({
               )}
             </div>
 
+            {/* Document Metadata Editor */}
+            <PdfMetadataEditor
+              metadata={metadataDraft}
+              hasDocument={Boolean(pdfBytes && !passwordPromptOpen)}
+              loading={metadataLoading}
+              isDirty={isMetadataDirty}
+              disabled={exporting}
+              onChange={handleMetadataChange}
+              onReset={handleMetadataReset}
+            />
+
             {/* Export CTA Button */}
             <button
               type="button"
               data-testid="esign-export-pdf-btn"
-              disabled={exporting || !pdfBytes || history.present.length === 0}
+              disabled={
+                exporting ||
+                !pdfBytes ||
+                (history.present.length === 0 && !isMetadataDirty)
+              }
               onClick={handleExportPdf}
               className="ui-btn-primary w-full py-2.5 text-xs sm:text-sm disabled:opacity-45 disabled:pointer-events-none"
             >

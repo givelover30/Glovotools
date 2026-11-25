@@ -76,9 +76,9 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-50 w-full h-14 bg-[#F5F6F8] dark:bg-[#111923]/92 backdrop-blur-xl border-b border-[#E2E8F0] dark:border-[#29384A] text-text-primary transition-colors">
-      <div className="w-full h-full px-3 sm:px-5 flex items-center justify-between gap-3 lg:gap-6">
+      <div className="w-full h-full px-2 sm:px-4 lg:px-6 flex items-center justify-between gap-1.5 sm:gap-3 lg:gap-6">
         {/* Zone 1: Sidebar Controls + CALCTOOLS Brand Mark */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0 min-w-0">
           {/* Mobile / Tablet Drawer Trigger (< lg) */}
           {onToggleMobileDrawer && (
             <button
@@ -95,9 +95,9 @@ export default function Header({
               }
               aria-expanded={isMobileDrawerOpen}
               aria-controls="app-sidebar-drawer"
-              className="lg:hidden h-10 w-10 rounded-lg border border-border-main bg-surface hover:bg-surface-hover flex items-center justify-center text-text-primary transition-colors cursor-pointer shrink-0"
+              className="lg:hidden h-8 w-8 sm:h-10 sm:w-10 rounded-lg border border-border-main bg-surface hover:bg-surface-hover flex items-center justify-center text-text-primary transition-colors cursor-pointer shrink-0"
             >
-              {isMobileDrawerOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileDrawerOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           )}
 
@@ -141,17 +141,17 @@ export default function Header({
             type="button"
             onClick={() => onOpenSection('home')}
             aria-label="Glovotools Home"
-            className="flex items-center text-left group shrink-0 cursor-pointer rounded-lg py-1 pr-1"
+            className="flex items-center text-left group shrink-0 cursor-pointer rounded-lg py-1 pr-1 min-w-0"
           >
             <img
               src="/assets/aistudio/glovotools_header_logo_exact_size_6f2e1a70.png"
               alt="Glovotools"
-              className="block dark:hidden h-8 w-auto object-contain shrink-0 select-none group-hover:scale-[1.02] transition-transform duration-150"
+              className="block dark:hidden h-7 sm:h-8 w-auto object-contain shrink-0 select-none group-hover:scale-[1.02] transition-transform duration-150"
             />
             <img
               src="/assets/aistudio/glovotools_dark_mode_transparent_header_FIXED_ded1ad44.png"
               alt="Glovotools"
-              className="hidden dark:block h-8 w-auto object-contain shrink-0 select-none group-hover:scale-[1.02] transition-transform duration-150"
+              className="hidden dark:block h-7 sm:h-8 w-auto object-contain shrink-0 select-none group-hover:scale-[1.02] transition-transform duration-150"
             />
           </button>
         </div>
@@ -190,8 +190,8 @@ export default function Header({
         </nav>
 
         {/* Zone 3: Currency, Language & Theme Switch */}
-        <div className="flex items-center justify-end gap-2 shrink-0">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-1 sm:gap-2 shrink-0 min-w-0">
+          <div className="flex items-center gap-1 sm:gap-2 min-w-0">
             <CurrencySelector position="bottom" compact />
             <LanguageSelector position="bottom" compact />
           </div>
@@ -217,12 +217,12 @@ export default function Header({
                 ? 'Modo oscuro'
                 : 'Dark mode'
             }
-            className="h-9 w-9 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong flex items-center justify-center text-text-secondary hover:text-text-primary transition-colors cursor-pointer shrink-0"
+            className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg border border-border-main bg-surface hover:bg-surface-hover hover:border-border-strong flex items-center justify-center text-text-secondary hover:text-text-primary transition-colors cursor-pointer shrink-0"
           >
             {theme === 'dark' ? (
-              <Sun className="w-4 h-4 text-amber-400" />
+              <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
             ) : (
-              <Moon className="w-4 h-4 text-slate-600" />
+              <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-600" />
             )}
           </button>
         </div>
