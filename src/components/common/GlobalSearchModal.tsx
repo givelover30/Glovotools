@@ -5,6 +5,7 @@ import { CALCULATORS, CATEGORIES } from '../../data/calculators.ts';
 import { useTranslation } from '../../i18n/I18nContext.tsx';
 import { getLocalizedCalculator, getLocalizedCategory } from '../../i18n/esTranslations.ts';
 import ToolIconBadge from './ToolIconBadge.tsx';
+import { intentSearch } from '../../utils/intentSearch.ts';
 import Fuse from 'fuse.js';
 
 interface GlobalSearchModalProps {
@@ -69,8 +70,8 @@ export default function GlobalSearchModal({
       // Default to popular/featured tools if query is empty
       return uniqueCalculators.filter(c => c.isPopular).slice(0, 8);
     }
-    return fuse.search(q).map(r => r.item).slice(0, 10);
-  }, [query, fuse, uniqueCalculators]);
+    return intentSearch(q, uniqueCalculators).slice(0, 10);
+  }, [query, uniqueCalculators]);
 
   useEffect(() => {
     setSelectedIndex(0);

@@ -26,13 +26,13 @@ import {
   ListFilter
 } from 'lucide-react';
 import { CalculatorMeta, CalculatorId, CategoryId, CategoryMeta } from '../types.ts';
-import { CALCULATORS, CATEGORIES } from '../data/calculators.ts';
+import { CALCULATORS, CATEGORIES, SUBCATEGORIES } from '../data/calculators.ts';
 import { getPrimaryToolHub, getContextualToolName } from '../data/toolClassification.ts';
 import ToolIconBadge from './common/ToolIconBadge.tsx';
 import ToolDirectory from './common/ToolDirectory.tsx';
 import CalculatorView from './CalculatorView.tsx';
 import { useTranslation } from '../i18n/I18nContext.tsx';
-import { getLocalizedCalculator, getLocalizedCategory } from '../i18n/esTranslations.ts';
+import { getLocalizedCalculator, getLocalizedCategory, getLocalizedSubcategory } from '../i18n/esTranslations.ts';
 import Hero from './Hero.tsx';
 import CompactToolCard from './common/CompactToolCard.tsx';
 import HomeCategoryCard from './home/HomeCategoryCard.tsx';
@@ -50,6 +50,7 @@ interface HomePageProps {
   onSelectCategory: (catId: CategoryId | 'all', subId?: string) => void;
   onBrowseAllTools?: () => void;
   onNavigateFavorites?: () => void;
+  onNavigateContact?: () => void;
   favoriteIds: CalculatorId[];
   onToggleFavorite: (id: CalculatorId) => void;
   recentIds?: CalculatorId[];
@@ -114,6 +115,7 @@ export default function HomePage({
   onSelectCategory,
   onBrowseAllTools,
   onNavigateFavorites,
+  onNavigateContact,
   favoriteIds,
   onToggleFavorite,
   recentIds = [],
@@ -245,7 +247,7 @@ export default function HomePage({
       math: ['basic-math', 'algebra', 'geometry', 'trigonometry', 'statistics', 'scientific'],
       health: ['health-fitness', 'datetime', 'everyday'],
       converters: ['converter', 'document-converters'],
-      utilities: ['pdf-tools', 'generators', 'checkers', 'additional-tools']
+      utilities: ['pdf-tools', 'e-signature']
     };
 
     const allowed = new Set<CategoryId>(domainCategories[popularFilter]);
@@ -316,18 +318,6 @@ export default function HomePage({
 
   return (
     <div className="pb-16 bg-background text-text-primary transition-colors duration-200">
-      {/* 1. COMPACT UTILITY HERO */}
-      <Hero
-        searchQuery={searchQuery}
-        onSearchChange={onSearchChange}
-        onSearchSubmit={onSearchSubmit}
-        searchResults={searchResults}
-        recentIds={recentIds}
-        recentUsageCounts={recentUsageCounts}
-        onSelectCalculator={onSelectCalculator}
-        onSelectCategory={onSelectCategory}
-        onBrowseAllTools={onBrowseAllTools}
-      />
 
       <div className="relative dark:border-t dark:border-[#29384A] pt-8 sm:pt-10">
         {/* Subtle dark-mode blue ambient glow near top of workspace */}
@@ -684,91 +674,7 @@ export default function HomePage({
               </div>
             </section>
 
-            {/* 5. FEATURED UTILITY SUITES (Real verified PDF, Converter, Generator, Checker collections) */}
-            {utilitySuites.length > 0 && activeUtilityCategory && (
-              <section
-                aria-labelledby="home-utilities-heading"
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
-                  <div>
-                    <h2 id="home-utilities-heading" className="ui-section-title text-lg sm:text-xl">
-                      {isEs ? 'Utilidades, PDF y Conversores' : 'Utilities, PDF & Converters'}
-                    </h2>
-                    <p className="ui-supporting mt-0.5">
-                      {isEs
-                        ? 'Más allá de las calculadoras: herramientas directas para documentos, unidades, generación y validación.'
-                        : 'Beyond calculators — browser-local tools for PDFs, unit conversion, generation, and validation.'}
-                    </p>
-                  </div>
 
-                  <button
-                    type="button"
-                    onClick={() => onSelectCategory(activeUtilityCategory.id)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-hover transition-colors cursor-pointer whitespace-nowrap self-start sm:self-auto tabular-nums"
-                  >
-                    <span>
-                      {isEs
-                        ? `Ver todo en ${getLocalizedCategory(activeUtilityCategory, language).title} (${activeUtilityCategory.count})`
-                        : `Open ${getLocalizedCategory(activeUtilityCategory, language).title} (${activeUtilityCategory.count})`}
-                    </span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-
-                {/* Utility Suite Switcher */}
-                <div
-                  role="tablist"
-                  aria-label={isEs ? 'Colecciones de utilidades' : 'Utility collections'}
-                  className="flex flex-wrap items-center gap-1.5 mb-5"
-                >
-                  {utilitySuites.map((suite) => {
-                    const localizedSuite = getLocalizedCategory(suite, language);
-                    const isActive = activeUtilityCategory.id === suite.id;
-                    return (
-                      <button
-                        key={suite.id}
-                        type="button"
-                        role="tab"
-                        aria-selected={isActive}
-                        onClick={() => setActiveUtilitySuite(suite.id as UtilitySuiteCategoryId)}
-                        className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${
-                          isActive
-                            ? 'bg-surface-selected text-accent border border-border-selected/50'
-                            : 'bg-surface text-text-secondary border border-border-main hover:bg-surface-hover hover:text-text-primary'
-                        }`}
-                      >
-                        <span>{localizedSuite.title}</span>
-                        <span className="text-[11px] font-normal opacity-75 tabular-nums">
-                          {suite.count}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-                  {activeUtilityTools.map((rawTool) => {
-                    const localized = getLocalizedCalculator(rawTool, language);
-                    return (
-                      <CompactToolCard
-                        key={rawTool.id}
-                        tool={localized}
-                        categoryLabel={categoryTitleMap.get(rawTool.category)}
-                        isFavorite={favoriteIds.includes(rawTool.id)}
-                        onSelect={onSelectCalculator}
-                        onToggleFavorite={onToggleFavorite}
-                        favoriteAddLabel={favoriteAddLabel}
-                        favoriteRemoveLabel={favoriteRemoveLabel}
-                        onHoverEnter={handleCardHoverEnter}
-                        onHoverLeave={handleCardHoverLeave}
-                        isPreviewActive={hoverPreviewState?.tool.id === rawTool.id}
-                      />
-                    );
-                  })}
-                </div>
-              </section>
-            )}
 
           </>
         )}

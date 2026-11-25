@@ -45,7 +45,8 @@ import {
 import { CalculatorId, CategoryId, AppView } from './types.ts';
 import Fuse from 'fuse.js';
 import { fuzzyMatch } from './utils/fuzzySearch.ts';
-import { X } from 'lucide-react';
+import { intentSearch } from './utils/intentSearch.ts';
+import { X, LayoutGrid, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from './i18n/I18nContext.tsx';
 import { getLocalizedCategory, getLocalizedSubcategory, getLocalizedCalculator } from './i18n/esTranslations.ts';
 
@@ -162,6 +163,13 @@ export default function App() {
 
   // Search & Navigation state
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [showAllSearchResults, setShowAllSearchResults] = useState<boolean>(false);
+  const [searchPage, setSearchPage] = useState<number>(1);
+
+  useEffect(() => {
+    setShowAllSearchResults(false);
+    setSearchPage(1);
+  }, [searchQuery]);
   const [activeSection, setActiveSection] = useState<string>('home');
   const [notFoundPath, setNotFoundPath] = useState<string>(() =>
     typeof window !== 'undefined' ? window.location.pathname : ''
@@ -616,11 +624,9 @@ export default function App() {
 
   const searchCatalog = useCallback(
     (query: string) => {
-      const q = query.trim();
-      if (!q) return [];
-      return fuse.search(q).map((r) => r.item);
+      return intentSearch(query, CALCULATORS);
     },
-    [fuse]
+    []
   );
 
   const searchResults = useMemo(() => {
@@ -944,26 +950,19 @@ export default function App() {
         ) : (
           /* VIEW 4: Main Landing Page Redesigned to Match Reference */
           <>
-            <HomePage
+            <Hero
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
               onSearchSubmit={handleSearchSubmit}
               searchResults={searchResults}
-              onSelectCalculator={navigateToCalculator}
-              onTrackCalculatorUsage={recordRecentUsage}
-              onSelectCategory={handleCategoryGridSelect}
-              onBrowseAllTools={navigateToAllCalculators}
-              onNavigateFavorites={navigateToFavorites}
-              favoriteIds={favoriteIds}
-              onToggleFavorite={handleToggleFavorite}
               recentIds={recentIds}
               recentUsageCounts={recentUsageCounts}
-              recentCalculators={recentCalculators}
-              onClearRecent={handleClearRecent}
-              favoriteCalculators={favoriteCalculators}
+              onSelectCalculator={navigateToCalculator}
+              onSelectCategory={handleCategoryGridSelect}
+              onBrowseAllTools={navigateToAllCalculators}
             />
 
-            {/* 8. Dynamic Filtered/Directory Section (shown when user searches in Hero) */}
+            {/* Dynamic Filtered/Directory Section (shown when user searches in Hero) */}
             {searchQuery.trim() !== '' && (
               <section id="filtered-section" className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-border-subtle mt-8">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
@@ -989,61 +988,153 @@ export default function App() {
                 </div>
 
                 {searchResults.length === 0 ? (
-                  <div className="py-12 text-center ui-card p-6">
-                    <p className="text-sm font-semibold text-text-primary">
-                      {language === 'es' ? 'No se encontraron calculadoras' : 'No calculators matched your search'}
-                    </p>
-                    <p className="text-xs text-text-secondary mt-1">
-                      {language === 'es'
-                        ? 'Pruebe con palabras clave como "hipoteca", "porcentaje", "imc", o "concreto"'
-                        : 'Try keywords like "mortgage", "percentage", "bmi", or "concrete"'}
-                    </p>
+                  <div className="py-12 text-center ui-card p-6 space-y-3">
+                    <div>
+                      <p className="text-sm font-semibold text-text-primary">
+                        {language === 'es' ? 'No se encontraron calculadoras' : 'No calculators matched your search'}
+                      </p>
+                      <p className="text-xs text-text-secondary mt-1">
+                        {language === 'es'
+                          ? 'Pruebe con palabras clave como "hipoteca", "porcentaje", "imc", o "concreto"'
+                          : 'Try keywords like "mortgage", "percentage", "bmi", or "concrete"'}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs">
+                      <span className="text-text-secondary">
+                        {language === 'es' ? '¿No encuentra lo que necesita?' : "Can't find what you need?"}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={navigateToAllCalculators}
+                        className="font-semibold text-accent hover:underline cursor-pointer"
+                      >
+                        {language === 'es' ? 'Ver todas las herramientas' : 'Browse All Tools'}
+                      </button>
+                      <span className="text-text-tertiary">·</span>
+                      <button
+                        type="button"
+                        onClick={navigateToContact}
+                        className="font-semibold text-accent hover:underline cursor-pointer"
+                      >
+                        {language === 'es' ? 'Solicitar herramienta / Contactar' : 'Request tool / Contact us'}
+                      </button>
+                    </div>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
-                    {searchResults.map((rawC) => {
-                      const c = getLocalizedCalculator(rawC, language);
-                      const isFav = favoriteIds.includes(c.id);
-                      const rawCat = CATEGORIES.find((catItem) => catItem.id === c.category);
-                      const cat = rawCat ? getLocalizedCategory(rawCat, language) : null;
-                      const rawSubcat = SUBCATEGORIES.find((s) => s.id === c.subcategoryId);
-                      const subcat = rawSubcat ? getLocalizedSubcategory(rawSubcat, language) : null;
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
+                      {searchResults.slice((searchPage - 1) * 12, searchPage * 12).map((rawC) => {
+                        const c = getLocalizedCalculator(rawC, language);
+                        const isFav = favoriteIds.includes(c.id);
+                        const rawCat = CATEGORIES.find((catItem) => catItem.id === c.category);
+                        const cat = rawCat ? getLocalizedCategory(rawCat, language) : null;
+                        const rawSubcat = SUBCATEGORIES.find((s) => s.id === c.subcategoryId);
+                        const subcat = rawSubcat ? getLocalizedSubcategory(rawSubcat, language) : null;
 
-                      return (
-                        <CompactToolCard
-                          key={c.id}
-                          tool={c}
-                          categoryLabel={cat?.title || c.category}
-                          subcategoryLabel={subcat?.name}
-                          isFavorite={isFav}
-                          onSelect={navigateToCalculator}
-                          onToggleFavorite={handleToggleFavorite}
-                          favoriteAddLabel={language === 'es' ? 'Agregar a favoritos' : 'Save to favorites'}
-                          favoriteRemoveLabel={language === 'es' ? 'Eliminar de favoritos' : 'Remove from favorites'}
-                          onHoverEnter={handleSearchCardHoverEnter}
-                          onHoverLeave={handleSearchCardHoverLeave}
-                          isPreviewActive={searchHoverPreviewState?.tool.id === c.id}
-                        />
-                      );
-                    })}
-                  </div>
-                )}
+                        return (
+                          <CompactToolCard
+                            key={c.id}
+                            tool={c}
+                            categoryLabel={cat?.title || c.category}
+                            subcategoryLabel={subcat?.name}
+                            isFavorite={isFav}
+                            onSelect={navigateToCalculator}
+                            onToggleFavorite={handleToggleFavorite}
+                            favoriteAddLabel={language === 'es' ? 'Agregar a favoritos' : 'Save to favorites'}
+                            favoriteRemoveLabel={language === 'es' ? 'Eliminar de favoritos' : 'Remove from favorites'}
+                            onHoverEnter={handleSearchCardHoverEnter}
+                            onHoverLeave={handleSearchCardHoverLeave}
+                            isPreviewActive={searchHoverPreviewState?.tool.id === c.id}
+                          />
+                        );
+                      })}
+                    </div>
 
-                {searchHoverPreviewState && (
-                  <ToolHoverPreviewModal
-                    tool={searchHoverPreviewState.tool}
-                    categoryLabel={searchHoverPreviewState.categoryLabel}
-                    anchorRect={searchHoverPreviewState.anchorRect}
-                    isFavorite={favoriteIds.includes(searchHoverPreviewState.tool.id)}
-                    onClose={closeSearchPreview}
-                    onSelect={navigateToCalculator}
-                    onToggleFavorite={handleToggleFavorite}
-                    onMouseEnter={handleSearchModalMouseEnter}
-                    onMouseLeave={handleSearchModalMouseLeave}
-                  />
+                    {Math.ceil(searchResults.length / 12) > 1 && (
+                      <div className="mt-8 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <p className="text-xs text-text-secondary tabular-nums">
+                          {language === 'es'
+                            ? `Mostrando página ${searchPage} de ${Math.ceil(searchResults.length / 12)} (${searchResults.length} resultados totales)`
+                            : `Showing page ${searchPage} of ${Math.ceil(searchResults.length / 12)} (${searchResults.length} total results)`}
+                        </p>
+
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSearchPage((p) => Math.max(1, p - 1));
+                              const el = document.getElementById('filtered-section');
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            disabled={searchPage === 1}
+                            className="px-3 py-1.5 text-xs font-semibold rounded-xl border border-border-main bg-surface text-text-primary disabled:opacity-40 disabled:cursor-not-allowed hover:bg-surface-hover transition-colors cursor-pointer inline-flex items-center gap-1"
+                          >
+                            <ChevronLeft className="w-3.5 h-3.5" />
+                            <span>{language === 'es' ? 'Anterior' : 'Previous'}</span>
+                          </button>
+
+                          <div className="hidden sm:flex items-center gap-1">
+                            {Array.from({ length: Math.ceil(searchResults.length / 12) }, (_, i) => i + 1).map((p) => (
+                              <button
+                                key={p}
+                                type="button"
+                                onClick={() => {
+                                  setSearchPage(p);
+                                  const el = document.getElementById('filtered-section');
+                                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className={`w-8 h-8 text-xs font-semibold rounded-xl border transition-colors cursor-pointer tabular-nums flex items-center justify-center ${
+                                  searchPage === p
+                                    ? 'bg-blue-600 text-white border-blue-600'
+                                    : 'border-border-main bg-surface text-text-secondary hover:text-text-primary hover:bg-surface-hover'
+                                }`}
+                              >
+                                {p}
+                              </button>
+                            ))}
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSearchPage((p) => Math.min(Math.ceil(searchResults.length / 12), p + 1));
+                              const el = document.getElementById('filtered-section');
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            disabled={searchPage === Math.ceil(searchResults.length / 12)}
+                            className="px-3 py-1.5 text-xs font-semibold rounded-xl border border-border-main bg-surface text-text-primary disabled:opacity-40 disabled:cursor-not-allowed hover:bg-surface-hover transition-colors cursor-pointer inline-flex items-center gap-1"
+                          >
+                            <span>{language === 'es' ? 'Siguiente' : 'Next'}</span>
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </>
                 )}
               </section>
             )}
+
+            <HomePage
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              onSearchSubmit={handleSearchSubmit}
+              searchResults={searchResults}
+              onSelectCalculator={navigateToCalculator}
+              onTrackCalculatorUsage={recordRecentUsage}
+              onSelectCategory={handleCategoryGridSelect}
+              onBrowseAllTools={navigateToAllCalculators}
+              onNavigateFavorites={navigateToFavorites}
+              onNavigateContact={navigateToContact}
+              favoriteIds={favoriteIds}
+              onToggleFavorite={handleToggleFavorite}
+              recentIds={recentIds}
+              recentUsageCounts={recentUsageCounts}
+              recentCalculators={recentCalculators}
+              onClearRecent={handleClearRecent}
+              favoriteCalculators={favoriteCalculators}
+            />
           </>
         )}
         </Suspense>

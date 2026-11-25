@@ -374,7 +374,7 @@ export default function Hero({
       <MatrixHeroBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-9">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center">
           <h1
             id="home-hero-heading"
             className="text-2xl sm:text-3xl lg:text-[36px] font-bold tracking-[-0.025em] leading-[1.15] text-slate-900 dark:text-white text-balance"
@@ -657,15 +657,8 @@ export default function Hero({
           </div>
         </div>
 
-        {/* Compact Verified Registry Facts Bar (Preserves real platform metrics cleanly) */}
-        <div className="mt-6 pt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-slate-600 dark:text-slate-300 tabular-nums text-center">
-          <span>{t('statbar.toolCount')}</span>
-          <span aria-hidden="true" className="text-slate-400 dark:text-slate-500">·</span>
-          <span>{t('statbar.catCount')}</span>
-          <span aria-hidden="true" className="text-slate-400 dark:text-slate-500">·</span>
-          <span>{t('statbar.langCount')}</span>
-          <span aria-hidden="true" className="text-slate-400 dark:text-slate-500 hidden sm:inline">·</span>
-          <span className="text-slate-600 dark:text-slate-300">
+        <div className="mt-6 pt-4 flex flex-wrap items-center justify-center text-center mx-auto">
+          <span className="text-slate-600 dark:text-slate-300 mx-auto text-center block">
             {t('statbar.privacyBadge')}
           </span>
         </div>
