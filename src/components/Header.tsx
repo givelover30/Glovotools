@@ -76,7 +76,7 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-50 w-full h-14 bg-[#F5F6F8] dark:bg-[#111923]/92 backdrop-blur-xl border-b border-[#E2E8F0] dark:border-[#29384A] text-text-primary transition-colors">
-      <div className="w-full h-full px-2 sm:px-4 lg:px-6 flex items-center justify-between gap-1.5 sm:gap-3 lg:gap-6">
+      <div className="w-full h-full px-2 sm:px-4 lg:px-6 relative flex items-center justify-between gap-1.5 sm:gap-3 lg:gap-6">
         {/* Zone 1: Sidebar Controls + CALCTOOLS Brand Mark */}
         <div className="flex items-center gap-1 sm:gap-2 shrink-0 min-w-0">
           {/* Mobile / Tablet Drawer Trigger (< lg) */}
@@ -159,7 +159,7 @@ export default function Header({
         {/* Zone 2: Clean Single-Line Primary Navigation (Desktop lg+) */}
         <nav
           aria-label="Primary Navigation"
-          className="hidden lg:flex items-center justify-center gap-6"
+          className="hidden lg:flex items-center justify-center gap-6 absolute left-1/2 -translate-x-1/2"
         >
           {navItems.map((item) => {
             const isActive =

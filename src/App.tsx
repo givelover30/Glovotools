@@ -1023,7 +1023,7 @@ export default function App() {
                   </div>
                 ) : (
                   <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
                       {searchResults.slice((searchPage - 1) * 12, searchPage * 12).map((rawC) => {
                         const c = getLocalizedCalculator(rawC, language);
                         const isFav = favoriteIds.includes(c.id);
