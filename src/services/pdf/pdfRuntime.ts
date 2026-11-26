@@ -1,4 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
+import pdfWorkerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 
 export { pdfjsLib };
 
@@ -6,8 +7,8 @@ let workerConfigured = false;
 let configuredWorkerSrc = '';
 
 /**
- * Configures PDF.js to use the locally bundled worker from `pdfjs-dist`
- * with zero external CDN dependencies.
+ * Configures PDF.js to use the Vite-bundled worker from `pdfjs-dist`
+ * with zero external CDN dependencies and correct MIME type handling on static hosts.
  */
 export function ensurePdfJsWorker(): string {
   if (workerConfigured && configuredWorkerSrc) {
@@ -15,17 +16,9 @@ export function ensurePdfJsWorker(): string {
   }
 
   try {
-    const localWorkerUrl =
-      typeof window !== 'undefined'
-        ? new URL('/pdf.worker.min.mjs', window.location.origin).toString()
-        : new URL(
-            '../../../node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs',
-            import.meta.url
-          ).toString();
-
-    configuredWorkerSrc = localWorkerUrl;
+    configuredWorkerSrc = pdfWorkerUrl;
     if (pdfjsLib?.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = localWorkerUrl;
+      pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
     }
     workerConfigured = true;
   } catch {
