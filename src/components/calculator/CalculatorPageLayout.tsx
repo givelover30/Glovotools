@@ -82,7 +82,7 @@ export default function CalculatorPageLayout({
         : language === 'es'
         ? 'Calculadora Online Gratis'
         : 'Free Online Calculator';
-    document.title = `${localizedCalc.name} — ${suffix} | CalcTools`;
+    document.title = `${localizedCalc.name} — ${suffix} | Glovotools`;
     return () => {
       document.title = prevTitle;
     };

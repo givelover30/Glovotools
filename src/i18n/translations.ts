@@ -195,7 +195,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'footer.quickLinks': 'Quick Links',
     'footer.categories': 'Categories',
     'footer.resources': 'Resources & About',
-    'footer.aboutLink': 'About CalcTools',
+    'footer.aboutLink': 'About Glovotools',
     'footer.blogLink': 'Calculation Guides & Blog',
     'footer.privacyLink': 'Privacy & Data Policy',
     'footer.wcag': 'WCAG 2.2 AA Compliant',

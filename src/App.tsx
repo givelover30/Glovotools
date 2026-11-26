@@ -237,30 +237,30 @@ export default function App() {
     const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
     const canonicalUrl = `${origin}${pathname}`;
 
-    let title = 'CalcTools – Free Online Calculators for Math, Finance & Science';
-    let description = 'Explore 300+ free online calculators for mathematics, finance, business, construction, health, and engineering with step-by-step solutions.';
+    let title = 'Glovotools – Free Online Tools';
+    let description = 'Glovotools offers free online calculators, unit converters, and PDF tools. Calculate, convert, and manage documents directly in your browser.';
 
     if (currentView === 'calculator' && activeCalculatorId) {
       const calc = CALCULATORS.find(c => c.id === activeCalculatorId);
       const cat = calc ? CATEGORIES.find(cat => cat.id === calc.category) : null;
       if (calc) {
         const catTitle = cat ? cat.title : 'Calculators';
-        title = `${calc.name} – ${catTitle} | CalcTools`;
-        description = `${calc.shortDesc} Free online ${calc.name.toLowerCase()} with instant results and step-by-step formula breakdown on CalcTools.`;
+        title = `${calc.name} – ${catTitle} | Glovotools`;
+        description = `${calc.shortDesc} Free online ${calc.name.toLowerCase()} with instant results and step-by-step formula breakdown on Glovotools.`;
       }
     } else if (currentView === 'category-detail' && currentCategoryId) {
       const cat = CATEGORIES.find(c => c.id === currentCategoryId);
       if (cat) {
-        title = `${cat.title} – Free Online Tools | CalcTools`;
-        description = `${cat.description} Browse all free ${cat.title.toLowerCase()} on CalcTools.`;
+        title = `${cat.title} – Free Online Tools | Glovotools`;
+        description = `${cat.description} Browse all free ${cat.title.toLowerCase()} on Glovotools.`;
       }
     } else if (currentView === 'categories' || currentView === 'all-calculators') {
       const uniqueActiveTools = getUniqueRegisteredToolCount();
       title =
         currentView === 'all-calculators'
-          ? `Explore All Tools – ${uniqueActiveTools.toLocaleString()}+ Free Calculators & Utilities | CalcTools`
-          : `All Categories Directory – ${CATEGORIES.length} Tool Categories | CalcTools`;
-      description = `Browse ${uniqueActiveTools.toLocaleString()}+ free online calculators, converters, generators, and PDF utilities across ${CATEGORIES.length} categories on CalcTools.`;
+          ? `Explore All Tools – ${uniqueActiveTools.toLocaleString()}+ Free Calculators & Utilities | Glovotools`
+          : `All Categories Directory – ${CATEGORIES.length} Tool Categories | Glovotools`;
+      description = `Browse ${uniqueActiveTools.toLocaleString()}+ free online calculators, converters, generators, and PDF utilities across ${CATEGORIES.length} categories on Glovotools.`;
     }
 
     document.title = title;
@@ -286,7 +286,7 @@ export default function App() {
       { property: 'og:description', content: description },
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'CalcTools' },
+      { property: 'og:site_name', content: 'Glovotools' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description }
@@ -311,9 +311,9 @@ export default function App() {
     schemas.push({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      'name': 'CalcTools',
+      'name': 'Glovotools',
       'url': origin,
-      'description': 'Explore 300+ free online calculators across 14 categories.'
+      'description': 'Glovotools offers free online calculators, unit converters, and PDF tools.'
     });
 
     if (currentView === 'calculator' && activeCalculatorId) {

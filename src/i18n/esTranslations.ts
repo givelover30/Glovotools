@@ -170,7 +170,7 @@ export const ES_UI_STRINGS: Record<string, string> = {
   'footer.quickLinks': 'Enlaces Rápidos',
   'footer.categories': 'Categorías',
   'footer.resources': 'Recursos y Acerca de',
-  'footer.aboutLink': 'Acerca de CalcTools',
+  'footer.aboutLink': 'Acerca de Glovotools',
   'footer.blogLink': 'Guías de Cálculo y Artículos',
   'footer.privacyLink': 'Política de Privacidad y Datos',
   'footer.wcag': 'Conforme a WCAG 2.2 AA',
