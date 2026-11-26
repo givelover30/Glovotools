@@ -1,5 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
-import pdfWorkerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
+import pdfWorkerUrl from './pdfWorkerUrl';
 
 export { pdfjsLib };
 
@@ -16,9 +16,18 @@ export function ensurePdfJsWorker(): string {
   }
 
   try {
-    configuredWorkerSrc = pdfWorkerUrl;
+    const isNodeRuntime =
+      typeof process !== 'undefined' && Boolean(process.versions?.node);
+    const resolvedWorkerUrl = isNodeRuntime
+      ? new URL(
+          '../../../node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs',
+          import.meta.url
+        ).toString()
+      : pdfWorkerUrl;
+
+    configuredWorkerSrc = resolvedWorkerUrl;
     if (pdfjsLib?.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+      pdfjsLib.GlobalWorkerOptions.workerSrc = resolvedWorkerUrl;
     }
     workerConfigured = true;
   } catch {

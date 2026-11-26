@@ -7,7 +7,7 @@ function mjsMimeTypePlugin(): Plugin {
   const applyJsMimeMiddleware = (middlewares: any) => {
     middlewares.use((req: any, res: any, next: any) => {
       const cleanPath = (req.url || '').split('?')[0].toLowerCase();
-      if (cleanPath.endsWith('.mjs')) {
+      if (cleanPath.endsWith('.mjs') || cleanPath.endsWith('.js')) {
         const originalSetHeader = res.setHeader.bind(res);
         const originalWriteHead = res.writeHead.bind(res);
 
@@ -39,6 +39,16 @@ function mjsMimeTypePlugin(): Plugin {
 
   return {
     name: 'glovotools-mjs-mime-type',
+    transform(_code, id) {
+      const normalizedId = id.split('?')[0].replace(/\\/g, '/');
+      if (normalizedId.endsWith('/src/services/pdf/pdfWorkerUrl.ts')) {
+        return {
+          code: "import url from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';\nexport default url;\n",
+          map: null,
+        };
+      }
+      return null;
+    },
     configureServer(server) {
       applyJsMimeMiddleware(server.middlewares);
     },
@@ -51,6 +61,19 @@ function mjsMimeTypePlugin(): Plugin {
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss(), mjsMimeTypePlugin()],
+    build: {
+      rolldownOptions: {
+        output: {
+          assetFileNames: (assetInfo) => {
+            const names = assetInfo.names ?? (assetInfo.name ? [assetInfo.name] : []);
+            if (names.some((n) => n === 'pdf.worker.min.mjs' || n.endsWith('/pdf.worker.min.mjs'))) {
+              return 'assets/pdf.worker.min-[hash].js';
+            }
+            return 'assets/[name]-[hash][extname]';
+          },
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
