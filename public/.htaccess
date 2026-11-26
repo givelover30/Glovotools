@@ -1,8 +1,14 @@
+# Ensure JavaScript and ES module (.mjs) worker files are served with application/javascript MIME type on Hostinger (Apache/LiteSpeed)
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType application/wasm .wasm
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Do not rewrite existing static files or directories (assets, robots.txt, sitemap.xml)
+  # Do not rewrite existing static files or directories (assets, workers, robots.txt, sitemap.xml)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
