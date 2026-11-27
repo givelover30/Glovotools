@@ -1,0 +1,8 @@
+Tool ID,Tool Name,Contract Registered,Executor Integrated,Validation Tested,Storage Supported,Export Supported,Localization EN/ES,Test Coverage Status,Verification Status
+meal-planner,Meal Planner,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+wedding-planning-organizer,Wedding Planning Organizer,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+home-renovation-planner,Home Renovation Planner,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+social-media-content-calendar,Social Media Content Calendar,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+business-launch-planner,Business Launch Planner,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+garden-planting-planner,Garden Planting Planner,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS
+personal-goal-organizer,Personal Goal Organizer,Yes,Yes,Yes,Yes,Yes,Yes,Verified (plannersBatch1.test.ts),PASS

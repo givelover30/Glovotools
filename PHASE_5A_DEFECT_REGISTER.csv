@@ -1,0 +1,2 @@
+DefectID,Severity,Component,Description,ResolutionStatus,ResolutionNotes
+DF-5A-01,LOW,App.tsx,Initial path parsing did not extract locale segments from window.location.pathname.,RESOLVED,Updated parseUrlPath to recognize supported language codes as path prefixes.

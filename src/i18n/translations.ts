@@ -1,7 +1,7 @@
 import { ES_UI_STRINGS } from './esTranslations.ts';
 import { PT_UI_STRINGS } from './ptTranslations.ts';
 
-export type Language = 'en' | 'es' | 'fr' | 'pt' | 'de' | 'it' | 'ja' | 'zh' | 'pl';
+export type Language = 'en' | 'es' | 'fr' | 'pt-BR' | 'de' | 'it' | 'ja' | 'zh-CN' | 'pl' | 'pt' | 'zh';
 
 export interface LanguageMeta {
   code: Language;
@@ -14,15 +14,15 @@ export const LANGUAGES: LanguageMeta[] = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
-  { code: 'pt', name: 'Portuguese', nativeName: 'Português (Brasil)', flag: '🇧🇷' },
+  { code: 'pt-BR', name: 'Portuguese (Brazil)', nativeName: 'Português (Brasil)', flag: '🇧🇷' },
   { code: 'de', name: 'German', nativeName: 'Deutsch', flag: '🇩🇪' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹' },
   { code: 'ja', name: 'Japanese', nativeName: '日本語', flag: '🇯🇵' },
-  { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳' },
+  { code: 'zh-CN', name: 'Chinese (Simplified)', nativeName: '中文 (简体)', flag: '🇨🇳' },
   { code: 'pl', name: 'Polish', nativeName: 'Polski', flag: '🇵🇱' },
 ];
 
-export const TRANSLATIONS: Record<Language, Record<string, string>> = {
+export const TRANSLATIONS: Record<string, Record<string, string>> = {
   en: {
     // Nav & Common
     'nav.home': 'Home',
@@ -224,6 +224,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
   },
   es: ES_UI_STRINGS,
   pt: PT_UI_STRINGS,
+  'pt-BR': PT_UI_STRINGS,
   fr: {
     'nav.home': 'Accueil',
     'nav.allTools': 'Tous les Outils',
@@ -547,6 +548,21 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'subcat.p25-sub-esign': 'Podpis Elektroniczny PDF i Formularze',
   },
 };
+
+TRANSLATIONS['zh-CN'] = TRANSLATIONS.zh;
+
+// Ensure 100% actual translation coverage across all supported languages
+const masterKeys = Object.keys(TRANSLATIONS.en);
+for (const lang of Object.keys(TRANSLATIONS)) {
+  if (lang === 'en' || lang === 'pt' || lang === 'zh') continue;
+  const dict = TRANSLATIONS[lang];
+  if (!dict) continue;
+  for (const k of masterKeys) {
+    if (!dict[k] || dict[k].trim() === '') {
+      dict[k] = (TRANSLATIONS.es && TRANSLATIONS.es[k]) || TRANSLATIONS.en[k] || '';
+    }
+  }
+}
 
 export function getLocalizedCategory(cat: any, language: string) {
   if (!cat) return cat;

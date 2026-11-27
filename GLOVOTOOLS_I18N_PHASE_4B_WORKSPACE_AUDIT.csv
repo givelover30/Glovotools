@@ -1,0 +1,19 @@
+ComponentType,ElementName,UsageScope,LocalizationMechanism,Status
+SharedPrimitive,ToolInputPanel,All Calculators,translateTerm / t(),VERIFIED
+SharedPrimitive,ToolResultsPanel,All Calculators,translateTerm / t(),VERIFIED
+SharedPrimitive,ToolFieldGroup,All Calculators,translateTerm / t(),VERIFIED
+SharedPrimitive,ToolBreakdownList,All Calculators,translateTerm / t(),VERIFIED
+SharedPrimitive,ToolMetricTile,All Calculators,translateTerm / t(),VERIFIED
+EngineCalculatorView,InputFields & Schema,All Contract Calculators,translateTerm / dynamic interpolation,VERIFIED
+EngineCalculatorView,CalculationErrors,All Contract Calculators,translateTerm / error mapping,VERIFIED
+EngineCalculatorView,PrintInputsSummary,All Print Summaries,translateTerm / currency formatting,VERIFIED
+PilotCalculator,PercentageCalculator,Pilot Set (1),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,ScientificCalculator,Pilot Set (2),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,LoanMortgageCalculator,Pilot Set (3),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,CompoundInterestCalculator,Pilot Set (4),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,BmiCalculator,Pilot Set (5),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,SpeedConverterCalculator,Pilot Set (6),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,DateDifferenceCalculator,Pilot Set (7),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,PercentChangeCalculator,Pilot Set (8),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,OhmsLawCalculator,Pilot Set (9),CalculationContract + Schema Translation,VERIFIED
+PilotCalculator,TipSplitCalculator,Pilot Set (10),CalculationContract + Schema Translation,VERIFIED

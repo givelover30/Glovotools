@@ -1095,10 +1095,12 @@ export const ESIGN_TRANSLATIONS: Record<Language, ESignTranslations> = {
   es: ES_ESIGN,
   fr: FR_ESIGN,
   pt: PT_ESIGN,
+  'pt-BR': PT_ESIGN,
   de: DE_ESIGN,
   it: IT_ESIGN,
   ja: JA_ESIGN,
   zh: ZH_ESIGN,
+  'zh-CN': ZH_ESIGN,
   pl: PL_ESIGN
 };
 

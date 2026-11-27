@@ -3,6 +3,19 @@
 import { getESignText } from './esignTranslations.ts';
 
 export const ES_UI_STRINGS: Record<string, string> = {
+  // Hero Category Badges
+  'hero.cat.calculators': 'Calculadoras',
+  'hero.cat.converters': 'Convertidores',
+  'hero.cat.checkers': 'Verificadores',
+  'hero.cat.generators': 'Generadores',
+  'hero.cat.planners': 'Planificadores',
+  'hero.cat.tools': 'Herramientas',
+  'hero.cat.trackers': 'Seguidores',
+  'hero.cat.guides': 'Guías y Referencias',
+  'hero.cat.pdfTools': 'Herramientas PDF',
+  'hero.cat.docConverters': 'Conversores de Documentos',
+  'cat.health': 'Salud y Bienestar',
+
   // Navigation & Common
   'nav.home': 'Inicio',
   'nav.allTools': 'Todas las Herramientas',

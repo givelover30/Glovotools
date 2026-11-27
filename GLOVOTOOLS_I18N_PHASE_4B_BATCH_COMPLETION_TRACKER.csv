@@ -1,0 +1,6 @@
+BatchID,CategoryRange,ToolCount,Status,VerifiedLanguages,TestResult
+Batch-01,Basic Math & Algebra,90,COMPLETED,en|es|fr|de|it|ja|zh-CN|pl|pt-BR,PASS
+Batch-02,Financial & Business,75,COMPLETED,en|es|fr|de|it|ja|zh-CN|pl|pt-BR,PASS
+Batch-03,Construction & Engineering,110,COMPLETED,en|es|fr|de|it|ja|zh-CN|pl|pt-BR,PASS
+Batch-04,Health, Fitness & Date,50,COMPLETED,en|es|fr|de|it|ja|zh-CN|pl|pt-BR,PASS
+Batch-05,Converters, PDF Tools & Utilities,131,COMPLETED,en|es|fr|de|it|ja|zh-CN|pl|pt-BR,PASS

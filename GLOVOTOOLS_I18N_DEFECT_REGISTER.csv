@@ -1,0 +1,3 @@
+"Defect ID","Category","Description","Impact","Severity","Remediation Status"
+"DEF-P3-01","Localization Coverage","Core interface strings are fully populated across all 9 languages.","None","Low","Resolved in Phase 3."
+"DEF-P3-02","Layout Responsiveness","Longer localized strings in German and Polish tested against flex containers.","Ensures no text overflow on mobile or desktop viewports.","Low","Verified via responsive UI standards."

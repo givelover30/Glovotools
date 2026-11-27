@@ -110,8 +110,29 @@ const EmergencyFundPlannerCalculator = lazy(() => import('./calculators/Emergenc
 const RetirementPlanningCalculator = lazy(() => import('./calculators/RetirementPlanningCalculator.tsx'));
 const SocialMediaContentCalendarCalculator = lazy(() => import('./calculators/SocialMediaContentCalendarCalculator.tsx'));
 const BusinessLaunchPlannerCalculator = lazy(() => import('./calculators/BusinessLaunchPlannerCalculator.tsx'));
+const FreelanceRatePlannerCalculator = lazy(() => import('./calculators/FreelanceRatePlannerCalculator.tsx'));
+const WeddingBudgetPlannerCalculator = lazy(() => import('./calculators/WeddingBudgetPlannerCalculator.tsx'));
+const FitnessWorkoutPlannerCalculator = lazy(() => import('./calculators/FitnessWorkoutPlannerCalculator.tsx'));
+const MealPrepPlannerCalculator = lazy(() => import('./calculators/MealPrepPlannerCalculator.tsx'));
+const SideHustlePlannerCalculator = lazy(() => import('./calculators/SideHustlePlannerCalculator.tsx'));
+const CashFlowForecastPlannerCalculator = lazy(() => import('./calculators/CashFlowForecastPlannerCalculator.tsx'));
+const RetirementBucketStrategyPlannerCalculator = lazy(() => import('./calculators/RetirementBucketStrategyPlannerCalculator.tsx'));
+const FreelanceQuarterlyTaxPaymentPlannerCalculator = lazy(() => import('./calculators/FreelanceQuarterlyTaxPaymentPlannerCalculator.tsx'));
+const CollegeTuitionSavingsGrowthPlannerCalculator = lazy(() => import('./calculators/CollegeTuitionSavingsGrowthPlannerCalculator.tsx'));
 const GardenPlantingPlannerCalculator = lazy(() => import('./calculators/GardenPlantingPlannerCalculator.tsx'));
 const PersonalGoalOrganizerCalculator = lazy(() => import('./calculators/PersonalGoalOrganizerCalculator.tsx'));
+const ConstructionCostSchedulePlannerCalculator = lazy(() => import('./calculators/ConstructionCostSchedulePlannerCalculator.tsx'));
+const ElectricalInstallPlannerCalculator = lazy(() => import('./calculators/ElectricalInstallPlannerCalculator.tsx'));
+const SolarInstallPlannerCalculator = lazy(() => import('./calculators/SolarInstallPlannerCalculator.tsx'));
+const ManufacturingProductionPlannerCalculator = lazy(() => import('./calculators/ManufacturingProductionPlannerCalculator.tsx'));
+const MarketingBudgetPlannerCalculator = lazy(() => import('./calculators/MarketingBudgetPlannerCalculator.tsx'));
+const EmployeePayrollPlannerCalculator = lazy(() => import('./calculators/EmployeePayrollPlannerCalculator.tsx'));
+const InventoryReorderPlannerCalculator = lazy(() => import('./calculators/InventoryReorderPlannerCalculator.tsx'));
+const FreelancePricingPlannerCalculator = lazy(() => import('./calculators/FreelancePricingPlannerCalculator.tsx'));
+const WorkforceShiftPlannerCalculator = lazy(() => import('./calculators/WorkforceShiftPlannerCalculator.tsx'));
+const ProcurementPurchaseOrderPlannerCalculator = lazy(() => import('./calculators/ProcurementPurchaseOrderPlannerCalculator.tsx'));
+const PreventiveMaintenanceSchedulePlannerCalculator = lazy(() => import('./calculators/PreventiveMaintenanceSchedulePlannerCalculator.tsx'));
+const BusinessContinuityDisasterRecoveryPlannerCalculator = lazy(() => import('./calculators/BusinessContinuityDisasterRecoveryPlannerCalculator.tsx'));
 const SubscriptionTrackerCalculator = lazy(() => import('./calculators/SubscriptionTrackerCalculator.tsx'));
 const BillDueDateTrackerCalculator = lazy(() => import('./calculators/BillDueDateTrackerCalculator.tsx'));
 const VehicleMaintenanceTrackerCalculator = lazy(() => import('./calculators/VehicleMaintenanceTrackerCalculator.tsx'));
@@ -248,7 +269,7 @@ export default function CalculatorView({
       case 'cash-flow-burn-rate-calc':
         return <CashFlowBurnRateCalculator />;
       case '401k-savings-calc':
-        return <RetirementPlanningCalculator />;
+        return <RetirementPlanningCalculator mode="401k" />;
       case 'capital-gains-tax-estimator':
         return <CapitalGainsTaxCalculator />;
       case 'dividend-reinvestment-drip-calc':
@@ -482,7 +503,7 @@ export default function CalculatorView({
       case 'emergency-fund-planner':
         return <EmergencyFundPlannerCalculator />;
       case 'retirement-planning-calculator':
-        return <RetirementPlanningCalculator />;
+        return <RetirementPlanningCalculator mode="planner" />;
       case 'social-media-content-calendar':
         return <SocialMediaContentCalendarCalculator />;
       case 'business-launch-planner':
@@ -491,6 +512,50 @@ export default function CalculatorView({
         return <GardenPlantingPlannerCalculator />;
       case 'personal-goal-organizer':
         return <PersonalGoalOrganizerCalculator />;
+      case 'freelance-rate-planner':
+        return <FreelanceRatePlannerCalculator />;
+      case 'wedding-budget-planner':
+        return <WeddingBudgetPlannerCalculator />;
+      case 'fitness-workout-planner':
+        return <FitnessWorkoutPlannerCalculator />;
+      case 'meal-prep-planner':
+        return <MealPrepPlannerCalculator />;
+      case 'side-hustle-planner':
+        return <SideHustlePlannerCalculator />;
+      case 'debt-snowball-avalanche-planner':
+        return <DebtRepaymentPlannerCalculator mode="comparison" />;
+      case 'cash-flow-forecast-planner':
+        return <CashFlowForecastPlannerCalculator />;
+      case 'retirement-bucket-strategy-planner':
+        return <RetirementBucketStrategyPlannerCalculator />;
+      case 'freelance-quarterly-tax-payment-planner':
+        return <FreelanceQuarterlyTaxPaymentPlannerCalculator />;
+      case 'college-tuition-savings-growth-planner':
+        return <CollegeTuitionSavingsGrowthPlannerCalculator />;
+      case 'construction-cost-schedule-planner':
+        return <ConstructionCostSchedulePlannerCalculator />;
+      case 'electrical-install-planner':
+        return <ElectricalInstallPlannerCalculator />;
+      case 'solar-install-planner':
+        return <SolarInstallPlannerCalculator />;
+      case 'manufacturing-production-planner':
+        return <ManufacturingProductionPlannerCalculator />;
+      case 'marketing-budget-planner':
+        return <MarketingBudgetPlannerCalculator />;
+      case 'employee-payroll-planner':
+        return <EmployeePayrollPlannerCalculator />;
+      case 'inventory-reorder-planner':
+        return <InventoryReorderPlannerCalculator />;
+      case 'freelance-pricing-planner':
+        return <FreelancePricingPlannerCalculator />;
+      case 'workforce-shift-planner':
+        return <WorkforceShiftPlannerCalculator />;
+      case 'procurement-purchase-order-planner':
+        return <ProcurementPurchaseOrderPlannerCalculator />;
+      case 'preventive-maintenance-schedule-planner':
+        return <PreventiveMaintenanceSchedulePlannerCalculator />;
+      case 'business-continuity-disaster-recovery-planner':
+        return <BusinessContinuityDisasterRecoveryPlannerCalculator />;
       case 'subscription-tracker':
         return <SubscriptionTrackerCalculator />;
       case 'bill-due-date-tracker':

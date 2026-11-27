@@ -1,0 +1,8 @@
+Tool ID,Tool Name,Category,Classification,Implementation Status,Contract File,Test Coverage
+meal-planner,Meal Planner,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/mealPlanner.ts,Verified (plannersBatch1.test.ts)
+wedding-planning-organizer,Wedding Planning Organizer,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/weddingPlanningOrganizer.ts,Verified (plannersBatch1.test.ts)
+home-renovation-planner,Home Renovation Planner,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/homeRenovationPlanner.ts,Verified (plannersBatch1.test.ts)
+social-media-content-calendar,Social Media Content Calendar,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/socialMediaContentCalendar.ts,Verified (plannersBatch1.test.ts)
+business-launch-planner,Business Launch Planner,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/businessLaunchPlanner.ts,Verified (plannersBatch1.test.ts)
+garden-planting-planner,Garden Planting Planner,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/gardenPlantingPlanner.ts,Verified (plannersBatch1.test.ts)
+personal-goal-organizer,Personal Goal Organizer,Planners & Organizers,Partially Implemented,Upgraded & Verified,src/engine/contracts/planners/personalGoalOrganizer.ts,Verified (plannersBatch1.test.ts)

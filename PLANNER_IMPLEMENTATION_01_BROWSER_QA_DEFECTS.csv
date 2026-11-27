@@ -1,0 +1,2 @@
+defect_id,planner_id,severity,test_scenario,expected_behavior,actual_behavior,reproduction_steps,supporting_evidence,recommended_remediation,blocks_production_readiness
+none,none,none,none,none,none,none,none,none,false

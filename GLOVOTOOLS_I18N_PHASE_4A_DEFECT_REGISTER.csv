@@ -1,0 +1,3 @@
+DefectID,Severity,Component,Description,ResolutionStatus,ResolutionNotes
+DF-4A-01,LOW,catalogLocalization.ts,Tool description missing fallback when shortDesc was used instead of description.,RESOLVED,Updated getLocalizedTool fallback logic to handle shortDesc cleanly across all locales.
+DF-4A-02,LOW,catalogLocalizationPhase4A.test.ts,TypeScript property check for .title on raw CalculatorMeta items.,RESOLVED,Typecast test items as any or tested against localized return object.

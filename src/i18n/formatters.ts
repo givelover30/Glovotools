@@ -4,11 +4,13 @@ const LOCALE_MAP: Record<Language, string> = {
   en: 'en-US',
   es: 'es-ES',
   pt: 'pt-BR',
+  'pt-BR': 'pt-BR',
   fr: 'fr-FR',
   de: 'de-DE',
   it: 'it-IT',
   ja: 'ja-JP',
   zh: 'zh-CN',
+  'zh-CN': 'zh-CN',
   pl: 'pl-PL'
 };
 

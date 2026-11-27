@@ -1,0 +1,12 @@
+Domain,Component / Module,Current State,Target Languages,Estimated Keys / Strings,Localization Priority
+Navigation & Header,src/components/Header.tsx,Partial (EN/ES/PT),9 Languages,45 keys,High
+Footer & Resources,src/components/Footer.tsx,Partial (EN/ES/PT),9 Languages,35 keys,Medium
+Home & Landing Page,src/components/HomePage.tsx,Partial (EN/ES/PT),9 Languages,60 keys,High
+Category Browser & Directory,src/components/directory/,Hardcoded EN,9 Languages,40 keys,High
+Calculator Core View,src/components/CalculatorView.tsx & EngineCalculatorView.tsx,Mixed,9 Languages,80 keys,High
+P0 & P1 Planners (32 tools),src/components/calculators/,Mixed EN/ES,9 Languages,960 keys (30/tool),Critical
+PDF Tools Workspaces,src/components/calculators/PdfToolsWorkspace.tsx,Mixed,9 Languages,150 keys,High
+Input Labels & Placeholders,Component-level (src/components/calculators/),Hardcoded EN,9 Languages,2400 keys,High
+Calculation Results & Breakdown,Component-level (src/components/calculators/),Hardcoded EN,9 Languages,1200 keys,Medium
+Error States & Notifications,src/components/ui/AppPrimitives.tsx & components,Hardcoded EN,9 Languages,70 keys,High
+SEO Metadata & OpenGraph,src/App.tsx & index.html,Hardcoded EN,9 Languages,50 keys,Medium

@@ -1,6 +1,19 @@
 // Comprehensive Portuguese UI Translations and Domain Terms for Glovotools
 
 export const PT_UI_STRINGS: Record<string, string> = {
+  // Hero Category Badges
+  'hero.cat.calculators': 'Calculadoras',
+  'hero.cat.converters': 'Conversores',
+  'hero.cat.checkers': 'Verificadores',
+  'hero.cat.generators': 'Geradores',
+  'hero.cat.planners': 'Planejadores',
+  'hero.cat.tools': 'Ferramentas',
+  'hero.cat.trackers': 'Rastreadores',
+  'hero.cat.guides': 'Guias e Referências',
+  'hero.cat.pdfTools': 'Ferramentas PDF',
+  'hero.cat.docConverters': 'Conversores de Documentos',
+  'cat.health': 'Saúde e Bem-estar',
+
   // Navigation & Common
   'nav.home': 'Início',
   'nav.allTools': 'Todas as Ferramentas',

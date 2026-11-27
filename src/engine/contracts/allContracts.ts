@@ -63,6 +63,7 @@ import { PHASE22_CONTRACTS } from './phase22_lifestyle_contracts.ts';
 import { PHASE23_CONTRACTS } from './phase23_business_productivity_contracts.ts';
 import { PHASE25_CONTRACTS } from './phase25_pdf_tools_contracts.ts';
 import { PHASE27_CONTRACTS } from './phase27_document_converter_contracts.ts';
+import { PLANNER_P0_CONTRACTS } from './planners/index.ts';
 
 export const ALL_REGISTERED_CONTRACTS: CalculationContract<any, any>[] = [
   ...BASE_24_CONTRACTS,
@@ -128,7 +129,8 @@ export const ALL_REGISTERED_CONTRACTS: CalculationContract<any, any>[] = [
   ...PHASE22_CONTRACTS,
   ...PHASE23_CONTRACTS,
   ...PHASE25_CONTRACTS,
-  ...PHASE27_CONTRACTS
+  ...PHASE27_CONTRACTS,
+  ...PLANNER_P0_CONTRACTS
 ];
 
 export const ALL_300_CONTRACTS = ALL_REGISTERED_CONTRACTS;

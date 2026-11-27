@@ -1,0 +1,2 @@
+DefectID,Severity,Component,Description,ResolutionStatus,ResolutionNotes
+DF-4B-MASS-01,LOW,CalculationRegistry,Minor formula nomenclature alignment during batch 3 engineering test.,RESOLVED,Normalized display labels through central translation dictionary lookup.

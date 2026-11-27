@@ -50,40 +50,34 @@ import { X, LayoutGrid, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-rea
 import { useTranslation } from './i18n/I18nContext.tsx';
 import { getLocalizedCategory, getLocalizedSubcategory, getLocalizedCalculator } from './i18n/esTranslations.ts';
 
+const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'it', 'ja', 'zh-CN', 'pl', 'pt-BR'];
+
 export function parseUrlPath(pathname: string): {
   view: AppView;
   categoryId: CategoryId | null;
   subcategoryId: string | null;
   calculatorId: CalculatorId | null;
+  locale: string | null;
 } {
   const parts = pathname.split('/').filter(Boolean);
+  let locale: string | null = null;
+  if (parts.length > 0 && SUPPORTED_LOCALES.includes(parts[0])) {
+    locale = parts[0];
+    parts.shift();
+  }
+
   if (parts.length === 0) {
-    return { view: 'home', categoryId: null, subcategoryId: null, calculatorId: null };
+    return { view: 'home', categoryId: null, subcategoryId: null, calculatorId: null, locale };
   }
   if (parts.length === 1) {
-    if (parts[0] === 'privacy') {
-      return { view: 'privacy', categoryId: null, subcategoryId: null, calculatorId: null };
-    }
-    if (parts[0] === 'terms') {
-      return { view: 'terms', categoryId: null, subcategoryId: null, calculatorId: null };
-    }
-    if (parts[0] === 'contact') {
-      return { view: 'contact', categoryId: null, subcategoryId: null, calculatorId: null };
-    }
-    if (parts[0] === 'about') {
-      return { view: 'about', categoryId: null, subcategoryId: null, calculatorId: null };
-    }
-    if (parts[0] === 'favorites') {
-      return { view: 'favorites', categoryId: null, subcategoryId: null, calculatorId: null };
-    }
-    if (parts[0] === 'all-calculators') {
-      return { view: 'all-calculators', categoryId: null, subcategoryId: null, calculatorId: null };
+    if (['privacy', 'terms', 'contact', 'about', 'favorites', 'all-calculators'].includes(parts[0])) {
+      return { view: parts[0] as AppView, categoryId: null, subcategoryId: null, calculatorId: null, locale };
     }
   }
   // /calculators or /categories
   if (parts[0] === 'calculators' || parts[0] === 'categories') {
     if (parts.length === 1) {
-      return { view: 'categories', categoryId: null, subcategoryId: null, calculatorId: null };
+      return { view: 'categories', categoryId: null, subcategoryId: null, calculatorId: null, locale };
     }
     const catSlug = parts[1];
     const cat = getCategoryBySlug(catSlug);
@@ -93,7 +87,8 @@ export function parseUrlPath(pathname: string): {
           view: 'category-detail',
           categoryId: cat.id,
           subcategoryId: null,
-          calculatorId: null
+          calculatorId: null,
+          locale
         };
       }
       if (parts.length === 3) {
@@ -104,21 +99,22 @@ export function parseUrlPath(pathname: string): {
             view: 'category-detail',
             categoryId: cat.id,
             subcategoryId: subcat.id,
-            calculatorId: null
+            calculatorId: null,
+            locale
           };
         }
       }
     }
-    return { view: 'not-found', categoryId: null, subcategoryId: null, calculatorId: null };
+    return { view: 'not-found', categoryId: null, subcategoryId: null, calculatorId: null, locale };
   }
   // /calculator/:calculatorId
   if (parts[0] === 'calculator' && parts.length === 2 && parts[1]) {
     const calcId = parts[1] as CalculatorId;
     if (CALCULATORS.some((c) => c.id === calcId)) {
-      return { view: 'calculator', categoryId: null, subcategoryId: null, calculatorId: calcId };
+      return { view: 'calculator', categoryId: null, subcategoryId: null, calculatorId: calcId, locale };
     }
   }
-  return { view: 'not-found', categoryId: null, subcategoryId: null, calculatorId: null };
+  return { view: 'not-found', categoryId: null, subcategoryId: null, calculatorId: null, locale };
 }
 
 export default function App() {

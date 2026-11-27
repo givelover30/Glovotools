@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && npm run validate:assets",
+    "build": "npm run generate:sitemap && vite build && npm run validate:assets",
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "validate:assets": "node scripts/validate-asset-mime.mjs",
     "validate:mime": "node scripts/validate-asset-mime.mjs --http",
     "preview": "vite preview",

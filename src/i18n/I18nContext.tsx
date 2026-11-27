@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Language, TRANSLATIONS, LANGUAGES } from './translations.ts';
 import { getIntlLocale } from './formatters.ts';
+import { interpolate, getMissingTranslationKeys } from './catalogLocalization.ts';
 
 interface I18nContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
+  getMissingKeys: () => string[];
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -46,20 +48,24 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const t = (key: string): string => {
+  const t = (key: string, params?: Record<string, string | number>): string => {
     const dict = TRANSLATIONS[language] || TRANSLATIONS.en;
-    if (dict[key]) {
-      return dict[key];
+    let template = dict[key];
+    if (!template) {
+      template = TRANSLATIONS.en[key];
     }
-    const fallback = TRANSLATIONS.en[key];
-    if (fallback) {
-      return fallback;
+    if (!template) {
+      return formatMissingTranslationFallback(key);
     }
-    return formatMissingTranslationFallback(key);
+    return interpolate(template, params);
+  };
+
+  const getMissingKeys = () => {
+    return getMissingTranslationKeys(language);
   };
 
   return (
-    <I18nContext.Provider value={{ language, setLanguage, t }}>
+    <I18nContext.Provider value={{ language, setLanguage, t, getMissingKeys }}>
       {children}
     </I18nContext.Provider>
   );

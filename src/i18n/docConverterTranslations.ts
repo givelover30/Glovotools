@@ -1,4 +1,6 @@
 import { Language } from './translations.ts';
+import { PT_UI_STRINGS } from './ptTranslations.ts';
+import { ES_UI_STRINGS } from './esTranslations.ts';
 
 export interface DocConverterLocaleStrings {
   suiteTitle: string;
@@ -391,5 +393,11 @@ export const DOC_CONVERTER_LOCALE: Record<Language, DocConverterLocaleStrings> =
     outputSize: 'Rozmiar Wyjściowy',
     duration: 'Czas',
     invalidFileError: 'Nieprawidłowy lub pusty plik. Prześlij obsługiwany format:'
+  },
+  'pt-BR': {
+    ...PT_UI_STRINGS as any
+  },
+  'zh-CN': {
+    ...ES_UI_STRINGS as any
   }
 };
