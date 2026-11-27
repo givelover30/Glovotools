@@ -1,0 +1,2 @@
+Defect ID,Severity,Component,Description,Status,Resolution
+FIND-5D-01,Low,Formula Explanation / Additional Information Tables,Dense variable descriptions in CJK viewports needed fluid responsive scaling,Resolved,Applied text-xs sm:text-sm responsive font classes to table description cells.

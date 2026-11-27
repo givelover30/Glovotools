@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Language, TRANSLATIONS, LANGUAGES } from './translations.ts';
 import { getIntlLocale } from './formatters.ts';
 import { interpolate, getMissingTranslationKeys } from './catalogLocalization.ts';
+import { resolveInitialLanguage, saveLocale, getLocalizedUrlForLanguage, isValidLocale } from './languageUtils.ts';
 
 interface I18nContextType {
   language: Language;
@@ -26,25 +27,43 @@ export function formatMissingTranslationFallback(key: string): string {
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
-    try {
-      const saved = localStorage.getItem('calctools_lang') as Language;
-      if (saved && TRANSLATIONS[saved] && LANGUAGES.some(l => l.code === saved)) {
-        return saved;
-      }
-    } catch {}
-    return 'en';
+    const initial = resolveInitialLanguage();
+    saveLocale(initial);
+    return initial;
   });
 
   useEffect(() => {
-    try {
-      localStorage.setItem('calctools_lang', language);
-    } catch {}
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      if (currentPath === '/' || currentPath === '') {
+        const resolved = resolveInitialLanguage(currentPath);
+        if (resolved !== 'en') {
+          const targetUrl = `/${resolved}`;
+          window.history.replaceState({}, '', targetUrl);
+          setLanguageState(resolved);
+          saveLocale(resolved);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     document.documentElement.lang = getIntlLocale(language);
   }, [language]);
 
   const setLanguage = (lang: Language) => {
-    if (TRANSLATIONS[lang] && LANGUAGES.some(l => l.code === lang)) {
+    if (isValidLocale(lang)) {
       setLanguageState(lang);
+      saveLocale(lang);
+      if (typeof window !== 'undefined') {
+        const currentPath = window.location.pathname;
+        const search = window.location.search;
+        const newUrl = getLocalizedUrlForLanguage(currentPath, lang, search);
+        if (currentPath + search !== newUrl) {
+          window.history.pushState({}, '', newUrl);
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+      }
     }
   };
 

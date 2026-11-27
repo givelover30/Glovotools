@@ -1,0 +1,5 @@
+Test Item,Target URL / Scope,Status,Verification Method
+Homepage,https://glovotools.com/,Deferred (Deployment Blocked),Local Build Validated
+All Nine Locales,https://glovotools.com/{locale}/,Deferred (Deployment Blocked),Local Router & Tests Passed
+SEO Endpoints,/sitemap.xml & /robots.txt,Deferred (Deployment Blocked),Local Sitemap Generated & Valid
+Calculator Smoke Tests,Representative Workspaces,Deferred (Deployment Blocked),155/155 Unit Tests Passed

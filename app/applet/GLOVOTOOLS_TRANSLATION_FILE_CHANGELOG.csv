@@ -1,0 +1,8 @@
+File Path,Modification Type,Description
+GLOVOTOOLS_TRANSLATION_ARCHITECTURE.md,Created,Permanent Gemini translation architecture definition.
+GLOVOTOOLS_TRANSLATION_GLOSSARY.md,Created,Central terminology glossary across all 8 target languages.
+GLOVOTOOLS_TRANSLATION_WORKFLOW.md,Created,Reusable development-time Gemini translation workflow.
+GLOVOTOOLS_TRANSLATION_VALIDATION_REPORT.md,Created,Dictionary validation and quality gate report.
+GLOVOTOOLS_TRANSLATION_CHANGE_DETECTION_REPORT.md,Created,Change detection and dictionary synchronization guide.
+GLOVOTOOLS_TRANSLATION_FILE_CHANGELOG.csv,Created,File changelog record.
+GLOVOTOOLS_TRANSLATION_DEFECT_REGISTER.csv,Created,Defect register record.

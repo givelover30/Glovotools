@@ -277,6 +277,25 @@ export default function App() {
     }
     canonical.setAttribute('href', canonicalUrl);
 
+    // Dynamic hreflang alternate links generation
+    document.querySelectorAll('link[rel="alternate"][data-hreflang-alt]').forEach(el => el.remove());
+    const cleanPathname = pathname.replace(/^\/(en|es|fr|de|it|ja|zh-CN|pl|pt-BR)(\/|$)/, '/');
+    const locales = ['en', 'es', 'fr', 'de', 'it', 'ja', 'zh-CN', 'pl', 'pt-BR'];
+    for (const code of locales) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', code);
+      link.setAttribute('data-hreflang-alt', 'true');
+      link.setAttribute('href', `${origin}/${code}${cleanPathname === '/' ? '' : cleanPathname}`);
+      document.head.appendChild(link);
+    }
+    const defaultLink = document.createElement('link');
+    defaultLink.setAttribute('rel', 'alternate');
+    defaultLink.setAttribute('hreflang', 'x-default');
+    defaultLink.setAttribute('data-hreflang-alt', 'true');
+    defaultLink.setAttribute('href', `${origin}/en${cleanPathname === '/' ? '' : cleanPathname}`);
+    document.head.appendChild(defaultLink);
+
     const ogTags = [
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },

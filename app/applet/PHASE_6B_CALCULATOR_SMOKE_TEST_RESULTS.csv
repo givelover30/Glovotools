@@ -1,0 +1,6 @@
+Calculator ID,Category,Locales Tested,Live Execution,Local Test Execution,Status
+percentage,math,en, es,Not Tested (Offline),Passed (Unit Tests),Local Verified
+mortgage,finance,en, fr,Not Tested (Offline),Passed (Unit Tests),Local Verified
+bmi,health,en, de,Not Tested (Offline),Passed (Unit Tests),Local Verified
+pdf-extract-pages,pdf,en, ja,Not Tested (Offline),Passed (Unit Tests),Local Verified
+loan-calculator,finance,en, pt-BR,Not Tested (Offline),Passed (Unit Tests),Local Verified

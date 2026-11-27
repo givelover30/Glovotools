@@ -2,15 +2,22 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { CALCULATORS, CATEGORIES, SUBCATEGORIES } from '../src/data/calculators.ts';
 
+export interface SitemapAlternate {
+  hreflang: string;
+  href: string;
+}
+
 export interface SitemapEntry {
   loc: string;
   lastmod: string;
   changefreq: 'daily' | 'weekly' | 'monthly';
   priority: string;
+  alternates: SitemapAlternate[];
 }
 
 const DEFAULT_BASE_URL = 'https://glovotools.com';
 const MAX_SITEMAP_URLS = 50_000;
+const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'it', 'ja', 'zh-CN', 'pl', 'pt-BR'];
 
 const STATIC_ROUTE_METADATA: Record<
   string,
@@ -47,10 +54,6 @@ function escapeXml(value: string): string {
     .replace(/'/g, '&apos;');
 }
 
-/**
- * Crawls static SPA page routes declared in src/App.tsx `parseUrlPath`,
- * merging with canonical baseline routes so directory & informational pages stay indexed.
- */
 function crawlStaticRoutes(rootDir: string): string[] {
   const appPath = path.resolve(rootDir, 'src/App.tsx');
   const discovered = new Set<string>(['/', '/calculators']);
@@ -74,7 +77,6 @@ function crawlStaticRoutes(rootDir: string): string[] {
     discovered.add(fallbackRoute);
   }
 
-  // Keep deterministic canonical ordering: prioritized known routes first, then alphabetical
   const ordered = [
     ...Object.keys(STATIC_ROUTE_METADATA).filter((r) => discovered.has(r)),
     ...[...discovered]
@@ -96,92 +98,126 @@ export function buildSitemapEntries(
     categories: number;
     subcategories: number;
     calculators: number;
+    totalLocales: number;
   };
 } {
-  const entries: SitemapEntry[] = [];
-  const seenUrls = new Set<string>();
+  const rawPaths: Array<{ path: string; changefreq: SitemapEntry['changefreq']; priority: string }> = [];
 
-  const addRoute = (
-    routePath: string,
-    changefreq: SitemapEntry['changefreq'],
-    priority: string
-  ): boolean => {
-    const normalizedPath = routePath === '/' ? '/' : `/${routePath.replace(/^\/+/, '')}`;
-    const fullUrl = `${baseUrl}${normalizedPath === '/' ? '/' : encodeURI(normalizedPath)}`;
-    if (seenUrls.has(fullUrl)) return false;
-    seenUrls.add(fullUrl);
-    entries.push({ loc: fullUrl, lastmod, changefreq, priority });
-    return true;
-  };
-
-  // 1. Static pages (from src/App.tsx parseUrlPath)
-  let staticPages = 0;
+  // 1. Static pages
   for (const route of crawlStaticRoutes(rootDir)) {
     const meta = STATIC_ROUTE_METADATA[route] ?? {
       changefreq: 'monthly' as const,
       priority: '0.5',
     };
-    if (addRoute(route, meta.changefreq, meta.priority)) {
-      staticPages++;
-    }
+    rawPaths.push({ path: route, changefreq: meta.changefreq, priority: meta.priority });
   }
 
-  // 2. Category landing pages (/calculators/:categorySlug)
+  // 2. Category landing pages
   const categoryById = new Map(CATEGORIES.map((cat) => [cat.id, cat]));
-  let categories = 0;
   for (const cat of CATEGORIES) {
     if (!cat?.slug) continue;
-    if (addRoute(`/calculators/${cat.slug}`, 'weekly', '0.9')) {
-      categories++;
-    }
+    rawPaths.push({ path: `/calculators/${cat.slug}`, changefreq: 'weekly', priority: '0.9' });
   }
 
-  // 3. Subcategory landing pages (/calculators/:categorySlug/:subcategorySlug)
-  let subcategories = 0;
+  // 3. Subcategory landing pages
   for (const sub of SUBCATEGORIES) {
     if (!sub?.slug || !sub?.categoryId) continue;
     const parentCat = categoryById.get(sub.categoryId);
     if (!parentCat?.slug) continue;
-    if (addRoute(`/calculators/${parentCat.slug}/${sub.slug}`, 'weekly', '0.8')) {
-      subcategories++;
-    }
+    rawPaths.push({ path: `/calculators/${parentCat.slug}/${sub.slug}`, changefreq: 'weekly', priority: '0.8' });
   }
 
-  // 4. All registered calculator/tool routes (/calculator/:id), deduplicated by ID
-  let calculators = 0;
+  // 4. Calculator routes
   for (const calc of CALCULATORS) {
     if (!calc?.id) continue;
-    if (addRoute(`/calculator/${calc.id}`, 'weekly', '0.8')) {
-      calculators++;
+    rawPaths.push({ path: `/calculator/${calc.id}`, changefreq: 'weekly', priority: '0.8' });
+  }
+
+  const entries: SitemapEntry[] = [];
+  const seenUrls = new Set<string>();
+
+  let staticPages = 0;
+  let categories = 0;
+  let subcategories = 0;
+  let calculators = 0;
+
+  for (const item of rawPaths) {
+    const normalizedBasePath = item.path === '/' ? '' : `/${item.path.replace(/^\/+/, '')}`;
+    
+    // Build alternate links for all 9 locales + x-default
+    const alternates: SitemapAlternate[] = SUPPORTED_LOCALES.map((code) => ({
+      hreflang: code,
+      href: `${baseUrl}/${code}${normalizedBasePath}`,
+    }));
+    alternates.push({
+      hreflang: 'x-default',
+      href: `${baseUrl}/en${normalizedBasePath}`,
+    });
+
+    for (const locale of SUPPORTED_LOCALES) {
+      const routePath = `/${locale}${normalizedBasePath}`;
+      const fullUrl = `${baseUrl}${encodeURI(routePath)}`;
+      if (seenUrls.has(fullUrl)) continue;
+      seenUrls.add(fullUrl);
+
+      entries.push({
+        loc: fullUrl,
+        lastmod,
+        changefreq: item.changefreq,
+        priority: item.priority,
+        alternates,
+      });
+    }
+
+    if (item.path.startsWith('/calculator/')) calculators++;
+    else if (item.path.startsWith('/calculators/')) {
+      if (item.path.split('/').length === 3) categories++;
+      else subcategories++;
+    } else {
+      staticPages++;
     }
   }
 
   if (entries.length > MAX_SITEMAP_URLS) {
     throw new Error(
-      `Sitemap exceeds ${MAX_SITEMAP_URLS.toLocaleString()} URL protocol limit (${entries.length.toLocaleString()} URLs). Split into a sitemap index.`
+      `Sitemap exceeds ${MAX_SITEMAP_URLS.toLocaleString()} URL protocol limit (${entries.length.toLocaleString()} URLs).`
     );
   }
 
   return {
     entries,
-    counts: { staticPages, categories, subcategories, calculators },
+    counts: {
+      staticPages: staticPages * SUPPORTED_LOCALES.length,
+      categories: categories * SUPPORTED_LOCALES.length,
+      subcategories: subcategories * SUPPORTED_LOCALES.length,
+      calculators: calculators * SUPPORTED_LOCALES.length,
+      totalLocales: SUPPORTED_LOCALES.length,
+    },
   };
 }
 
 export function renderSitemapXml(entries: SitemapEntry[]): string {
   const urlNodes = entries
-    .map(
-      (entry) => `  <url>
+    .map((entry) => {
+      const alternateNodes = entry.alternates
+        .map(
+          (alt) =>
+            `    <xhtml:link rel="alternate" hreflang="${escapeXml(alt.hreflang)}" href="${escapeXml(alt.href)}"/>`
+        )
+        .join('\n');
+      return `  <url>
     <loc>${escapeXml(entry.loc)}</loc>
+${alternateNodes}
     <lastmod>${entry.lastmod}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
-  </url>`
-    )
+  </url>`;
+    })
     .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlNodes}
 </urlset>
 `;
@@ -195,6 +231,7 @@ export function generateSitemap(rootDir: string = process.cwd()): {
     categories: number;
     subcategories: number;
     calculators: number;
+    totalLocales: number;
   };
 } {
   const baseUrl = resolveBaseUrl();
@@ -210,8 +247,7 @@ export function generateSitemap(rootDir: string = process.cwd()): {
   fs.writeFileSync(outputPath, xml, 'utf8');
 
   console.log(
-    `[Sitemap Generator] Wrote ${entries.length.toLocaleString()} URLs to ${path.relative(rootDir, outputPath)} ` +
-      `(static=${counts.staticPages}, categories=${counts.categories}, subcategories=${counts.subcategories}, calculators=${counts.calculators}, base=${baseUrl})`
+    `[Sitemap Generator] Wrote ${entries.length.toLocaleString()} URLs across ${counts.totalLocales} locales to ${path.relative(rootDir, outputPath)}`
   );
 
   return {

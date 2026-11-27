@@ -1,0 +1,2 @@
+Defect ID,Severity,Component,Description,Status,Resolution
+DEF-5C-01,Low,Test Environment,Test suite mock for window.navigator and window.localStorage threw reference/getter errors in jsdom,Resolved,Updated tests and utils to safely reference globalThis and window with proper configurable object definitions.

@@ -1,0 +1,2 @@
+Defect ID,Severity,Component,Description,Status,Resolution
+DEF-6CE-01,High,Hosting & Deployment,Hosting provider and deployment credentials unknown in workspace repository.,Open,Requires user to provide hosting provider and deployment target configuration.

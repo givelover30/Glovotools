@@ -1,0 +1,3 @@
+Defect ID,Severity,Component,Description,Status,Resolution
+DEF-5B-01,Low,Sitemap Generation,Initial sitemap script lacked xhtml namespace attributes,Resolved,Added xmlns:xhtml namespace declaration and proper xhtml:link syntax.
+DEF-5B-02,Low,Test Suite,Import path error in seoPhase5B.test.ts referencing ../scripts instead of ../../scripts,Resolved,Corrected relative import path.

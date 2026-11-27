@@ -65,7 +65,7 @@ export default function FormulaExplanation({ details }: FormulaExplanationProps)
                   <td className="py-2.5 px-3.5 text-text-tertiary whitespace-nowrap">
                     {v.unit || '—'}
                   </td>
-                  <td className="py-2.5 px-3.5 text-text-secondary leading-relaxed">
+                  <td className="py-2.5 px-3.5 text-xs sm:text-sm text-text-secondary leading-relaxed">
                     {v.description}
                   </td>
                 </tr>

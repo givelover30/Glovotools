@@ -185,7 +185,7 @@ export default function AdditionalInformationSection({
                         <td className="text-text-tertiary whitespace-nowrap">
                           {v.unit || '—'}
                         </td>
-                        <td className="text-text-secondary leading-relaxed">
+                        <td className="text-xs sm:text-sm text-text-secondary leading-relaxed">
                           {v.description}
                         </td>
                       </tr>
