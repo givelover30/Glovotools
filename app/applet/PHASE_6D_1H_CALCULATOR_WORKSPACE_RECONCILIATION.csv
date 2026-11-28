@@ -1,0 +1,7 @@
+Metric,Count,Status
+Registered Calculation Contracts,436,Verified
+Active Calculator Workspaces,417,Verified
+Active Locales,8,Verified (en, es, fr, de, it, ja, pl, pt-BR)
+Deferred Locale,1 (zh-CN),Deferred / Retained
+Total Workspace-Locale Combinations (Active),3336 (417 * 8),Fully Localized
+Calculation Regressions,0,Verified Unchanged

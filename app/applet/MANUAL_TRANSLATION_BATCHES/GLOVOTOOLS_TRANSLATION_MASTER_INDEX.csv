@@ -1,0 +1,50 @@
+filename,target_locale,content_category,string_count,export_status,translation_status,import_status
+GLOVOTOOLS_TRANSLATION_ES_GLOBAL_BATCH_001.csv,es,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_HOMEPAGE_BATCH_001.csv,es,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_CATEGORIES_BATCH_001.csv,es,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_CATALOG_BATCH_001.csv,es,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_WORKSPACES_BATCH_001.csv,es,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_MESSAGES_BATCH_001.csv,es,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_ES_SEO_BATCH_001.csv,es,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_GLOBAL_BATCH_001.csv,fr,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_HOMEPAGE_BATCH_001.csv,fr,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_CATEGORIES_BATCH_001.csv,fr,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_CATALOG_BATCH_001.csv,fr,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_WORKSPACES_BATCH_001.csv,fr,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_MESSAGES_BATCH_001.csv,fr,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_FR_SEO_BATCH_001.csv,fr,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_GLOBAL_BATCH_001.csv,de,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_HOMEPAGE_BATCH_001.csv,de,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_CATEGORIES_BATCH_001.csv,de,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_CATALOG_BATCH_001.csv,de,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_WORKSPACES_BATCH_001.csv,de,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_MESSAGES_BATCH_001.csv,de,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_DE_SEO_BATCH_001.csv,de,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_GLOBAL_BATCH_001.csv,it,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_HOMEPAGE_BATCH_001.csv,it,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_CATEGORIES_BATCH_001.csv,it,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_CATALOG_BATCH_001.csv,it,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_WORKSPACES_BATCH_001.csv,it,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_MESSAGES_BATCH_001.csv,it,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_IT_SEO_BATCH_001.csv,it,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_GLOBAL_BATCH_001.csv,ja,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_HOMEPAGE_BATCH_001.csv,ja,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_CATEGORIES_BATCH_001.csv,ja,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_CATALOG_BATCH_001.csv,ja,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_WORKSPACES_BATCH_001.csv,ja,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_MESSAGES_BATCH_001.csv,ja,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_JA_SEO_BATCH_001.csv,ja,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_GLOBAL_BATCH_001.csv,pl,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_HOMEPAGE_BATCH_001.csv,pl,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_CATEGORIES_BATCH_001.csv,pl,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_CATALOG_BATCH_001.csv,pl,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_WORKSPACES_BATCH_001.csv,pl,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_MESSAGES_BATCH_001.csv,pl,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PL_SEO_BATCH_001.csv,pl,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_GLOBAL_BATCH_001.csv,pt-BR,Global interface and navigation,25,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_HOMEPAGE_BATCH_001.csv,pt-BR,Homepage and public pages,20,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_CATEGORIES_BATCH_001.csv,pt-BR,Categories and subcategories,38,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_CATALOG_BATCH_001.csv,pt-BR,Calculator catalog metadata,50,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_WORKSPACES_BATCH_001.csv,pt-BR,Calculator workspaces,60,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_MESSAGES_BATCH_001.csv,pt-BR,Dynamic messages and validation,35,Exported,Pending Manual Translation,Pending
+GLOVOTOOLS_TRANSLATION_PT-BR_SEO_BATCH_001.csv,pt-BR,SEO metadata and structured content,25,Exported,Pending Manual Translation,Pending

@@ -1,0 +1,2 @@
+File Path,Modification Type,Description
+src/i18n/translations.ts,Verified,Dynamic validation, toast, error, and loading message keys verified across the 8 active locales. zh-CN retained as deferred.

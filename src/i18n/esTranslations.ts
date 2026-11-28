@@ -15,6 +15,16 @@ export const ES_UI_STRINGS: Record<string, string> = {
   'hero.cat.pdfTools': 'Herramientas PDF',
   'hero.cat.docConverters': 'Conversores de Documentos',
   'cat.health': 'Salud y Bienestar',
+  'cat.science-education': 'Ciencia y Educación',
+  'cat.desc.science-education': 'Calculadoras científicas, físicas y educativas.',
+  'cat.developer-it': 'Infraestructura de Desarrollo y TI',
+  'cat.desc.developer-it': 'Utilidades para programadores, redes y bases de datos.',
+  'cat.guides': 'Guías y Referencias',
+  'cat.desc.guides': 'Referencia técnica y guías de cálculo.',
+  'cat.checkers': 'Verificadores y Validadores',
+  'cat.desc.checkers': 'Validación de sintaxis, formatos y datos.',
+  'cat.utilities': 'Herramientas y Utilidades Adicionales',
+  'cat.desc.utilities': 'Utilidades prácticas para el trabajo diario.',
 
   // Navigation & Common
   'nav.home': 'Inicio',
@@ -683,7 +693,12 @@ export const ES_CALCULATOR_OVERRIDES: Record<string, { name: string; description
   'color-converter-picker': { name: 'Convertidor de Color HEX, RGB, HSL y CMYK con WCAG', description: 'Conversión entre espacios de color con selector interactivo y evaluación de contraste de accesibilidad.' },
   'url-encoder-decoder': { name: 'Codificador y Decodificador de URL (Percent-Encoding)', description: 'Codifique parámetros de consulta URI según RFC 3986 o decodifique cadenas codificadas.' },
   'html-entity-converter': { name: 'Convertidor de Entidades HTML (Encoder / Decoder)', description: 'Transformación de caracteres especiales a entidades HTML (&amp;, &lt;, &gt;) y viceversa.' },
-  'qr-code-payload-generator': { name: 'Generador de Cargas Útiles para Códigos QR y Wi-Fi', description: 'Formateo de esquemas estándar para URLs, credenciales de redes Wi-Fi, textos y correos.' }
+  'qr-code-payload-generator': { name: 'Generador de Cargas Útiles para Códigos QR y Wi-Fi', description: 'Formateo de esquemas estándar para URLs, credenciales de redes Wi-Fi, textos y correos.' },
+  'merge-pdf': { name: 'Unir Archivos PDF', description: 'Combinar múltiples documentos PDF en un solo archivo ordenado de forma instantánea.' },
+  'secure-password-generator': { name: 'Generador de Contraseñas Seguras y Frases de Contraseña', description: 'Creación de claves robustas y contraseñas seguras con criterios personalizados.' },
+  'json-validator': { name: 'Validador de Sintaxis y Estructura JSON', description: 'Comprobación de errores de sintaxis y validación de esquemas de datos JSON en el navegador.' },
+  'restaurant-bill-split': { name: 'Divisor de Cuenta de Restaurante e Impuestos', description: 'Cálculo de propinas, división de cuentas y distribución de impuestos entre comensales.' },
+  'monthly-budget': { name: 'Presupuesto Mensual y Gastos', description: 'Planificación de ingresos, gastos fijos y control de ahorros mensuales.' }
 };
 
 export function getLocalizedCalculator(calc: any, language: string) {
@@ -715,11 +730,7 @@ export function getLocalizedCalculator(calc: any, language: string) {
         shortDesc: override.description,
       };
     }
-    return {
-      ...calc,
-      name: calc.name.replace(/Calculator/gi, 'Calculadora').replace(/Solver/gi, 'Solucionador').replace(/Converter/gi, 'Convertidor'),
-      shortDesc: calc.shortDesc.replace(/Calculate/gi, 'Calcula').replace(/Compute/gi, 'Calcula').replace(/Determine/gi, 'Determina'),
-    };
+    return calc;
   }
   return calc;
 }

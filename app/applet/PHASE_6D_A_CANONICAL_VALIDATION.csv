@@ -1,0 +1,6 @@
+Page Type,Tested Locale Route,Canonical URL Format,Https Secure,Status
+Homepage,/es/,https://glovotools.com/es/,Yes,Valid
+Category Page,/es/calculators/finance,https://glovotools.com/es/calculators/finance,Yes,Valid
+Subcategory Page,/es/calculators/finance/mortgage,https://glovotools.com/es/calculators/finance/mortgage,Yes,Valid
+Calculator Workspace,/es/calculator/percentage,https://glovotools.com/es/calculator/percentage,Yes,Valid
+Static Page,/es/about,https://glovotools.com/es/about,Yes,Valid

@@ -1,0 +1,10 @@
+Locale Code,Language Name,Pre-existing Keys,Newly Covered Keys,Total Master Keys,Coverage %
+en,English (Master),176,0,176,100.0%
+es,Spanish,348,0,176,100.0%
+pt-BR,Brazilian Portuguese,259,0,176,100.0%
+fr,French,178,0,176,100.0%
+de,German,178,0,176,100.0%
+it,Italian,178,0,176,100.0%
+ja,Japanese,178,0,176,100.0%
+zh-CN,Simplified Chinese,178,0,176,100.0%
+pl,Polish,178,0,176,100.0%

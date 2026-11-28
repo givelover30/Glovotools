@@ -1,0 +1,5 @@
+Namespace / Key,English Source,Affected Locales,Severity,Impact
+extended.ui.warnings,Extended warning messages,fr, de, it, ja, zh-CN, pl,High,Fallback to English in non-Spanish locales
+workspace.errors,Detailed calculation error states,fr, de, it, ja, zh-CN, pl,High,Fallback to English for error prompts
+calculator.tooltips,Advanced workspace tooltips and hints,fr, de, it, ja, zh-CN, pl,Medium,Helpful guidance appears in English
+modal.dialogs,Advanced confirmation modals,fr, de, it, ja, zh-CN, pl,Medium,Modal buttons display English text

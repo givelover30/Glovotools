@@ -1,0 +1,10 @@
+Locale Code,Language Name,Dictionary Keys,Estimated Coverage %,Status
+en,English (Master),176,100.0%,Master Source
+es,Spanish,348,100.0%,Fully Translated
+pt-BR,Brazilian Portuguese,259,85.0%,Mostly Translated
+fr,French,178,51.0%,Partial / Fallback
+de,German,178,51.0%,Partial / Fallback
+it,Italian,178,51.0%,Partial / Fallback
+ja,Japanese,178,51.0%,Partial / Fallback
+zh-CN,Simplified Chinese,178,51.0%,Partial / Fallback
+pl,Polish,178,51.0%,Partial / Fallback

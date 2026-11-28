@@ -1,0 +1,7 @@
+conflict_id,translation_key,existing_value,proposed_staging_value,owning_module,recommended_action
+CON-01,nav.home,Inicio,Principal,esTranslations.ts,Retain existing approved translation ("Inicio")
+CON-02,btn.calculate,Calcular,Hacer Cálculo,esTranslations.ts,Retain existing approved translation ("Calcular")
+CON-03,btn.reset,Restablecer,Borrar Todo,esTranslations.ts,Retain existing approved translation ("Restablecer")
+CON-04,btn.save,Guardar,Almacenar,esTranslations.ts,Retain existing approved translation ("Guardar")
+CON-05,btn.copy,Copiar,Copiar al Portapapeles,esTranslations.ts,Retain existing approved translation ("Copiar")
+CON-06 to CON-36,Various Core UI Keys,Standard Approved Spanish,Alternate Staging Variant,esTranslations.ts,Retain existing approved core translations across all 31 remaining conflict keys

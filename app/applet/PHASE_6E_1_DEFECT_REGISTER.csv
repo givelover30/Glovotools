@@ -1,0 +1,2 @@
+Defect ID,Severity,Component,Description,Status,Resolution
+DEF-6E1-01,Low,Live Verification,External live network probing blocked by sandbox environment constraints.,Open (Requires Manual Check),Perform manual post-deployment verification against https://glovotools.com.

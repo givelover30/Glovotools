@@ -1,0 +1,11 @@
+test_id,test_category,description_or_target,expected_result,actual_result,screenshot_evidence,status
+TC-ES-01,Homepage & Nav,Navigate to /es/,Header, footer, and hero render in Spanish. Pending manual check.,NOT TESTED,Pending
+TC-ES-02,Catalog,View All Tools catalog,Tool titles and short descriptions display in Spanish. Pending manual check.,NOT TESTED,Pending
+TC-ES-03,Categories,Browse Category Hubs,Category titles and breadcrumbs localized in Spanish. Pending manual check.,NOT TESTED,Pending
+TC-ES-04,Workspaces,Open Mortgage Calculator,Input labels, validation, and results display in Spanish. Pending manual check.,NOT TESTED,Pending
+TC-ES-05,Targeted Audit,Merge PDF Files title check,Verify localization state on Spanish homepage. Pending manual check.,NOT TESTED,Pending
+TC-ES-06,Targeted Audit,Secure Password Generator title check,Verify localization state on Spanish homepage. Pending manual check.,NOT TESTED,Pending
+TC-ES-07,Targeted Audit,JSON Syntax Validator title check,Verify localization state on Spanish homepage. Pending manual check.,NOT TESTED,Pending
+TC-ES-08,Targeted Audit,Group Restaurant Bill Splitter title check,Verify localization state on Spanish homepage. Pending manual check.,NOT TESTED,Pending
+TC-ES-09,Language Switch,Switch between /en/ and /es/,State preserved and UI switches language instantly. Pending manual check.,NOT TESTED,Pending
+TC-ES-10,SEO & Routing,Inspect /sitemap.xml & hreflang,Valid XML and reciprocal Spanish hreflang alternates present. Pending manual check.,NOT TESTED,Pending

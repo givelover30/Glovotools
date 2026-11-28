@@ -1,0 +1,4 @@
+file_path,action_type,keys_affected,description
+src/i18n/esTranslations.ts,Integrated,4900,Integrated approved new general entries while preserving identical and conflicting keys.
+src/i18n/esignTranslations.ts,Routed,300,Routed specialized e-sign module keys to dedicated dictionary.
+src/i18n/docConverterTranslations.ts,Routed,200,Routed specialized document converter module keys to dedicated dictionary.

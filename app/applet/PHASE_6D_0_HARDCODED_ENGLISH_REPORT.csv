@@ -1,0 +1,4 @@
+Component File,Line Number,Hard-coded String,Severity,Recommendation
+src/components/calculator/EngineCalculatorView.tsx,230,This tool currently runs a generic preview estimation template...,Low,Extract into translation key
+src/components/pages/ContactPage.tsx,68,No se ha incluido ningún correo electrónico ficticio...,Low,Extract into translation key
+src/components/common/GlobalSearchModal.tsx,181,Try a different keyword or formula term.,Low,Extract into translation key

@@ -1,0 +1,9 @@
+Locale Code,Language Name,URL Path,Live Test Status,Local Build Status,Notes
+en,English,/en/,BLOCKED (Sandbox Offline),PASSED,Master locale verified locally
+es,Spanish,/es/,BLOCKED (Sandbox Offline),PASSED,Spanish locale verified locally
+fr,French,/fr/,BLOCKED (Sandbox Offline),PASSED,French locale verified locally
+de,German,/de/,BLOCKED (Sandbox Offline),PASSED,German locale verified locally
+it,Italian,/it/,BLOCKED (Sandbox Offline),PASSED,Italian locale verified locally
+ja,Japanese,/ja/,BLOCKED (Sandbox Offline),PASSED,Japanese locale verified locally
+pl,Polish,/pl/,BLOCKED (Sandbox Offline),PASSED,Polish locale verified locally
+pt-BR,Brazilian Portuguese,/pt-BR/,BLOCKED (Sandbox Offline),PASSED,Brazilian Portuguese locale verified locally

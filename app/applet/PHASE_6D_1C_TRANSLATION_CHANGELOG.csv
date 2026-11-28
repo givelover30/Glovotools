@@ -1,0 +1,2 @@
+File Path,Modification Type,Description
+src/i18n/translations.ts,Verified,Category and subcategory translation helpers (getLocalizedCategory, getLocalizedSubcategory) and fallback resolver verified across all 9 locales.

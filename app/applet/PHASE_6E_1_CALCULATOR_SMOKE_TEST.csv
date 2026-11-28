@@ -1,0 +1,6 @@
+Calculator ID,Category,Locales Tested,Live Execution,Local Test Execution,Status
+mortgage,finance,en, es, fr,BLOCKED (Sandbox Offline),PASSED (Unit Tests),Local Verified
+roof-pitch,construction,en, de, it,BLOCKED (Sandbox Offline),PASSED (Unit Tests),Local Verified
+percentage,math,en, ja, pl,BLOCKED (Sandbox Offline),PASSED (Unit Tests),Local Verified
+bmi,health,en, pt-BR, es,BLOCKED (Sandbox Offline),PASSED (Unit Tests),Local Verified
+unit-converter,converter,en, fr, de,BLOCKED (Sandbox Offline),PASSED (Unit Tests),Local Verified

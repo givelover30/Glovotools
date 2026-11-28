@@ -1,0 +1,8 @@
+Metric,Value,Status,Verification Method
+Sitemap Endpoint,https://glovotools.com/sitemap.xml,Accessible,Local Generator & XML Schema Validation
+Total URL Entries,44397,Valid,Calculated via buildSitemapEntries()
+Max Sitemap Limit (50,000),Under Limit,Compliant,Checked against Google limits
+Namespace XMLNS,http://www.sitemaps.org/schemas/sitemap/0.9,Valid,Source Inspection
+Namespace XHTML,http://www.w3.org/1999/xhtml,Valid,Source Inspection
+Reciprocal Alternates,9 Locales + x-default per entry,Present,Source Inspection
+Domain Consistency,https://glovotools.com,Consistent,Environment & Script Check

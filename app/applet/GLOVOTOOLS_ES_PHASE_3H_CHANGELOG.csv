@@ -1,0 +1,4 @@
+file_path,action_type,keys_affected,description
+src/i18n/esTranslations.ts,Modified,merge-pdf; secure-password-generator; json-validator; restaurant-bill-split; monthly-budget,Added explicit calculator overrides to ES_CALCULATOR_OVERRIDES.
+src/i18n/esTranslations.ts,Modified,science-education; developer-it; guides; checkers; utilities,Added category translation keys (cat.*, cat.desc.*) to ES_UI_STRINGS.
+src/i18n/esTranslations.ts,Modified,getLocalizedCalculator,Removed naive regex replacement fallback and enforced strict override priority.

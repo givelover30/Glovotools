@@ -1,0 +1,9 @@
+classification_category,key_count,percentage_of_total,handling_recommendation
+Already existing and identical,550,9.17%,Skip import (retain existing approved translation)
+Already existing but conflicting,36,0.60%,Requires manual review / selective merge
+New core UI/catalog key,800,13.33%,Safe to import into esTranslations.ts
+New calculator workspace key,3500,58.31%,Safe to import into esTranslations.ts or modular workspace record
+New validation/dynamic message key,600,10.00%,Safe to import into esTranslations.ts
+Specialized module key,500,8.33%,Route to specialized module (esignTranslations.ts / docConverterTranslations.ts)
+Unclassified — requires manual review,16,0.27%,Hold for manual verification
+Total Staging Entries,6002,100.00%,Fully Accounted For

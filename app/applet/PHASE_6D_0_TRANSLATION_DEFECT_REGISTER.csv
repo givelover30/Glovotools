@@ -1,0 +1,4 @@
+Defect ID,Severity,Locale,Component,Description,Status
+DEF-6D0-01,High,fr, de, it, ja, zh-CN, pl,Dictionary Dictionaries,Extended translation keys missing compared to Spanish dictionary.,Open
+DEF-6D0-02,Medium,All non-Spanish/Portuguese,Calculator Workspaces,Advanced workspace descriptions falling back to English.,Open
+DEF-6D0-03,Low,All locales,UI Components,Minor hard-coded English strings in modals and search.,Open
